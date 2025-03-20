@@ -4,11 +4,13 @@ namespace _1_primeros_pasos
     {
         decimal previousValue = 0;
         decimal currentValue = 0;
-        string op = "+";
+        string op = "";
         public FrmPrincipal()
         {
             InitializeComponent();
-
+            this.previousValue = previousValue;
+            this.currentValue = currentValue;
+            this.op = op;
         }
 
         private void onBtnClick(object sender, EventArgs e)
@@ -19,15 +21,15 @@ namespace _1_primeros_pasos
             }
             if (IsOperator(((Button)sender).Text))
             {
+                this.op = ((Button)sender).Text;
+                this.previousValue = decimal.Parse(tbCalc.Text);
                 tbPreviousValue.Text = tbCalc.Text;
-                previousValue = decimal.Parse(tbCalc.Text);
-                op = ((Button)sender).Text;
                 tbCalc.Text = "";
             }
             if (((Button)sender).Text == "=")
             {
                 tbPreviousValue.Text = "";
-                currentValue = decimal.Parse(tbCalc.Text);
+                this.currentValue = decimal.Parse(tbCalc.Text);
                 Calculate();
             }
                 
@@ -44,22 +46,22 @@ namespace _1_primeros_pasos
 
         public void Calculate() {
             decimal result = 0;
-            switch (op)
+            switch (this.op)
             {
                 case "+":
-                    result = previousValue + currentValue;
+                    result = this.previousValue + this.currentValue;
                     break;
                 case "-":
-                    result = previousValue - currentValue;
+                    result = this.previousValue - this.currentValue;
                     break;
                 case "*":
-                    result = previousValue * currentValue;
+                    result = this.previousValue * this.currentValue;
                     break;
                 case "/":
-                    result = previousValue / currentValue;
+                    result = this.previousValue / this.currentValue;
                     break;
             }
-            previousValue = result;
+            this.previousValue = result;
             tbCalc.Text = Convert.ToString(result);
         }
 
