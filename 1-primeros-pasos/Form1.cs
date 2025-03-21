@@ -1,69 +1,83 @@
+using MaterialSkin.Controls;
+using System.Data;
+
+//import debug
+using System.Diagnostics;
+
 namespace _1_primeros_pasos
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmPrincipal : MaterialForm
     {
-        decimal previousValue = 0;
-        decimal currentValue = 0;
-        string op = "";
         public FrmPrincipal()
         {
             InitializeComponent();
-            this.previousValue = previousValue;
-            this.currentValue = currentValue;
-            this.op = op;
         }
 
         private void onBtnClick(object sender, EventArgs e)
         {
-            if (IsNumeric(((Button)sender).Text))
+            if (IsNumeric((Button)sender) || IsOperator((Button)sender))
             {
                 tbCalc.Text += ((Button)sender).Text;
             }
-            if (IsOperator(((Button)sender).Text))
+            else if (IsEqual((Button)sender))
             {
-                this.op = ((Button)sender).Text;
-                this.previousValue = decimal.Parse(tbCalc.Text);
-                tbPreviousValue.Text = tbCalc.Text;
-                tbCalc.Text = "";
+                try
+                {
+                    var result = Calculate(tbCalc.Text);
+                    tbCalc.Text = result.ToString();
+                }
+                catch (DivideByZeroException ex)
+                {
+                    tbCalc.Text = "Error: No se puede dividir por cero";
+                }
             }
-            if (((Button)sender).Text == "=")
+            else if (IsClearAll((Button)sender))
             {
-                tbPreviousValue.Text = "";
-                this.currentValue = decimal.Parse(tbCalc.Text);
-                Calculate();
+                ClearAll();
             }
-                
         }
-        public bool IsNumeric(string value)
+        public bool IsNumeric(Button btn)
         {
-            return value.All(char.IsNumber);
+            return int.TryParse(btn.Text, out _);
         }
 
-        public bool IsOperator(string value)
+        public bool IsOperator(Button btn)
         {
-            return value == "+" || value == "-" || value == "*" || value == "/";
+            return btn.Equals(btnPlus) || btn.Equals(btnMinus) || btn.Equals(btnMultiplcation) || btn.Equals(btnDivision) || btn.Equals(btnPercent) || btn.Equals(btnComma);
+
         }
 
-        public void Calculate() {
-            decimal result = 0;
-            switch (this.op)
-            {
-                case "+":
-                    result = this.previousValue + this.currentValue;
-                    break;
-                case "-":
-                    result = this.previousValue - this.currentValue;
-                    break;
-                case "*":
-                    result = this.previousValue * this.currentValue;
-                    break;
-                case "/":
-                    result = this.previousValue / this.currentValue;
-                    break;
-            }
-            this.previousValue = result;
-            tbCalc.Text = Convert.ToString(result);
+        public bool IsEqual(Button btn)
+        {
+            return btn.Equals(btnEqual);
         }
 
+        public bool IsClearAll(Button btn)
+        {
+            return btn.Equals(btnClearAll);
+        }
+
+        public bool IsRem(Button btn)
+        {
+            return btn.Equals(btnRem);
+        }
+
+        public bool IsClearCurrent(Button btn)
+        {
+            return btn.Equals(btnClearCurrent);
+        }
+
+        public dynamic Calculate(string expression)
+        {
+            expression = expression.Replace(",", ".");
+            var result = new DataTable().Compute(expression, null);
+            return result;
+        }
+
+
+        public void ClearAll()
+        {
+            tbCalc.Text = "";
+        }
     }
 }
