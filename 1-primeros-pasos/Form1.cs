@@ -100,6 +100,7 @@ namespace _1_primeros_pasos
         public void PutOperator(string value)
         {
             if (string.IsNullOrEmpty(tbCalc.Text)) return;
+            if (value == "." && tbCalc.Text.Contains(".")) return;
             if (IsStrOperator(tbCalc.Text.Substring(tbCalc.Text.Length - 1)))
                 tbCalc.Text = tbCalc.Text.Remove(tbCalc.Text.Length - 1);
             tbCalc.Text += value;
