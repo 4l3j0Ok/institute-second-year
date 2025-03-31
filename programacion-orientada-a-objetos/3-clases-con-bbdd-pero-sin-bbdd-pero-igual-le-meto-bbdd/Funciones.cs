@@ -1,53 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading.Tasks;
-// sqlite import:
-using Microsoft.Data.Sqlite;
+using Microsoft.Data.SqlClient;
+using System.Data;
+
 
 namespace _3_clases_con_bbdd_pero_sin_bbdd_pero_igual_le_meto_bbdd
 {
-    internal class Funciones
+    public static class Database
     {
-        private static SqliteConnection sqliteConnection = new SqliteConnection("Data Source=hello.db");
-
-        public static void CreateBaseTables()
+        private static SqlConnection connection = new SqlConnection(Variables.connectionString);
+        public static void OpenDatabase()
         {
-            using (sqliteConnection)
-            {
-                string statement = @"
-                    CREATE TABLE IF NOT EXISTS user (
-                        id INTEGER PRIMARY KEY,
-                        name TEXT NOT NULL
-                    );
-                    ";
-                sqliteConnection.Open();
-                SqliteCommand command = new SqliteCommand(statement, sqliteConnection);
-                command.ExecuteNonQuery();
-            }
+            connection.Open(); // Abre la conexión con la base de datos
         }
-        //    using (var connection = new SqliteConnection("Data Source=hello.db"))
-        //    {
-        //        connection.Open();
-
-        //        var command = connection.CreateCommand();
-        //        command.CommandText = @"
-        //            SELECT name
-        //            FROM user
-        //            WHERE id = $id
-        //        ";
-        //        command.Parameters.AddWithValue("$id", id);
-
-        //        using (var reader = command.ExecuteReader())
-        //        {
-        //            while (reader.Read())
-        //            {
-        //                var name = reader.GetString(0);
-
-        //        Console.WriteLine($"Hello, {name}!");
-        //            }
-        //        }
-        //    }
+        public static void CloseDatabase()
+        {
+            connection.Close(); // Cierra la conexión con la base de datos
+        }
+        public static SqlDataReader ExecuteQuery(string query)
+        {
+            SqlCommand command = new SqlCommand(query, connection); // Crea un comando SQL en base a una query y una conexión para ejecutarla en la base de datos.
+            return command.ExecuteReader(); // Ejecuta la query y devuelve un SqlDataReader con los resultados.
+        }
     }
 }
