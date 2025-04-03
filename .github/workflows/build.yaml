@@ -30,6 +30,9 @@ jobs:
           docker create --name projects-browser projects-browser:latest
           docker cp projects-browser:/app/dist ./dist
           docker rm -f projects-browser
+      - name: NoJekyll
+        run: |
+          touch ./dist/.nojekyll
       - name: Upload dist
         uses: actions/upload-pages-artifact@v3
         with:
