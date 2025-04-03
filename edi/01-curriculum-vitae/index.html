@@ -7,19 +7,40 @@
     <title>Alejo Sarmiento - Currículum Vitae</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="icon" href="./assets/favicon.ico" />
-</head>
+    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
 
 <body>
     <main>
         <header>
             <img class="profile-pic" src="./assets/profile.webp" />
-            <div class="profile-info">
-                <h1>Alejo Sarmiento</h1>
-                <p>SRE y Desarrollador de aplicaciones </p>
+            <div class="profile-header">
+                <div class="profile-info">
+                    <h1>Alejo Sarmiento</h1>
+                    <p>SRE y Desarrollador de aplicaciones </p>
+                </div>
             </div>
         </header>
-        <section class="experience">
-            <h2>Experiencia profesional</h2>
+        <section class="summary" id="summary">
+            <h2 class="title">Resumen <a href="#summary" class="pilcrow">&para;</a></h2>
+            <hr />
+            <p>Soy SRE/DevOps y desarrollador de software con más de cuatro
+                años de experiencia.
+                <br>Optimizo infraestructuras para
+                mejorar confiabilidad y rendimiento, con enfoque
+                proactivo y habilidades sólidas en desarrollo web.
+                <br>Busco un entorno desafiante donde aplicar mis habilidades y seguir aprendiendo.
+            </p>
+        </section>
+        <section class="contact" id="contact">
+            <h2>Contacto <a href="#contact" class="pilcrow">&para;</a></h2>
+            <hr />
+            <p><b>Correo</b>: alejofsarmiento@gmail.com</p>
+            <p><b>Teléfono</b>: +54 9 2224 501572</p>
+            <p><b>Dirección</b>: San Vicente, Buenos Aires, Argentina</p>
+            <p><b>Edad</b>: 24 años</p>
+        </section>
+        <section class="experience" id="experience">
+            <h2>Experiencia profesional <a href="#experience" class="pilcrow">&para;</a></h2>
             <hr />
             <article class="exp-item">
                 <div class="exp-header">
@@ -34,6 +55,12 @@
                 </div>
                 <ul>
                     <li>Desarrollo de producto Moorea para clientes de Leafnoise.</li>
+                    <li>Creación de APIs y servicios web RESTful y SOAP.</li>
+                    <li>Conexión de APIs con base de datos MongoDB y SQL.</li>
+                    <li>Diseño y optimización de consulta para bases de datos.</li>
+                    <li>Uso efectivo de Git para control de versiones.</li>
+                    <li>Colaboración en equipos a través de plataformas como GitLab.</li>
+                    <li>Metodologías ágiles y trabajo en equipo.</li>
                 </ul>
             </article>
             <article class="job-item">
@@ -48,31 +75,181 @@
                     </div>
                 </div>
                 <ul>
-                    <li>Desarrollo de producto Moorea para clientes de Leafnoise.</li>
+                    <li>Gestión y contenerización de aplicaciones web con Docker.</li>
+                    <li>Automatización de despliegue con herramientas de CI/CD.</li>
+                    <li>Orquestación de conenedores con Kubernetes.</li>
+                    <li>Exposición de aplicaciones con servidores web Apache y NGINX.</li>
+                    <li>Amplio conocimiento en servicios de Digital Ocean y bases de AWS con EC2, S3, ECS, entre otros.
+                    </li>
+                    <li>Despliegue de servicios Java con Jboss EAP/ WildFly.</li>
+                    <li>Conocimiento en herramientas de IaC como Terraform, Ansible, Vagrant.</li>
+                    <li>Creación y administración de paquetes con Helm.</li>
+                    <li>Monitoreo y obervabilidad de aplicaciones.</li>
+                    <li>Scripting con Bash, Powershell y Python.</li>
                 </ul>
             </article>
         </section>
-        <section class="education">
-            <h2 class="title">Educación</h2>
+        <section class="education" id="education">
+            <h2 class="title">Educación <a href="#education" class="pilcrow">&para;</a></h2>
+            </h2>
             <hr />
+            <article class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">
+                        <h3>Escuela de Educación Secundaria Técnica N° 2 - Manuel Mateo</h3>
+                        <p><b>Título</b>: Tecnicatura en informática con orientación en redes y programación</p>
+                    </div>
+                    <div class="space-time">
+                        <h3>Buenos Aires, Argentina</h3>
+                        <p>Marzo 2012 – Noviembre 2019</p>
+                    </div>
+                </div>
+            </article>
+            <article class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">
+                        <h3>Instituto Superior de Formación Docente y Técnica Nº 93 Arturo Umberto Illia</h3>
+                        <p><b>Título</b>: Tecnicatura Superior en Análisis, Desarrollo y Programación de Aplicaciones
+                        </p>
+                    </div>
+                    <div class="space-time">
+                        <h3>Buenos Aires, Argentina</h3>
+                        <p>Marzo 2012 – Noviembre 2019</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="skills" id="skills">
+            <h2 class="title">Habilidades <a href="#skills" class="pilcrow">&para;</a></h2>
+            <hr />
+            <h3>Tecnologías que utilizo como desarrollador de aplicaciónes:</h3>
             <ul>
-                <li>Escuela de educación secundaria técnica N°2</li>
+                <li>Lenguajes de programación: Python, JavaScript, TypeScript, C#, HTML y CSS.</li>
+                <li>Backend: Flask, FastAPI</li>
+                <li>Frontend: Astro, React</li>
+                <li>Base de datos: MongoDB, SQL Server, SQLite, MySQL, PostgreSQL, Redis</li>
+                <li>Versionado: Git</li>
+            </ul>
+            <h3>Tecnologías que utilizo como SRE:</h3>
+            <ul>
+                <li>Infraestructura: Digital Ocean, AWS</li>
+                <li>Contenedores: Docker, Kubernetes, Helm</li>
+                <li>CI/CD: Jenkins, GitHub Actions, GitLab CI</li>
+                <li>Servidores web: Apache, Nginx</li>
+                <li>Monitorización: Grafana, Prometheus, Elastic Kibana</li>
+                <li>Scripting: Bash, Python</li>
+                <li>IaC: Terraform</li>
+            </ul>
             </ul>
         </section>
-        <section class="courses">
-            <h2 class="title">Licencias y certificaciones</h2>
+        <section class="certificates" id="certificates">
+            <h2 class="title">Certificaciones <a href="#certificates" class="pilcrow">&para;</a></h2>
+            </h2>
             <hr />
-            <ul>
-            </ul>
+            <article class="certificate-item">
+                <div class="certificate-header">
+                    <div class="certificate-title">
+                        <h3>Qt/PySide: Interfaces Gráficas con Python</h3>
+                        <a href="./public/alejo-sarmiento-certificado-pyside.pdf" class="noprint" target="_blank">Ver
+                            certificado</a>
+                    </div>
+                    <div class="info">
+                        <h3>Hector Costa Guzmán</h3>
+                        <p>nov. 2024</p>
+                    </div>
+                </div>
+            </article>
+            <article class="certificate-item">
+                <div class="certificate-header">
+                    <div class="certificate-title">
+                        <h3>Ultimate Git + GitHub</h3>
+                        <a href="./public/alejo-sarmiento-certificado-ultimate-git-github.pdf" class="noprint"
+                            target="_blank">Ver certificado</a>
+                    </div>
+                    <div class="info">
+                        <h3>Academia Hola Mundo</h3>
+                        <p>ago. 2024</p>
+                    </div>
+                </div>
+            </article>
+            <article class="certificate-item">
+                <div class="certificate-header">
+                    <div class="certificate-title">
+                        <h3>Ultimate Docker</h3>
+                        <a href="./public/alejo-sarmiento-certificado-ultimate-docker.pdf" class="noprint"
+                            target="_blank">Ver certificado</a>
+                    </div>
+                    <div class="info">
+                        <h3>Academia Hola Mundo</h3>
+                        <p>jun. 2024</p>
+                    </div>
+                </div>
+            </article>
+            <article class="certificate-item">
+                <div class="certificate-header">
+                    <div class="certificate-title">
+                        <h3>Cloud Devops (Docker, Kubernetes y Jenkins)</h3>
+                        <a href="./public/alejo-sarmiento-certificado-cloud-devops.pdf" class="noprint"
+                            target="_blank">Ver certificado</a>
+                    </div>
+                    <div class="info">
+                        <h3>Educación IT</h3>
+                        <p>may. 2022</p>
+                    </div>
+                </div>
+            </article>
+            <article class="certificate-item">
+                <div class="certificate-header">
+                    <div class="certificate-title">
+                        <h3>Ultimate Python</h3>
+                        <a href="./public/alejo-sarmiento-certificado-ultimate-python.pdf" class="noprint"
+                            target="_blank">Ver certificado</a>
+                    </div>
+                    <div class="info">
+                        <h3>Academia Hola Mundo</h3>
+                        <p>abr. 2024</p>
+                    </div>
+                </div>
+            </article>
+            <article class="certificate-item">
+                <div class="certificate-header">
+                    <div class="certificate-title">
+                        <h3>Python Sin Fronteras: HTML, CSS, Flask y MySQL</h3>
+                        <a href="./public/alejo-sarmiento-certificado-python-sin-fronteras.pdf" class="noprint"
+                            target="_blank">Ver certificado</a>
+                    </div>
+                    <div class="info">
+                        <h3>Udemy</h3>
+                        <p>mar. 2024</p>
+                    </div>
+                </div>
+            </article>
+            <article class="certificate-item">
+                <div class="certificate-header">
+                    <div class="certificate-title">
+                        <h3>Bases de datos NoSQL con MongoDB y NodeJS</h3>
+                        <a href="./public/alejo-sarmiento-certificado-mongodb.pdf" class="noprint" target="_blank">Ver
+                            certificado</a>
+                    </div>
+                    <div class="info">
+                        <h3>Academia Mastermind</h3>
+                        <p>sept. 2022</p>
+                    </div>
+                </div>
+            </article>
         </section>
-        <section class="extra-skills">
-            <h2 class="title">Habilidades adicionales</h2>
+        <section class="links" id="links">
+            <h2 class="title">Enlaces de interés <a href="#links" class="pilcrow">&para;</a></h2>
             <hr />
-            <ul>
-                <li>Inglés intermedio</li>
-            </ul>
-        </section>
-        <footer></footer>
+            <h3><a href="https://github.com/4l3j0Ok" target="_blank"><iconify-icon icon="mdi:github"></iconify-icon>
+                    GitHub</a><span class="onlyprint">: github.com/4l3j0Ok</span></h3>
+            <h3><a href="https://www.linkedin.com/in/alejoide" target="_blank"><iconify-icon
+                        icon="mdi:linkedin"></iconify-icon> LinkedIn</a><span class="onlyprint">:
+                    linkedin.com/in/alejoide</span></h3>
+            <h3><a href="https://alejoide.com" target="_blank"><iconify-icon icon="mdi:world"></iconify-icon>
+                    Página
+                    web</a><span class="onlyprint">: alejoide.com</span></h3>
+
     </main>
 </body>
 

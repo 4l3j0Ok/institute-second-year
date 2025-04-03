@@ -17,6 +17,27 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4em;
+}
+
+h3 {
+    margin: 0;
+}
+
+section {
+    margin-bottom: 3em;
+}
+
+hr {
+    margin-bottom: 1.5em;
+}
+
+p {
+    margin: 0;
+}
+
+.onlyprint {
+    display: none;
 }
 
 .profile-pic {
@@ -31,6 +52,10 @@ header {
     text-align: right;
 }
 
+.contact-info p {
+    margin: 0;
+}
+
 .exp-header {
     display: flex;
     flex-direction: row;
@@ -38,6 +63,42 @@ header {
 }
 
 .exp-header .space-time {
+    text-align: right;
+}
+
+.pilcrow {
+    text-decoration: none;
+    color: #777;
+}
+
+.certificate-item {
+    margin-bottom: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #555555;
+}
+
+.certificate-item a {
+    text-decoration: underline;
+}
+
+.certificate-title {
+    margin-top: 0;
+}
+
+.certificate-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.certificate-header .info {
     text-align: right;
 }
 
@@ -66,5 +127,19 @@ header {
 
     .profile-pic {
         width: 120px;
+    }
+}
+
+@media print {
+    .noprint {
+        display: none;
+    }
+
+    .pilcrow {
+        display: none;
+    }
+
+    .onlyprint {
+        display: inline-block;
     }
 }
