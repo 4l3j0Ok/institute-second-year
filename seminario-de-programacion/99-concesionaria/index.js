@@ -6,7 +6,7 @@ function displayCars() {
     cars.forEach(car => {
         const div = document.createElement("div");
         let price = `<b>Precio</b>: ${car.price}`;
-        let endpoint = `/${car.brand.toLowerCase()}-${car.model.toLowerCase()}.html`;
+        let endpoint = `./${car.brand.toLowerCase()}-${car.model.toLowerCase()}.html`;
         if (car.promotionPrice !== undefined) {
             price = `<b>Precio</b>: <span style="color:red;"><s>$${car.price}</s></span> $${car.promotionPrice}`;
         }
