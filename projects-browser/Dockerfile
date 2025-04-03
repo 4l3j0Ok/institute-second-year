@@ -6,14 +6,14 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --prod
-
 COPY . .
 
+WORKDIR /app/projects-browser
+RUN pnpm install --prefer-offline --prod --no-frozen-lockfile --prefer-offline --force
 RUN pnpm run prebuild
 RUN pnpm run build
 
-FROM base AS production
-COPY --from=base /app/dist ./dist
+FROM node:lts-alpine AS production
+WORKDIR /app
+COPY --from=base /app/projects-browser/dist ./dist
 CMD ["echo", "Build complete"]

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Directorio donde se encuentran los proyectos
 SOURCE_DIR="../"

@@ -16,7 +16,7 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v5
         with:
-          context: ./projects-browser
+          context: .
           file: ./projects-browser/Dockerfile
           push: false
           tags: projects-browser:latest
