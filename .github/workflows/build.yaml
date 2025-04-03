@@ -1,0 +1,41 @@
+# Build astro project with docker and deploy to GitHub Pages
+
+name: Build Astro Project
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build
+        uses: docker/build-action@v5
+        with:
+          context: ./projects-browser
+          file: Dockerfile
+          push: false
+          tags: projects-browser:latest
+      - name: Get dist
+        run: |
+          docker create --name projects-browser projects-browser:latest
+          docker cp projects-browser:/app/dist ./dist
+          docker rm -f projects-browser
+      - name: Upload dist
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
