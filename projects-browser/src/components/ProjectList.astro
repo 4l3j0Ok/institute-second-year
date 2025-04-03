@@ -1,0 +1,45 @@
+---
+import { subjects } from "../lib/searchProjects.js";
+---
+
+<section class="projects">
+    <article class="subjects-list">
+        {
+            subjects.map((subject) => (
+                <div class="subject">
+                    <h3 class="subject-title">
+                        <a href={subject.url}>{subject.prettyName}</a>
+                    </h3>
+                    <div class="project-list">
+                        <ul>
+                            {subject.projects.map((project) => (
+                                <a href={project.path} class="project-item">
+                                    <li>{project.name}</li>
+                                </a>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            ))
+        }
+    </article>
+</section>
+
+<style>
+    .projects {
+        width: 60%;
+    }
+    .subject {
+        background-color: #f0f0f0;
+        padding: 1em;
+    }
+    .subject:nth-child(even) {
+        background-color: #e0e0e0;
+    }
+    .subject:first-child {
+        border-radius: 2em 2em 0 0;
+    }
+    .subject:last-child {
+        border-radius: 0 0 2em 2em;
+    }
+</style>

@@ -1,0 +1,44 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+const { description } = Astro.props;
+import {
+	SITE_NAME,
+	SITE_DESCRIPTION,
+	PROJECT_NAME,
+	REPO_NAME,
+	REPO_URL,
+} from "../consts";
+import "@fontsource/montserrat";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_NAME} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<header>
+			<h1>{PROJECT_NAME}</h1>
+			<p>
+				Lista de proyectos del repositorio <a href={REPO_URL}
+					>{REPO_NAME}</a>
+			</p>
+			<slot />
+		</header>
+	</body>
+</html>
+
+<style>
+	html {
+		font-family: "Montserrat";
+	}
+	header {
+		text-align: center;
+		margin: 2em 0;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+</style>
