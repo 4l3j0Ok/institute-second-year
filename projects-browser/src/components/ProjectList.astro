@@ -13,7 +13,10 @@ import { subjects } from "../lib/searchProjects.js";
                     <div class="project-list">
                         <ul>
                             {subject.projects.map((project) => (
-                                <a href={project.path} class="project-item">
+                                <a
+                                    href={"./" + project.path}
+                                    class="project-link"
+                                >
                                     <li>{project.name}</li>
                                 </a>
                             ))}

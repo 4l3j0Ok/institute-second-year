@@ -19,7 +19,7 @@ export const subjects: Subject[] = (() => {
     const result: Subject[] = [];
     for (const path in modules) {
         const projectName = path.split('/').slice(-2, -1)[0];
-        const projectPath = path.replace(/^\/public/, '');
+        const projectPath = path.replace(/^\/public/, '').replace(/^\//, '');
         // capitalize
         const subjectName = path.split('/').slice(-3, -2)[0]
         const prettySubjectName = subjectName.charAt(0).toUpperCase() + subjectName.slice(1).replace(/-/g, ' ');
