@@ -121,7 +121,7 @@
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
             panel1.Size = new Size(587, 56);
-            panel1.TabIndex = 2;
+            panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -146,7 +146,7 @@
             panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
             panel2.Size = new Size(587, 211);
-            panel2.TabIndex = 0;
+            panel2.TabIndex = 2;
             // 
             // tableLayoutPanel3
             // 
