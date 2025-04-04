@@ -31,7 +31,7 @@ export const subjects: Subject[] = (() => {
                 name: subjectName,
                 prettyName: prettySubjectName,
                 projects: [{ name: projectName, path: projectPath }],
-                url: `${REPO_URL}/${REPO_NAME}/tree/main/${subjectName}`,
+                url: `${REPO_URL}/tree/main/${subjectName}`,
             });
         }
     }
