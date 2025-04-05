@@ -1,0 +1,94 @@
+---
+import { subjects } from "../lib/searchProjects.js";
+import { PROJECT_NAME, REPO_URL, REPO_NAME } from "../consts.js";
+---
+
+<section class="hero">
+    <div class="hero-title">
+        <h1>{PROJECT_NAME}</h1>
+        <p>
+            Lista de proyectos del repositorio <a href={REPO_URL}>{REPO_NAME}</a
+            >
+        </p>
+    </div>
+    <div class="projects">
+        <article class="subjects-list">
+            {
+                subjects.map((subject) => (
+                    <div class="subject">
+                        <h3 class="subject-title">
+                            <a href={subject.url}>{subject.prettyName}</a>
+                        </h3>
+                        <div class="project-list">
+                            <ul>
+                                {subject.projects.map((project) => (
+                                    <a
+                                        href={"./" + project.path}
+                                        class="project-link"
+                                    >
+                                        <li>{project.name}</li>
+                                    </a>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                ))
+            }
+        </article>
+    </div>
+</section>
+
+<style>
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5em;
+    }
+    .hero-title {
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    .hero-title h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+    ul {
+        margin: 0;
+    }
+    h3 {
+        margin-top: 0;
+    }
+    .projects {
+        width: 40%;
+    }
+    .subjects-list {
+        border-radius: 1em;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    }
+    .subject {
+        background-color: #fff;
+        padding: 2em;
+    }
+    .subject:nth-child(even) {
+        background-color: #e9e2e2;
+    }
+    .subject:first-child {
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+    .subject:last-child {
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+    @media (max-width: 900px) {
+        .projects {
+            width: 60%;
+        }
+    }
+    @media (max-width: 600px) {
+        .projects {
+            width: 80%;
+        }
+    }
+</style>

@@ -1,13 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-const { description } = Astro.props;
-import {
-	SITE_NAME,
-	SITE_DESCRIPTION,
-	PROJECT_NAME,
-	REPO_NAME,
-	REPO_URL,
-} from "../consts";
+import { SITE_NAME, SITE_DESCRIPTION } from "../consts";
+import { Colors } from "../colors.ts";
 import "@fontsource/montserrat";
 ---
 
@@ -17,38 +11,33 @@ import "@fontsource/montserrat";
 		<BaseHead title={SITE_NAME} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<header>
-			<h1>{PROJECT_NAME}</h1>
-			<p>
-				Lista de proyectos del repositorio <a href={REPO_URL}
-					>{REPO_NAME}</a
-				>
-			</p>
-			<slot />
-		</header>
+		<slot />
 	</body>
 </html>
 
-<style>
+<style
+	is:global
+	define:vars={{
+		borderRadius: "1em",
+		accentColor: Colors.accent,
+		accentHoverColor: Colors.accentHover,
+		backgroundColor: Colors.background,
+		fontColor: Colors.font,
+	}}
+>
 	html {
 		font-family: "Montserrat";
 	}
-	header {
-		text-align: center;
-		margin: 2em 0;
-	}
 	body {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-color: #eee;
-		a {
-			color: #8f002b;
-			transition: color 0.2s ease-in-out;
-		}
-		a:hover {
-			color: #924d62;
-		}
+		background-color: var(--backgroundColor);
+		margin: 0;
+		min-height: 100vh;
+	}
+	a {
+		color: var(--accentColor);
+		transition: color 0.2s ease-in-out;
+	}
+	a:hover {
+		color: var(--accentHoverColor);
 	}
 </style>
