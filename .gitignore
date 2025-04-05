@@ -29,5 +29,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+*.bkp
 
 projects-browser/public/projects
