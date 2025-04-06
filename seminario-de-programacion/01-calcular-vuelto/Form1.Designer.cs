@@ -1,4 +1,4 @@
-﻿namespace _01_explorando_properties
+﻿namespace _01_calcular_vuelto
 {
     partial class CalculateRest
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35913.81 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-explorando-properties", "01-explorando-properties.csproj", "{7110EEB4-725F-42DA-94F0-36EA5232CC6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-calcular-vuelto", "01-calcular-vuelto.csproj", "{7110EEB4-725F-42DA-94F0-36EA5232CC6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

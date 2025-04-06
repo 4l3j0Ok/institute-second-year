@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.Numerics;
 
 
-namespace _01_explorando_properties
+namespace _01_calcular_vuelto
 {
     public partial class CalculateRest : Form
     {
