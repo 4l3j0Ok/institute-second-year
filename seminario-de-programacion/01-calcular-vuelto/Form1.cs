@@ -21,6 +21,7 @@ namespace _01_calcular_vuelto
         private void Calculate(object sender, EventArgs e)
         {
             int result;
+            int rest;
             if (String.IsNullOrEmpty(tbFirstValue.Text) || String.IsNullOrEmpty(tbSecondValue.Text))
             {
                 tbRest.Text = "0";
@@ -36,11 +37,16 @@ namespace _01_calcular_vuelto
             if (result < 0) result = 0;
             tbRest.Text = result.ToString();
             tbRest2000.Text = GetBills(result, 2000).ToString();
-            tbRest1000.Text = GetBills(GetRest(result, 2000), 1000).ToString();
-            tbRest500.Text = GetBills(GetRest(result, 1000), 500).ToString();
-            tbRest200.Text = GetBills(GetRest(result, 500), 200).ToString();
-            tbRest100.Text = GetBills(GetRest(result, 200), 100).ToString();
-            tbRest50.Text = GetBills(GetRest(result, 100), 50).ToString();
+            rest = GetRest(result, 2000);
+            tbRest1000.Text = GetBills(rest, 1000).ToString();
+            rest = GetRest(rest, 1000);
+            tbRest500.Text = GetBills(rest, 500).ToString();
+            rest = GetRest(rest, 500);
+            tbRest200.Text = GetBills(rest, 200).ToString();
+            rest = GetRest(rest, 200);
+            tbRest100.Text = GetBills(rest, 100).ToString();
+            rest = GetRest(rest, 100);
+            tbRest50.Text = GetBills(rest, 50).ToString();
         }
 
         static private int GetBills(int initialValue, int billValue)
@@ -50,11 +56,6 @@ namespace _01_calcular_vuelto
         static private int GetRest(int initialValue, int billValue)
         {
             return initialValue % billValue;
-        }
-
-        private void CalculateRest_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

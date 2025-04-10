@@ -32,3 +32,4 @@ pnpm-debug.log*
 *.bkp
 
 projects-browser/public/projects
+launchSettings.json

@@ -392,7 +392,6 @@
             Padding = new Padding(8);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de vuelto";
-            Load += CalculateRest_Load;
             panel1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
