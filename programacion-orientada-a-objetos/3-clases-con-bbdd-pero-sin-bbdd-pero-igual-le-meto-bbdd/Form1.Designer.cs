@@ -32,9 +32,9 @@
             btnRead = new Button();
             btnDisconnect = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
-            dataGridView1 = new DataGridView();
+            dgvMainData = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMainData).BeginInit();
             SuspendLayout();
             // 
             // btnConnect
@@ -87,7 +87,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
             tableLayoutPanel1.Controls.Add(btnConnect, 0, 0);
-            tableLayoutPanel1.Controls.Add(dataGridView1, 0, 1);
+            tableLayoutPanel1.Controls.Add(dgvMainData, 0, 1);
             tableLayoutPanel1.Controls.Add(btnDisconnect, 2, 0);
             tableLayoutPanel1.Controls.Add(btnRead, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -101,16 +101,16 @@
             tableLayoutPanel1.Size = new Size(800, 450);
             tableLayoutPanel1.TabIndex = 4;
             // 
-            // dataGridView1
+            // dgvMainData
             // 
-            dataGridView1.BackgroundColor = Color.FromArgb(64, 64, 64);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tableLayoutPanel1.SetColumnSpan(dataGridView1, 3);
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(15, 44);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(770, 391);
-            dataGridView1.TabIndex = 0;
+            dgvMainData.BackgroundColor = Color.FromArgb(64, 64, 64);
+            dgvMainData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableLayoutPanel1.SetColumnSpan(dgvMainData, 3);
+            dgvMainData.Dock = DockStyle.Fill;
+            dgvMainData.Location = new Point(15, 44);
+            dgvMainData.Name = "dgvMainData";
+            dgvMainData.Size = new Size(770, 391);
+            dgvMainData.TabIndex = 0;
             // 
             // Form1
             // 
@@ -121,7 +121,7 @@
             Name = "Form1";
             Text = "Clases globales";
             tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMainData).EndInit();
             ResumeLayout(false);
         }
 
@@ -131,6 +131,6 @@
         private Button btnRead;
         private Button btnDisconnect;
         private TableLayoutPanel tableLayoutPanel1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvMainData;
     }
 }

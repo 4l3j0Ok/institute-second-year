@@ -10,9 +10,10 @@ namespace _3_clases_con_bbdd_pero_sin_bbdd_pero_igual_le_meto_bbdd
     internal class Variables
     {
         private static string DBHost = Environment.GetEnvironmentVariable("DB_HOST") ?? "localhost";
-        private static string DBDatabse = Environment.GetEnvironmentVariable("DB_DATABASE") ?? "db";
+        private static string DBDatabase = Environment.GetEnvironmentVariable("DB_DATABASE") ?? "db";
         private static string DBPassword = Environment.GetEnvironmentVariable("DB_PASSWORD") ?? "password";
         private static string DBUsername = Environment.GetEnvironmentVariable("DB_USERNAME") ?? "root";
-        public static string connectionString = $"Server={DBHost};Database={DBDatabse};User Id={DBUsername};Password={DBPassword};";
+        //Server=localhost,1433;Database=master;User Id=sa;Password=PerritoSalvaje;TrustServerCertificate=True
+        public static string connectionString = $"Server={DBHost};Database={DBDatabase};User Id={DBUsername};Password={DBPassword};TrustServerCertificate=True";
     }
 }
