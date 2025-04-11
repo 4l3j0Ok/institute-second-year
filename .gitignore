@@ -32,4 +32,9 @@ pnpm-debug.log*
 *.bkp
 
 projects-browser/public/projects
+
+# dotnet environment
 launchSettings.json
+
+#draw.io
+*.dtmp
