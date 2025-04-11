@@ -1,5 +1,11 @@
 -- Insertar datos --
 USE Biblioteca;
+-- Eliminar datos
+-- DELETE FROM Libro;
+-- DELETE FROM Seccion;
+-- Resetear autoincrementos
+--DBCC CHECKIDENT ('Seccion', RESEED, 0);
+--DBCC CHECKIDENT ('Libro', RESEED, 0);
 -- Sección
 INSERT INTO Seccion (nombre)
 VALUES ('Terror'),
