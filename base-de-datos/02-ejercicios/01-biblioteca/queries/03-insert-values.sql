@@ -10,4 +10,7 @@ VALUES ('Terror'),
 -- Libro
 INSERT INTO Libro (IDSeccion, titulo, anioPublicacion)
 VALUES (1, 'El Silencio de los Inocentes', 1991),
-    (2, 'Star Wars', 1977);
+    (2, 'El Señor de los Anillos', 1954),
+    (3, 'Harry Potter y la Piedra Filosofal', 1997),
+    (4, 'La Odisea', 1600),
+    (5, 'El Hobbit', 1937);
