@@ -1,16 +1,16 @@
 -- Insertar datos --
-USE Empresa;
-DELETE FROM Pedidos;
-DELETE FROM Clientes;
-DBCC CHECKIDENT ('Clientes', RESEED, 0);
-DBCC CHECKIDENT ('Pedidos', RESEED, 0);
-INSERT INTO Clientes (nombre, apellido, correo)
-VALUES ('Pedro', 'Gomez', 'pgomez@argentina.gob.ar'),
-    ('Juan', 'Díaz', 'jdiaz@leafnoise.io'),
-    ('Julián', 'Weich', 'jweich@telefe.com.ar');
-INSERT INTO Pedidos (monto, idCliente)
-VALUES (100, 1),
-    (200, 2),
-    (300, 3),
-    (400, 1),
-    (500, 2);
+USE Universidad;
+DELETE FROM Facultades;
+DELETE FROM Carreras;
+DELETE FROM Estudiantes;
+DBCC CHECKIDENT ('Facultades', RESEED, 0);
+DBCC CHECKIDENT ('Carreras', RESEED, 0);
+DBCC CHECKIDENT ('Estudiantes', RESEED, 0);
+INSERT INTO Facultades (nombre)
+VALUES ('Facultad San Vicente'),
+    ('Facultad Lomas de Zamora'),
+    ('Facultad Temperley');
+INSERT INTO Carreras (nombre, idFacultad)
+VALUES ('Analista de sistemas', '1'),
+    ('Audiovisuales', 1),
+    ('Turismo', 2)
