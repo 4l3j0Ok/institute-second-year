@@ -1,4 +1,6 @@
 SELECT *
-FROM Clientes;
+FROM Facultad;
 SELECT *
-FROM Pedidos;
+FROM Carrera;
+SELECT *
+FROM Estudiante;

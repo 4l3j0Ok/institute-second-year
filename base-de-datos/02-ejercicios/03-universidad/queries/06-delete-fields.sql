@@ -1,4 +1,4 @@
 -- Eliminar registros
-USE Empresa;
-DELETE FROM Clientes
-WHERE ID = 4;
+USE Universidad;
+DELETE FROM Estudiante
+WHERE ID = 3;
