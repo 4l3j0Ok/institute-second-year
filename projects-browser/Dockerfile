@@ -10,6 +10,7 @@ COPY . .
 
 WORKDIR /app/projects-browser
 RUN pnpm install --prefer-offline --prod --no-frozen-lockfile --prefer-offline --force
+RUN chmod +x prebuild.sh
 RUN pnpm run prebuild
 RUN pnpm run build
 
