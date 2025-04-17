@@ -5,11 +5,12 @@ namespace _04_sql_to_combo
         public Form1()
         {
             InitializeComponent();
+            Database.CreateInitialTables();
         }
 
         private void btnLoadComboClick(object sender, EventArgs e)
         {
-
+            //cbData
         }
     }
 }

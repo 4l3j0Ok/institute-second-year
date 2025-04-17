@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
+            cbData = new ComboBox();
             btnLoadCombo = new Button();
             button2 = new Button();
             SuspendLayout();
             // 
-            // comboBox1
+            // cbData
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(258, 141);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(259, 23);
-            comboBox1.TabIndex = 0;
+            cbData.FormattingEnabled = true;
+            cbData.Location = new Point(258, 141);
+            cbData.Name = "cbData";
+            cbData.Size = new Size(259, 23);
+            cbData.TabIndex = 0;
             // 
             // btnLoadCombo
             // 
@@ -67,7 +67,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button2);
             Controls.Add(btnLoadCombo);
-            Controls.Add(comboBox1);
+            Controls.Add(cbData);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -75,7 +75,7 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox cbData;
         private Button btnLoadCombo;
         private Button button2;
     }
