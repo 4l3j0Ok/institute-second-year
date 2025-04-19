@@ -106,32 +106,6 @@ sudo modprobe -r kvm_intel
 
 Luego de ejecutar el comando, se procedió a iniciar nuevamente la máquina virtual y se pudo iniciar sin problemas.
 
-![Instalación de Ubuntu 1](13.png)
-
-![Instalación de Ubuntu 2](14.png)
-
-![Instalación de Ubuntu 3](15.png)
-
-![Instalación de Ubuntu 4](16.png)
-
-![Instalación de Ubuntu 5](17.png)
-
-![Instalación de Ubuntu 6](18.png)
-
-![Instalación de Ubuntu 7](19.png)
-
-![Instalación de Ubuntu 8](20.png)
-
-![Instalación de Ubuntu 9](21.png)
-
-![Instalación de Ubuntu 10](22.png)
-
-![Instalación de Ubuntu 11](23.png)
-
-![Instalación de Ubuntu 12](24.png)
-
-![Instalación de Ubuntu 13](25.png)
-
 > Fuente https://forums.virtualbox.org/viewtopic.php?t=50517
 
 Luego de probar en otra ocasión habiendo reiniado la máquina, el error apareció nuevamente, se corrigió usando el mismo comando anteriormente mencionado.
@@ -147,3 +121,44 @@ Luego de crear el archivo, se debe reiniciar la máquina para que los cambios te
 > Fuente: https://unix.stackexchange.com/questions/366609/how-do-i-disable-a-kernel-module-persistently
 
 Luego de reiniciar la máquina, se pudo iniciar la máquina virtual sin problemas.
+
+Se procede con la instalación de Ubuntu ya en la máquina virtual:
+
+![Instalación de Ubuntu 1](13.png)
+> Pantalla de GRUB. Seleccionamos Try or install Ubuntu.
+
+![Instalación de Ubuntu 2](14.png)
+> Pantalla de preparación del instalador.
+
+> ![Instalación de Ubuntu 3](15.png)
+> Pantalla de selección de idioma. Seleccionamos "Español".
+
+> ![Instalación de Ubuntu 4](16.png)
+> Pantalla de accesibilidad. En este caso no seleccionamos nada.
+
+> ![Instalación de Ubuntu 5](17.png)
+> Pantalla de disposición del teclado. Seleccionamos en este caso "Inglés (EE.UU.)".
+
+> ![Instalación de Ubuntu 6](18.png)
+> Pantalla de probar e instalar Ubuntu. Seleccionamos la opción de "Instalar Ubuntu".
+
+> ![Instalación de Ubuntu 7](19.png)
+> Pantalla de tipo de instalación. Elegimos la opción "Instalación interactiva" para poder elegir algunos parametros de instalación.
+
+> ![Instalación de Ubuntu 8](20.png)
+> Pantalla de configuración de disco. Elegimos la opción de "Borrar disco e instalar Ubuntu".
+
+> ![Instalación de Ubuntu 9](21.png)
+> Pantalla de usuario local. Establecemos el usuario y la contraseña del sistema.
+
+> ![Instalación de Ubuntu 10](22.png)
+> Pantalla de zona horaria. Seleccionamos la zona horaria de Buenos Aires.
+
+> ![Instalación de Ubuntu 11](23.png)
+> Pantalla de resumen de instalación.
+
+> ![Instalación de Ubuntu 12](24.png)
+> Pantalla de instalación en progreso.
+
+> ![Instalación de Ubuntu 13](25.png)
+> Pantalla de instalación finalizada. Reiniciamos el sistema.
