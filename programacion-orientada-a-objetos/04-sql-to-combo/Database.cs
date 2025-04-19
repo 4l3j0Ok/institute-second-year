@@ -1,83 +1,53 @@
 ﻿using System.Data;
 using System.Diagnostics;
+using _04_sql_to_combo.Controllers;
 using Microsoft.Data.SqlClient;
 
 namespace _04_sql_to_combo
 {
     public static class Database
     {
-        private static SqlConnection connection = new SqlConnection(Environment.GetEnvironmentVariable("SQLSERVER_CONNECTION_STRING"));
-        public static void OpenDatabase()
+        private static readonly string connectionString = Environment.GetEnvironmentVariable("SQL_SERVER_CONNECTION_STRING") ??
+            throw new InvalidOperationException("La variable de entorno 'SQL_SERVER_CONNECTION_STRING' no se encuentra establecida");
+
+        public static DataTable ExecuteRead(string query)
         {
             try
             {
-                if (connection.State.Equals(ConnectionState.Open))
-                    throw new Exception("La conexión a la base de datos ya está abierta.");
-                Debug.WriteLine($"Conectando a la base de datos con la cadena de conexión: {connection}");
-                connection.Open();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    // Crea un comando SQL en base a una query y una conexión para ejecutarla en la base de datos.
+                    SqlCommand command = new SqlCommand(query, connection);
+                    DataTable dt = new DataTable();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                        dt.Load(reader);
+                    return dt;
+                }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                throw new MessageException($"Error al conectar a la base de datos: {ex.Message}");
+                Debug.WriteLine(ex.Message);
+                throw new MessageException($"Error al ejecutar la consulta SQL: {ex.Message}");
             }
         }
 
-        public static void CreateInitialTables()
-        {
-            if (!connection.State.Equals(ConnectionState.Open))
-                throw new MessageException("La conexión a la base de datos no está abierta.");
-            // si no existe la tabla de usuarios, la crea
-            string database = "ClasesGlobales";
-            string table = "ComboBox";
-            string query = @$"
-            IF NOT EXISTS(SELECT * FROM sys.databases WHERE name='{database}')
-            BEGIN
-	            CREATE DATABASE {database}
-            END
-        ";
-            Execute(query);
-            query = @$"
-            USE {database};
-            IF NOT EXISTS(SELECT * FROM sys.tables WHERE name='{table}')
-            BEGIN
-                CREATE TABLE {table}(
-                    id INT PRIMARY KEY IDENTITY(1,1),
-                    nombre VARCHAR(50) NOT NULL,
-                    apellidos VARCHAR(50) NOT NULL,
-                    edad INT NOT NULL
-                )
-            END
-        ";
-            Execute(query);
-        }
-        public static void CloseDatabase()
+        public static void Execute(string query)
         {
             try
             {
-                if (connection.State.Equals(ConnectionState.Closed))
-                    throw new Exception("La conexión a la base de datos ya está cerrada.");
-                connection.Close();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                        command.ExecuteNonQuery();
+                }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                throw new MessageException($"Error al cerrar la conexión a la base de datos: {ex.Message}");
+                Debug.WriteLine(ex.Message);
+                throw new MessageException($"Error al ejecutar la consulta SQL: {ex.Message}");
             }
-        }
-        public static DataTable ExecuteRead(string query)
-        {
-            if (!connection.State.Equals(ConnectionState.Open))
-                throw new MessageException("La conexión a la base de datos no está abierta.");
-            // Crea un comando SQL en base a una query y una conexión para ejecutarla en la base de datos.
-            SqlCommand command = new SqlCommand(query, connection);
-            DataTable dt = new DataTable();
-            using (SqlDataReader reader = command.ExecuteReader())
-                dt.Load(reader);
-            return dt;
-        }
-        public static void Execute(string query)
-        {
-            SqlCommand command = new SqlCommand(query, connection);
-            command.ExecuteNonQuery();
         }
     }
 }

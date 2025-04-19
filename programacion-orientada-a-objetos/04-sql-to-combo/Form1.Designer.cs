@@ -30,46 +30,85 @@
         {
             cbData = new ComboBox();
             btnLoadCombo = new Button();
-            button2 = new Button();
+            btnUnloadCombo = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // cbData
             // 
+            cbData.BackColor = Color.FromArgb(18, 18, 20);
+            tableLayoutPanel1.SetColumnSpan(cbData, 2);
+            cbData.Dock = DockStyle.Fill;
+            cbData.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbData.FlatStyle = FlatStyle.Popup;
+            cbData.ForeColor = Color.White;
             cbData.FormattingEnabled = true;
-            cbData.Location = new Point(258, 141);
+            cbData.Location = new Point(3, 43);
             cbData.Name = "cbData";
-            cbData.Size = new Size(259, 23);
+            cbData.Size = new Size(734, 23);
             cbData.TabIndex = 0;
             // 
             // btnLoadCombo
             // 
-            btnLoadCombo.Location = new Point(258, 112);
+            btnLoadCombo.BackColor = Color.FromArgb(18, 18, 20);
+            btnLoadCombo.Dock = DockStyle.Fill;
+            btnLoadCombo.FlatStyle = FlatStyle.Popup;
+            btnLoadCombo.ForeColor = Color.White;
+            btnLoadCombo.Location = new Point(3, 3);
             btnLoadCombo.Name = "btnLoadCombo";
-            btnLoadCombo.Size = new Size(116, 23);
+            btnLoadCombo.Size = new Size(364, 34);
             btnLoadCombo.TabIndex = 1;
             btnLoadCombo.Text = "Cargar ComboBox";
-            btnLoadCombo.UseVisualStyleBackColor = true;
+            btnLoadCombo.UseVisualStyleBackColor = false;
             btnLoadCombo.Click += btnLoadComboClick;
+            btnLoadCombo.MouseEnter += btnHover;
+            btnLoadCombo.MouseLeave += btnHoverLeave;
             // 
-            // button2
+            // btnUnloadCombo
             // 
-            button2.Location = new Point(442, 112);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnUnloadCombo.BackColor = Color.FromArgb(18, 18, 20);
+            btnUnloadCombo.Dock = DockStyle.Fill;
+            btnUnloadCombo.FlatStyle = FlatStyle.Popup;
+            btnUnloadCombo.ForeColor = Color.White;
+            btnUnloadCombo.Location = new Point(373, 3);
+            btnUnloadCombo.Name = "btnUnloadCombo";
+            btnUnloadCombo.Size = new Size(364, 34);
+            btnUnloadCombo.TabIndex = 2;
+            btnUnloadCombo.Text = "Vaciar ComboBox";
+            btnUnloadCombo.UseVisualStyleBackColor = false;
+            btnUnloadCombo.Click += btnUnloadComboClick;
+            btnUnloadCombo.MouseEnter += btnHover;
+            btnUnloadCombo.MouseLeave += btnHoverLeave;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(btnLoadCombo, 0, 0);
+            tableLayoutPanel1.Controls.Add(cbData, 0, 1);
+            tableLayoutPanel1.Controls.Add(btnUnloadCombo, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(740, 131);
+            tableLayoutPanel1.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(btnLoadCombo);
-            Controls.Add(cbData);
+            BackColor = Color.FromArgb(26, 26, 30);
+            ClientSize = new Size(740, 131);
+            Controls.Add(tableLayoutPanel1);
+            MinimumSize = new Size(756, 170);
             Name = "Form1";
-            Text = "Form1";
+            Text = "ComboBox + SQL";
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -77,6 +116,7 @@
 
         private ComboBox cbData;
         private Button btnLoadCombo;
-        private Button button2;
+        private Button btnUnloadCombo;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }
