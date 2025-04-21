@@ -1,16 +1,43 @@
 -- Insertar datos --
-USE Empresa;
-DELETE FROM Pedidos;
-DELETE FROM Clientes;
-DBCC CHECKIDENT ('Clientes', RESEED, 0);
-DBCC CHECKIDENT ('Pedidos', RESEED, 0);
-INSERT INTO Clientes (nombre, apellido, correo)
-VALUES ('Pedro', 'Gomez', 'pgomez@argentina.gob.ar'),
-    ('Juan', 'Díaz', 'jdiaz@leafnoise.io'),
-    ('Julián', 'Weich', 'jweich@telefe.com.ar');
-INSERT INTO Pedidos (monto, idCliente)
-VALUES (100, 1),
-    (200, 2),
-    (300, 3),
-    (400, 1),
-    (500, 2);
+USE Comercio;
+---
+DELETE FROM Comercio;
+DELETE FROM Ciudad;
+DELETE FROM Provincia;
+---
+INSERT INTO Provincia (nombre)
+VALUES ('Buenos Aires');
+INSERT INTO Provincia (nombre)
+VALUES ('Córdoba');
+INSERT INTO Provincia (nombre)
+VALUES ('Santa Fe');
+INSERT INTO Provincia (nombre)
+VALUES ('Mendoza');
+INSERT INTO Provincia (nombre)
+VALUES ('Tierra del Fuego');
+INSERT INTO Ciudad (nombre, idProvincia)
+VALUES ('La Plata', 1);
+---
+INSERT INTO Ciudad (nombre, idProvincia)
+VALUES ('Mar del Plata', 1);
+INSERT INTO Ciudad (nombre, idProvincia)
+VALUES ('Córdoba', 2);
+INSERT INTO Ciudad (nombre, idProvincia)
+VALUES ('Rosario', 3);
+INSERT INTO Ciudad (nombre, idProvincia)
+VALUES ('Santa Fe', 3);
+---
+INSERT INTO Comercio (nombre, idCiudad)
+VALUES ('Supermercado', 1);
+INSERT INTO Comercio (nombre, idCiudad)
+VALUES ('Ferretería', 2);
+INSERT INTO Comercio (nombre, idCiudad)
+VALUES ('Librería', 1);
+INSERT INTO Comercio (nombre, idCiudad)
+VALUES ('Supermercado', 4);
+INSERT INTO Comercio (nombre, idCiudad)
+VALUES ('Ferretería', 2);
+INSERT INTO Comercio (nombre, idCiudad)
+VALUES ('Librería', 1);
+INSERT INTO Comercio (nombre, idCiudad)
+VALUES ('Supermercado', 3);

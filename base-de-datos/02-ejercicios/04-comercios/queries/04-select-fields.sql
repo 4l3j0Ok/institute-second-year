@@ -1,4 +1,7 @@
+USE Comercio;
 SELECT *
-FROM Clientes;
+FROM Provincia;
 SELECT *
-FROM Pedidos;
+FROM Ciudad;
+SELECT *
+FROM Comercio;

@@ -1,16 +1,24 @@
 -- Crear tablas --
-USE Empresa;
-CREATE TABLE Clientes(
+USE Comercio;
+DROP TABLE Comercio;
+DROP TABLE Ciudad;
+DROP TABLE Provincia;
+CREATE TABLE Provincia (
     id INT IDENTITY(1, 1) NOT NULL,
     nombre VARCHAR(50) NOT NULL,
-    apellido VARCHAR(50) NOT NULL,
-    correo VARCHAR(80) NOT NULL,
-    PRIMARY KEY(id)
+    PRIMARY KEY (id)
 );
-CREATE TABLE Pedidos(
+CREATE TABLE Ciudad (
     id INT IDENTITY(1, 1) NOT NULL,
-    monto INT NOT NULL,
-    idCliente INT NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    idProvincia INT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (idCliente) REFERENCES Clientes(id)
+    FOREIGN KEY (idProvincia) REFERENCES Provincia(id)
+);
+CREATE TABLE Comercio (
+    id INT IDENTITY(1, 1) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    idCiudad INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (idCiudad) REFERENCES Ciudad(id)
 );
