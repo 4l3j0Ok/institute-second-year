@@ -1,0 +1,15 @@
+.car-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.car-actions {
+    text-align: right;
+}
+
+.car-details {
+    width: 100%;
+}
