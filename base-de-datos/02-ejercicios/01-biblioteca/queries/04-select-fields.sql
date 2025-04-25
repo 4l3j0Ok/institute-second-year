@@ -1,3 +1,4 @@
+USE Biblioteca;
 SELECT *
 FROM Seccion;
 SELECT *
