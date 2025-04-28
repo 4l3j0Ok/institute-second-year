@@ -1,2 +1,1 @@
--- Crear bases de datos --
-CREATE DATABASE Comercio;
+CREATE DATABASE Empresa;

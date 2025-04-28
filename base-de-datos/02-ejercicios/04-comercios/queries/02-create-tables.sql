@@ -1,8 +1,8 @@
 -- Crear tablas --
 USE Comercio;
-DROP TABLE Comercio;
-DROP TABLE Ciudad;
-DROP TABLE Provincia;
+DROP TABLE IF EXISTS Comercio;
+DROP TABLE IF EXISTS Ciudad;
+DROP TABLE IF EXISTS Provincia;
 CREATE TABLE Provincia (
     id INT IDENTITY(1, 1) NOT NULL,
     nombre VARCHAR(50) NOT NULL,
