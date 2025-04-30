@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./catalog.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,10 @@
             <button>Buscar</button>
         </div>
         <section class="catalog">
-            <script type="module" src="./catalog.js"></script>
+            <script type="module">
+                import { displayCars } from './catalog.js';
+                displayCars();
+            </script>
         </section>
     </main>
     <footer>

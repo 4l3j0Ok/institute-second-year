@@ -1,7 +1,9 @@
 export const cars = [
     {
+        id: "fiat-uno",
         brand: "Fiat",
         model: "Uno",
+        decription: "Fiat Uno nuevo",
         price: 10000000,
         promotionPrice: 9000000,
         km: 20,
@@ -9,6 +11,7 @@ export const cars = [
         img: "./assets/images/fiat-uno.webp"
     },
     {
+        id: "ford-ka",
         brand: "Ford",
         model: "Ka",
         price: 15000000,
@@ -18,6 +21,7 @@ export const cars = [
         img: "./assets/images/ford-ka.webp"
     },
     {
+        id: "chevrolet-onix",
         brand: "Chevrolet",
         model: "Onix",
         price: 20000000,
@@ -28,7 +32,7 @@ export const cars = [
     }
 ];
 
-function displayCars() {
+export function displayCars() {
     const container = document.querySelector(".catalog");
     container.innerHTML = "";
     cars.forEach(car => {
@@ -50,5 +54,3 @@ function displayCars() {
         container.appendChild(div);
     });
 }
-
-displayCars();
