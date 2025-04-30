@@ -16,7 +16,7 @@
         <div class="nav-content">
             <img src="../assets/images/logo-white-outline.webp" alt="Logo Premium Quality" class="logo">
             <div class="options">
-                <a href="#">Página Principal</a>
+                <a href="/">Página Principal</a>
                 <a href="#">Financiación</a>
                 <a href="#">Ofertas</a>
                 <a href="#">Financiación</a>
@@ -26,7 +26,8 @@
     <main>
         <section class="car">
             <script type="module">
-                displayCars();
+                import { displayCar } from '../modules/cars.js';
+                displayCar();
             </script>
         </section>
     </main>

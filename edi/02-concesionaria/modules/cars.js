@@ -1,7 +1,7 @@
 import { cars } from "./catalog.js";
 
 
-function displayCar() {
+export function displayCar() {
     const container = document.querySelector(".car");
     const fileName = window.location.pathname.split('/').pop();
     const carId = fileName.replace('.html', '');
@@ -28,5 +28,3 @@ function displayCar() {
         container.appendChild(div);
     })
 }
-
-displayCar();
