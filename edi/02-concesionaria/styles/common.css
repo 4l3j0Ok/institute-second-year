@@ -34,6 +34,8 @@ nav {
 
 }
 
+
+
 .nav-content a {
     margin-right: 2em;
     color: white;
@@ -50,59 +52,6 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.catalog {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 5em;
-    justify-content: center;
-}
-
-.search {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-bottom: 5em;
-    margin-top: 2em;
-}
-
-.search input {
-    width: 60%;
-    height: 3em;
-    border-radius: .5em;
-}
-
-
-.search button {
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: .5em;
-    padding: 0 1em;
-    height: 3em;
-}
-
-.car {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 1.5em;
-    box-shadow: 0 0 .5em rgba(0, 0, 0, 0.4);
-}
-
-.car img {
-    width: 360px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.car-link {
-    text-decoration: none;
-    color: black;
 }
 
 footer {

@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="./cars.css" />
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/cars.css" />
+    <script type="module" src="../modules/cars.js"></script>
 </head>
 
 <body>
@@ -23,7 +25,9 @@
     </nav>
     <main>
         <section class="car">
-            <script type="module" src="./cars.js"></script>
+            <script type="module">
+                displayCars();
+            </script>
         </section>
     </main>
     <footer>

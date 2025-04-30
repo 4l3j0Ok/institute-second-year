@@ -1,0 +1,11 @@
+.car {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.car-presentation img {
+    width: 640px;
+}
