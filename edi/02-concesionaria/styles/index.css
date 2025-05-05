@@ -19,30 +19,30 @@
 .search input {
     width: 60%;
     height: 3em;
-    border-radius: .5em;
+    border-radius: var(--border-radius);
 }
 
 .search button {
-    background-color: black;
+    background-color: var(--accent-color);
     color: white;
     border: none;
-    border-radius: .5em;
+    border-radius: var(--border-radius);
     padding: 0 1em;
     height: 3em;
 }
 
 .car {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     padding: 1.5em;
-    box-shadow: 0 0 .5em rgba(0, 0, 0, 0.4);
+    box-shadow: var(--box-shadow);
 }
 
 .car img {
     width: 360px;
     height: 180px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .car-link {
