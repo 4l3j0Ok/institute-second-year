@@ -1,6 +1,7 @@
 /* global variables */
 :root {
     --accent-color: #4b00a0;
+    --alt-accent-color: #3c0080;
     --background-color: #ededed;
     --border-radius: .5em;
     --box-shadow: 0 0 .5em rgba(0, 0, 0, 0.4);

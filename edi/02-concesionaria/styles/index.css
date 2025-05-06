@@ -7,6 +7,20 @@
     justify-content: center;
 }
 
+section {
+    margin-top: 6em;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .search {
     width: 100%;
     display: flex;
@@ -16,19 +30,34 @@
     margin-top: 2em;
 }
 
-.search input {
-    width: 60%;
+input {
+    width: 100%;
     height: 3em;
     border-radius: var(--border-radius);
 }
 
-.search button {
+textarea {
+    height: 6em;
+    resize: none;
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.search input {
+    width: 60%;
+}
+
+button {
     background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: var(--border-radius);
     padding: 0 1em;
     height: 3em;
+}
+
+button:hover {
+    background-color: var(--alt-accent-color);
 }
 
 .car {
