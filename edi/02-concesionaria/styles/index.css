@@ -3,7 +3,7 @@
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 5em;
+    gap: 2em;
     justify-content: center;
 }
 
@@ -19,6 +19,7 @@ form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: .5em;
 }
 
 .search {
@@ -63,7 +64,7 @@ button:hover {
 .car {
     background-color: #fff;
     border-radius: var(--border-radius);
-    padding: 1.5em;
+    padding: 1em;
     box-shadow: var(--box-shadow);
 }
 

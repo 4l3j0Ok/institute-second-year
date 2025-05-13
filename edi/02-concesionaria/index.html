@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./styles/common.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <script type="module" src="./modules/catalog.js"></script>
+    <script type="module">
+        import { handleClick } from './modules/contact.js';
+        window.handleClick = handleClick;
+    </script>
 </head>
 
 <body>
@@ -43,12 +47,10 @@
         <h2>Contacto</h2>
         <form>
             <label for="name">Nombre y apellido:</label>
-            <input type="text" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" name="email" required>
+            <input type="text" name="name" placeholder="Juan Pérez" required id="name">
             <label for="message">Mensaje:</label>
-            <textarea name="message" required></textarea>
-            <button type="submit">Enviar</button>
+            <textarea name="message" placeholder="Hola, quisiera contactarme por..." required id="message"></textarea>
+            <button type="submit" onclick="handleClick(event)">Enviar</button>
         </form>
     </section>
     <footer>
