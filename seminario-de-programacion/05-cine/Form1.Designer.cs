@@ -1,4 +1,8 @@
-﻿namespace _05_peliculas
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace _05_cine
 {
     partial class Form1
     {
@@ -198,7 +202,6 @@
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Top;
-            pictureBox1.Image = Properties.Resources._28_dias_despues;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.MinimumSize = new Size(160, 170);
             pictureBox1.Name = "pictureBox1";
@@ -241,7 +244,6 @@
             // pictureBox2
             // 
             pictureBox2.Dock = DockStyle.Top;
-            pictureBox2.Image = Properties.Resources.el_casoplon;
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.MinimumSize = new Size(160, 170);
             pictureBox2.Name = "pictureBox2";
@@ -284,7 +286,6 @@
             // pictureBox3
             // 
             pictureBox3.Dock = DockStyle.Top;
-            pictureBox3.Image = Properties.Resources.el_contable_2;
             pictureBox3.Location = new Point(0, 0);
             pictureBox3.MinimumSize = new Size(160, 170);
             pictureBox3.Name = "pictureBox3";
@@ -327,7 +328,6 @@
             // pictureBox4
             // 
             pictureBox4.Dock = DockStyle.Top;
-            pictureBox4.Image = Properties.Resources.enemigos;
             pictureBox4.Location = new Point(0, 0);
             pictureBox4.MinimumSize = new Size(160, 170);
             pictureBox4.Name = "pictureBox4";
@@ -370,7 +370,6 @@
             // pictureBox5
             // 
             pictureBox5.Dock = DockStyle.Top;
-            pictureBox5.Image = Properties.Resources.minecraft;
             pictureBox5.Location = new Point(0, 0);
             pictureBox5.MinimumSize = new Size(160, 170);
             pictureBox5.Name = "pictureBox5";
@@ -413,7 +412,6 @@
             // pictureBox6
             // 
             pictureBox6.Dock = DockStyle.Top;
-            pictureBox6.Image = Properties.Resources.thunderbolts;
             pictureBox6.Location = new Point(0, 0);
             pictureBox6.MinimumSize = new Size(160, 170);
             pictureBox6.Name = "pictureBox6";
@@ -456,7 +454,6 @@
             // pictureBox7
             // 
             pictureBox7.Dock = DockStyle.Top;
-            pictureBox7.Image = Properties.Resources.tierras_perdidas;
             pictureBox7.Location = new Point(0, 0);
             pictureBox7.MinimumSize = new Size(160, 170);
             pictureBox7.Name = "pictureBox7";
@@ -499,7 +496,6 @@
             // pictureBox8
             // 
             pictureBox8.Dock = DockStyle.Top;
-            pictureBox8.Image = Properties.Resources.una_quinta_portuguesa;
             pictureBox8.Location = new Point(0, 0);
             pictureBox8.MinimumSize = new Size(160, 170);
             pictureBox8.Name = "pictureBox8";
@@ -542,7 +538,6 @@
             // pictureBox9
             // 
             pictureBox9.Dock = DockStyle.Top;
-            pictureBox9.Image = Properties.Resources.un_funeral_de_locos;
             pictureBox9.Location = new Point(0, 0);
             pictureBox9.MinimumSize = new Size(160, 170);
             pictureBox9.Name = "pictureBox9";
@@ -585,7 +580,6 @@
             // pictureBox10
             // 
             pictureBox10.Dock = DockStyle.Top;
-            pictureBox10.Image = Properties.Resources.until_dawn;
             pictureBox10.Location = new Point(0, 0);
             pictureBox10.MinimumSize = new Size(160, 170);
             pictureBox10.Name = "pictureBox10";
@@ -628,7 +622,6 @@
             // pictureBox11
             // 
             pictureBox11.Dock = DockStyle.Top;
-            pictureBox11.Image = Properties.Resources.destino_final;
             pictureBox11.Location = new Point(0, 0);
             pictureBox11.MinimumSize = new Size(160, 170);
             pictureBox11.Name = "pictureBox11";
@@ -671,7 +664,6 @@
             // pictureBox12
             // 
             pictureBox12.Dock = DockStyle.Top;
-            pictureBox12.Image = Properties.Resources.conclave;
             pictureBox12.Location = new Point(0, 0);
             pictureBox12.MinimumSize = new Size(160, 170);
             pictureBox12.Name = "pictureBox12";

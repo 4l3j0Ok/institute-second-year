@@ -1,4 +1,4 @@
-namespace _05_peliculas
+namespace _05_cine
 {
     internal static class Program
     {

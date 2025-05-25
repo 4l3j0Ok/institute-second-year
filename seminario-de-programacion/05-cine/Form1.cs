@@ -1,4 +1,4 @@
-namespace _05_peliculas
+namespace _05_cine
 {
     public partial class Form1 : Form
     {

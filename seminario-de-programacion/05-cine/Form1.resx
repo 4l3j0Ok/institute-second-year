@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="minecraft" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minecraft.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="28-dias-despues" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\28-dias-despues.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tierras-perdidas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tierras-perdidas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="enemigos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enemigos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thunderbolts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thunderbolts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="el-casoplon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\el-casoplon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="un-funeral-de-locos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\un-funeral-de-locos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="una-quinta-portuguesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\una-quinta-portuguesa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="until-dawn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\until-dawn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="el-contable-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\el-contable-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="conclave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\conclave1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="destino-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\destino-final1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
