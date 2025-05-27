@@ -14,7 +14,7 @@ export const cars = [
                         <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
                         <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
         price: 10000000,
-        promotionPrice: 9000000,
+        promotionPrice: undefined,
         km: 20,
         year: 2020,
         img: "./assets/images/fiat-uno.webp"

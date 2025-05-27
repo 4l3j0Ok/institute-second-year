@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <!-- <link rel="stylesheet" href="../style.css" /> -->
     <link rel="stylesheet" href="../styles/common.css" />
     <link rel="stylesheet" href="../styles/cars.css" />
     <script type="module" src="../modules/cars.js"></script>
+    <script type="module">
+        import { handleClick } from '../modules/contact.js';
+        window.handleClick = handleClick;
+    </script>
 </head>
 
 <body>
@@ -32,6 +35,16 @@
             </script>
         </section>
     </main>
+    <section class="contact">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <label for="name">Nombre y apellido:</label>
+            <input type="text" name="name" placeholder="Juan Pérez" required id="name">
+            <label for="message">Mensaje:</label>
+            <textarea name="message" placeholder="Hola, quisiera contactarme por..." required id="message"></textarea>
+            <button type="submit" onclick="handleClick(event)">Enviar</button>
+        </form>
+    </section>
     <footer>
         <div class="content">
             <p>© 2021 Premium Quality.<br>Todos los derechos reservados.</p>
