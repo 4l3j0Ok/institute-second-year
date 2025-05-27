@@ -5,27 +5,14 @@
     flex-direction: row;
     gap: 2em;
     justify-content: space-between;
+    margin-top: 5em;
 }
 
 section {
-    margin-top: 6em;
     width: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.search {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-bottom: 5em;
-    margin-top: 2em;
-}
-
-.search input {
-    width: 60%;
 }
 
 .car {

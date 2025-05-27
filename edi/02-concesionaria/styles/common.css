@@ -32,7 +32,9 @@ nav {
 }
 
 .nav-content {
-    width: 80%;
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -51,6 +53,29 @@ nav {
 
 .nav-content a:last-child {
     margin-right: 0;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    width: 60%;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border: none;
+    outline: none;
+    padding-left: 1em
+}
+
+.search button {
+    background-color: white;
+    color: var(--accent-color);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.search button:hover {
+    background-color: var(--alt-accent-color);
+    color: white;
 }
 
 main {
