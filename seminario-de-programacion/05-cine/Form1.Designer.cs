@@ -44,6 +44,14 @@ namespace _05_cine
             button2 = new Button();
             label2 = new Label();
             pictureBox2 = new PictureBox();
+            panel13 = new Panel();
+            button12 = new Button();
+            label12 = new Label();
+            pictureBox12 = new PictureBox();
+            panel12 = new Panel();
+            button11 = new Button();
+            label11 = new Label();
+            pictureBox11 = new PictureBox();
             panel4 = new Panel();
             button3 = new Button();
             label3 = new Label();
@@ -76,14 +84,6 @@ namespace _05_cine
             button10 = new Button();
             label10 = new Label();
             pictureBox10 = new PictureBox();
-            panel12 = new Panel();
-            button11 = new Button();
-            label11 = new Label();
-            pictureBox11 = new PictureBox();
-            panel13 = new Panel();
-            button12 = new Button();
-            label12 = new Label();
-            pictureBox12 = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -91,6 +91,10 @@ namespace _05_cine
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel5.SuspendLayout();
@@ -107,10 +111,6 @@ namespace _05_cine
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -130,6 +130,7 @@ namespace _05_cine
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.White;
             groupBox1.Dock = DockStyle.Fill;
             groupBox1.Location = new Point(3, 519);
             groupBox1.Name = "groupBox1";
@@ -251,6 +252,90 @@ namespace _05_cine
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(button12);
+            panel13.Controls.Add(label12);
+            panel13.Controls.Add(pictureBox12);
+            panel13.Location = new Point(343, 3);
+            panel13.MinimumSize = new Size(164, 209);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(164, 209);
+            panel13.TabIndex = 10;
+            // 
+            // button12
+            // 
+            button12.Dock = DockStyle.Top;
+            button12.Location = new Point(0, 186);
+            button12.Name = "button12";
+            button12.Size = new Size(164, 23);
+            button12.TabIndex = 2;
+            button12.Text = "button12";
+            button12.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            label12.Dock = DockStyle.Top;
+            label12.Location = new Point(0, 171);
+            label12.Name = "label12";
+            label12.Size = new Size(164, 15);
+            label12.TabIndex = 1;
+            label12.Text = "label12";
+            label12.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.Dock = DockStyle.Top;
+            pictureBox12.Location = new Point(0, 0);
+            pictureBox12.MinimumSize = new Size(160, 170);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(164, 171);
+            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox12.TabIndex = 0;
+            pictureBox12.TabStop = false;
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(button11);
+            panel12.Controls.Add(label11);
+            panel12.Controls.Add(pictureBox11);
+            panel12.Location = new Point(513, 3);
+            panel12.MinimumSize = new Size(164, 209);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(164, 209);
+            panel12.TabIndex = 9;
+            // 
+            // button11
+            // 
+            button11.Dock = DockStyle.Top;
+            button11.Location = new Point(0, 186);
+            button11.Name = "button11";
+            button11.Size = new Size(164, 23);
+            button11.TabIndex = 2;
+            button11.Text = "button11";
+            button11.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            label11.Dock = DockStyle.Top;
+            label11.Location = new Point(0, 171);
+            label11.Name = "label11";
+            label11.Size = new Size(164, 15);
+            label11.TabIndex = 1;
+            label11.Text = "label11";
+            label11.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Dock = DockStyle.Top;
+            pictureBox11.Location = new Point(0, 0);
+            pictureBox11.MinimumSize = new Size(160, 170);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(164, 171);
+            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.TabIndex = 0;
+            pictureBox11.TabStop = false;
             // 
             // panel4
             // 
@@ -588,90 +673,6 @@ namespace _05_cine
             pictureBox10.TabIndex = 0;
             pictureBox10.TabStop = false;
             // 
-            // panel12
-            // 
-            panel12.Controls.Add(button11);
-            panel12.Controls.Add(label11);
-            panel12.Controls.Add(pictureBox11);
-            panel12.Location = new Point(513, 3);
-            panel12.MinimumSize = new Size(164, 209);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(164, 209);
-            panel12.TabIndex = 9;
-            // 
-            // button11
-            // 
-            button11.Dock = DockStyle.Top;
-            button11.Location = new Point(0, 186);
-            button11.Name = "button11";
-            button11.Size = new Size(164, 23);
-            button11.TabIndex = 2;
-            button11.Text = "button11";
-            button11.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            label11.Dock = DockStyle.Top;
-            label11.Location = new Point(0, 171);
-            label11.Name = "label11";
-            label11.Size = new Size(164, 15);
-            label11.TabIndex = 1;
-            label11.Text = "label11";
-            label11.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Dock = DockStyle.Top;
-            pictureBox11.Location = new Point(0, 0);
-            pictureBox11.MinimumSize = new Size(160, 170);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(164, 171);
-            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox11.TabIndex = 0;
-            pictureBox11.TabStop = false;
-            // 
-            // panel13
-            // 
-            panel13.Controls.Add(button12);
-            panel13.Controls.Add(label12);
-            panel13.Controls.Add(pictureBox12);
-            panel13.Location = new Point(343, 3);
-            panel13.MinimumSize = new Size(164, 209);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(164, 209);
-            panel13.TabIndex = 10;
-            // 
-            // button12
-            // 
-            button12.Dock = DockStyle.Top;
-            button12.Location = new Point(0, 186);
-            button12.Name = "button12";
-            button12.Size = new Size(164, 23);
-            button12.TabIndex = 2;
-            button12.Text = "button12";
-            button12.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            label12.Dock = DockStyle.Top;
-            label12.Location = new Point(0, 171);
-            label12.Name = "label12";
-            label12.Size = new Size(164, 15);
-            label12.TabIndex = 1;
-            label12.Text = "label12";
-            label12.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Dock = DockStyle.Top;
-            pictureBox12.Location = new Point(0, 0);
-            pictureBox12.MinimumSize = new Size(160, 170);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(164, 171);
-            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox12.TabIndex = 0;
-            pictureBox12.TabStop = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -680,6 +681,7 @@ namespace _05_cine
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
@@ -687,6 +689,10 @@ namespace _05_cine
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel5.ResumeLayout(false);
@@ -703,10 +709,6 @@ namespace _05_cine
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ResumeLayout(false);
         }
 
