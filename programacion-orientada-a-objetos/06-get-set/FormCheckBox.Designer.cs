@@ -528,6 +528,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "FormCheckBox";
             Text = "FormCheckBox";
+            Load += FormCheckBox_Load;
             tableLayoutPanel1.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);

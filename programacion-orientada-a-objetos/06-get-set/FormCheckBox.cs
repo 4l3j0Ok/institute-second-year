@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,15 @@ namespace _06_get_set
         private void CheckBoxCheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-
-            if (checkBox.Name.Contains("cbOne"))
-                if (checkBox.Checked)
-                    Variables.checkedOne.Add(int.Parse(checkBox.Name.Split("cbOne")[1]));
-                else
-                    Variables.checkedOne.Remove(int.Parse(checkBox.Name.Split("cbOne")[1]));
+            if (checkBox.Name.Contains("cbOne") && checkBox.Checked)
+            {
+                // uncheck rest
+                cbOne1.Checked = cbOne1.Name == checkBox.Name ? checkBox.Checked : false;
+                cbOne2.Checked = cbOne2.Name == checkBox.Name ? checkBox.Checked : false;
+                cbOne3.Checked = cbOne3.Name == checkBox.Name ? checkBox.Checked : false;
+                Variables.checkedOne.Clear();
+                Variables.checkedOne.Add(int.Parse(checkBox.Name.Split("cbOne")[1]));
+            }
             if (checkBox.Name.Contains("cbTwo"))
                 if (checkBox.Checked)
                     Variables.checkedTwo.Add(int.Parse(checkBox.Name.Split("cbTwo")[1]));
@@ -58,11 +62,16 @@ namespace _06_get_set
             textBox.Text = "";
             foreach (int i in checkedList)
             {
-                if (checkedList.Count > 1)
-                    textBox.Text += $", {i.ToString()}";
+                if (textBox.Text.Length > 0)
+                    textBox.Text = textBox.Text + $", {i.ToString()}";
                 else
                     textBox.Text += $"{i.ToString()}";
             }
+        }
+
+        private void FormCheckBox_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
