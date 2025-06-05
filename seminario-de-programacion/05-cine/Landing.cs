@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ReaLTaiizor.Forms;
 namespace _05_cine
 {
-    public partial class Landing : MaterialForm
+    public partial class Landing : UserControl
     {
         private MainForm mainForm;
         public Landing(MainForm mainForm)
@@ -23,9 +23,7 @@ namespace _05_cine
             //gets current instance of MainForm:
             mainForm.MainPanel.Controls.Clear();
             Booking booking = new Booking(mainForm);
-            mainForm.materialSkinManager.AddFormToManage(booking);
             booking.Dock = DockStyle.Fill;
-            booking.TopLevel = false;
             booking.Show();
             mainForm.MainPanel.Controls.Add(booking);
         }

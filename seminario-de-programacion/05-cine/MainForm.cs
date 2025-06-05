@@ -1,4 +1,5 @@
 using ReaLTaiizor.Colors;
+using ReaLTaiizor.Controls;
 using ReaLTaiizor.Forms;
 using ReaLTaiizor.Manager;
 using ReaLTaiizor.Util;
@@ -14,23 +15,22 @@ namespace _05_cine
             InitializeComponent();
             materialSkinManager.EnforceBackcolorOnAllComponents = true;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new MaterialColorScheme(
-                primary: MaterialPrimary.Red400,
-                darkPrimary: MaterialPrimary.Red400,
-                lightPrimary: MaterialPrimary.Red400,
+                primary: MaterialPrimary.Red800,
+                darkPrimary: MaterialPrimary.Red800,
+                lightPrimary: MaterialPrimary.Red800,
                 accent: MaterialAccent.Red400,
                 textShade: MaterialTextShade.LIGHT
             );
+            this.MinimumSize = new Size(900, 600);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             Landing landing = new Landing(this);
-            materialSkinManager.AddFormToManage(landing);
             landing.Dock = DockStyle.Fill;
-            landing.TopLevel = false;
-            landing.FormBorderStyle = FormBorderStyle.None;
+            landing.AutoScroll = true;
             landing.Show();
             MainPanel.Controls.Add(landing);
         }

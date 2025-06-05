@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket de Reserva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f9f9f9;
+        }
+
+        .ticket {
+            max-width: 600px;
+            margin: auto;
+            border: 2px dashed #333;
+            padding: 20px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d32f2f;
+        }
+
+        .ticket p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+    window.onload = function() {
+        window.print();
+    };
+    </script>
+</head>
+<body>
+    <div class="ticket">
+        <img src="./assets/logo.png" style="align-self: center; max-width: 200px;"/>
+        <h1>🎬 Ticket de Reserva</h1>
+        <p><span class="label">Película:</span> {{MovieName}}</p>
+        <p><span class="label">Tipo de sala:</span> {{RoomType}}</p>
+        <p><span class="label">Fecha:</span> {{Date}}</p>
+        <p><span class="label">Hora:</span> {{Hour}}</p>
+        <p><span class="label">Cantidad de asientos:</span> {{TotalSeats}}</p>
+        <p><span class="label">Asientos seleccionados:</span> {{SelectedSeats}}</p>
+        <hr>
+        <p><span class="label">Nombre:</span> {{Name}}</p>
+        <p><span class="label">Apellido:</span> {{Surname}}</p>
+        <p><span class="label">DNI:</span> {{DNI}}</p>
+        <p><span class="label">Email:</span> {{Email}}</p>
+        <p><span class="label">Teléfono:</span> {{Phone}}</p>
+        <p><span class="label">Método de pago:</span> {{PaymentMethod}}</p>
+        <p><span class="label">ID de compra:</span> {{PurchaseId}}</p>
+        <hr>
+        <p style="text-align:center;">Presentá este ticket el día de la función 📅</p>
+    </div>
+</body>
+</html>

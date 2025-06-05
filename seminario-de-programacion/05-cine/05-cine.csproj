@@ -7,7 +7,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>assets\appLogo.ico</ApplicationIcon>
+    <PackageIcon>appLogo.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="assets\appLogo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Markdig" Version="0.41.1" />
@@ -30,6 +36,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="assets\appLogo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="assets\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ticket_template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="tos.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

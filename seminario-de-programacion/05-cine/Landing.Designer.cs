@@ -68,6 +68,7 @@
             // btnViewBillboard
             // 
             btnViewBillboard.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnViewBillboard.Cursor = Cursors.Hand;
             btnViewBillboard.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnViewBillboard.Depth = 0;
             btnViewBillboard.Dock = DockStyle.Fill;
@@ -105,12 +106,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(879, 596);
             Controls.Add(tableLayoutPanel1);
-            FormStyle = ReaLTaiizor.Enum.Material.FormStyles.StatusAndActionBar_None;
             Name = "Landing";
             Padding = new Padding(3, 0, 3, 3);
-            Text = "Landing";
+            Size = new Size(879, 596);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

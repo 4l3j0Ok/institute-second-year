@@ -32,39 +32,24 @@ namespace _05_cine
         /// </summary>
         private void InitializeComponent()
         {
-            MainPanel = new ReaLTaiizor.Controls.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            MainPanel = new Panel();
             SuspendLayout();
             // 
             // MainPanel
             // 
-            MainPanel.AutoScroll = true;
-            MainPanel.BackColor = SystemColors.Control;
-            MainPanel.Dock = DockStyle.Fill;
-            MainPanel.EdgeColor = Color.Transparent;
-            MainPanel.Location = new Point(3, 64);
-            MainPanel.Margin = new Padding(2);
+            resources.ApplyResources(MainPanel, "MainPanel");
             MainPanel.Name = "MainPanel";
-            MainPanel.Padding = new Padding(4);
-            MainPanel.Size = new Size(487, 433);
-            MainPanel.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            MainPanel.TabIndex = 1;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
             BackColor = Color.FromArgb(238, 238, 238);
-            ClientSize = new Size(492, 499);
             Controls.Add(MainPanel);
-            Margin = new Padding(2);
-            MaximumSize = new Size(9999, 9999);
-            MinimumSize = new Size(419, 412);
+            DrawerShowIconsWhenHidden = true;
             Name = "MainForm";
-            Padding = new Padding(3, 64, 2, 2);
             ShowIcon = false;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "A.S Cinema";
             TransparencyKey = Color.Fuchsia;
             Load += MainForm_Load;
             ResumeLayout(false);
@@ -72,6 +57,6 @@ namespace _05_cine
 
         #endregion
 
-        public ReaLTaiizor.Controls.Panel MainPanel;
+        public Panel MainPanel;
     }
 }
