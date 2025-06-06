@@ -4,13 +4,13 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": -691,
-    "scrollLeft": -356,
+    "scrollTop": -831,
+    "scrollLeft": -186,
     "zoomLevel": 1,
     "show": 292,
     "database": 2,
     "databaseName": "Libreria",
-    "canvasType": "@dineug/erd-editor/builtin-schema-sql",
+    "canvasType": "ERD",
     "language": 1,
     "tableNameCase": 4,
     "columnNameCase": 2,
@@ -80,7 +80,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1749239968403,
+          "updateAt": 1749250733801,
           "createAt": 1748652359164
         }
       },
@@ -109,7 +109,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1749239968403,
+          "updateAt": 1749250733801,
           "createAt": 1749239499261
         }
       },
@@ -136,7 +136,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1749239968403,
+          "updateAt": 1749250733801,
           "createAt": 1749239515494
         }
       },
@@ -163,7 +163,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1749239968403,
+          "updateAt": 1749250733801,
           "createAt": 1749239516409
         }
       },
@@ -190,7 +190,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1749239968403,
+          "updateAt": 1749250733801,
           "createAt": 1749239517644
         }
       }
