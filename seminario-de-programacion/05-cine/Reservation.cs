@@ -21,6 +21,26 @@
         public static string CardHolder { get; set; } = "";
         public static bool ToSAccepted { get; set; } = false;
 
-
+        public static void ClearReservation()
+        {
+            MovieName = "";
+            RoomType = "";
+            Date = "";
+            Hour = "";
+            TotalSeats = 0;
+            SelectedSeats.Clear();
+            Name = "";
+            Surname = "";
+            DNI = "";
+            Email = "";
+            Phone = "";
+            PaymentMethod = "";
+            CardNumber = "";
+            CardExpirationMonth = "";
+            CardExpirationYear = "";
+            CardCVV = "";
+            CardHolder = "";
+            ToSAccepted = false;
+        }
     }
 }

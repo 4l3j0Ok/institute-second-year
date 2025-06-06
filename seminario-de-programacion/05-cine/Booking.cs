@@ -379,6 +379,7 @@ namespace _05_cine
             SuccessPurchase successPurchase = new SuccessPurchase(mainForm);
             successPurchase.Dock = DockStyle.Fill;
             successPurchase.Show();
+            
             mainForm.MainPanel.Controls.Add(successPurchase);
         }
     }

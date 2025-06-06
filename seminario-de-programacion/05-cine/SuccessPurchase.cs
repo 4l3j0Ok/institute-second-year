@@ -43,6 +43,7 @@ namespace _05_cine
 
         private void btnGoBack_Click(object sender, EventArgs e)
         {
+            Reservation.ClearReservation();
             mainForm.MainPanel.Controls.Clear();
             Landing landing = new Landing(this.mainForm);
             landing.Dock = DockStyle.Fill;

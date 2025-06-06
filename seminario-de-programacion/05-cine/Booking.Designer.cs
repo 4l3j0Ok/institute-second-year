@@ -328,7 +328,7 @@
             mepPersonalData.Name = "mepPersonalData";
             mepPersonalData.Padding = new Padding(24, 64, 24, 16);
             mepPersonalData.ShowValidationButtons = false;
-            mepPersonalData.Size = new Size(1832, 359);
+            mepPersonalData.Size = new Size(1815, 359);
             mepPersonalData.TabIndex = 4;
             mepPersonalData.Title = "Datos personales";
             mepPersonalData.ValidationButtonText = "Guardar";
@@ -350,7 +350,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(1784, 279);
+            tableLayoutPanel1.Size = new Size(1767, 279);
             tableLayoutPanel1.TabIndex = 15;
             // 
             // panel15
@@ -360,7 +360,7 @@
             panel15.Dock = DockStyle.Fill;
             panel15.Location = new Point(3, 162);
             panel15.Name = "panel15";
-            panel15.Size = new Size(886, 114);
+            panel15.Size = new Size(877, 114);
             panel15.TabIndex = 14;
             // 
             // tbPhone
@@ -387,7 +387,7 @@
             tbPhone.SelectionLength = 0;
             tbPhone.SelectionStart = 0;
             tbPhone.ShortcutsEnabled = true;
-            tbPhone.Size = new Size(886, 48);
+            tbPhone.Size = new Size(877, 48);
             tbPhone.TabIndex = 2;
             tbPhone.TabStop = false;
             tbPhone.TextAlign = HorizontalAlignment.Left;
@@ -414,9 +414,9 @@
             panel16.Controls.Add(tbEmail);
             panel16.Controls.Add(materialLabel16);
             panel16.Dock = DockStyle.Fill;
-            panel16.Location = new Point(895, 76);
+            panel16.Location = new Point(886, 76);
             panel16.Name = "panel16";
-            panel16.Size = new Size(886, 80);
+            panel16.Size = new Size(878, 80);
             panel16.TabIndex = 13;
             // 
             // tbEmail
@@ -444,7 +444,7 @@
             tbEmail.SelectionLength = 0;
             tbEmail.SelectionStart = 0;
             tbEmail.ShortcutsEnabled = true;
-            tbEmail.Size = new Size(886, 48);
+            tbEmail.Size = new Size(878, 48);
             tbEmail.TabIndex = 2;
             tbEmail.TabStop = false;
             tbEmail.TextAlign = HorizontalAlignment.Left;
@@ -472,7 +472,7 @@
             panel17.Dock = DockStyle.Fill;
             panel17.Location = new Point(3, 76);
             panel17.Name = "panel17";
-            panel17.Size = new Size(886, 80);
+            panel17.Size = new Size(877, 80);
             panel17.TabIndex = 12;
             // 
             // tbDNI
@@ -499,7 +499,7 @@
             tbDNI.SelectionLength = 0;
             tbDNI.SelectionStart = 0;
             tbDNI.ShortcutsEnabled = true;
-            tbDNI.Size = new Size(886, 48);
+            tbDNI.Size = new Size(877, 48);
             tbDNI.TabIndex = 2;
             tbDNI.TabStop = false;
             tbDNI.TextAlign = HorizontalAlignment.Left;
@@ -526,9 +526,9 @@
             panel14.Controls.Add(tbSurname);
             panel14.Controls.Add(materialLabel14);
             panel14.Dock = DockStyle.Fill;
-            panel14.Location = new Point(895, 3);
+            panel14.Location = new Point(886, 3);
             panel14.Name = "panel14";
-            panel14.Size = new Size(886, 67);
+            panel14.Size = new Size(878, 67);
             panel14.TabIndex = 9;
             // 
             // tbSurname
@@ -555,7 +555,7 @@
             tbSurname.SelectionLength = 0;
             tbSurname.SelectionStart = 0;
             tbSurname.ShortcutsEnabled = true;
-            tbSurname.Size = new Size(886, 48);
+            tbSurname.Size = new Size(878, 48);
             tbSurname.TabIndex = 2;
             tbSurname.TabStop = false;
             tbSurname.TextAlign = HorizontalAlignment.Left;
@@ -583,7 +583,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(886, 67);
+            panel1.Size = new Size(877, 67);
             panel1.TabIndex = 8;
             // 
             // tbName
@@ -610,7 +610,7 @@
             tbName.SelectionLength = 0;
             tbName.SelectionStart = 0;
             tbName.ShortcutsEnabled = true;
-            tbName.Size = new Size(886, 48);
+            tbName.Size = new Size(877, 48);
             tbName.TabIndex = 2;
             tbName.TabStop = false;
             tbName.TextAlign = HorizontalAlignment.Left;
@@ -647,7 +647,7 @@
             mepBillboard.Name = "mepBillboard";
             mepBillboard.Padding = new Padding(24, 64, 24, 16);
             mepBillboard.ShowValidationButtons = false;
-            mepBillboard.Size = new Size(1832, 543);
+            mepBillboard.Size = new Size(1815, 543);
             mepBillboard.TabIndex = 3;
             mepBillboard.Title = "Pelicula";
             // 
@@ -663,7 +663,7 @@
             tableLayoutPanel6.RowCount = 2;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel6.Size = new Size(1784, 463);
+            tableLayoutPanel6.Size = new Size(1767, 463);
             tableLayoutPanel6.TabIndex = 3;
             // 
             // flowLayoutPanel1
@@ -675,7 +675,7 @@
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(3, 373);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1778, 87);
+            flowLayoutPanel1.Size = new Size(1761, 87);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // panel26
@@ -872,7 +872,7 @@
             flpMovies.Dock = DockStyle.Fill;
             flpMovies.Location = new Point(3, 3);
             flpMovies.Name = "flpMovies";
-            flpMovies.Size = new Size(1778, 364);
+            flpMovies.Size = new Size(1761, 364);
             flpMovies.TabIndex = 2;
             // 
             // panel2
@@ -1695,7 +1695,7 @@
             mepPayMethod.Name = "mepPayMethod";
             mepPayMethod.Padding = new Padding(24, 64, 24, 16);
             mepPayMethod.ShowValidationButtons = false;
-            mepPayMethod.Size = new Size(1832, 494);
+            mepPayMethod.Size = new Size(1815, 494);
             mepPayMethod.TabIndex = 6;
             mepPayMethod.Title = "Método de pago";
             // 
@@ -1712,7 +1712,7 @@
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Size = new Size(1784, 414);
+            tableLayoutPanel2.Size = new Size(1767, 414);
             tableLayoutPanel2.TabIndex = 2;
             // 
             // pnlSelectedPayMethod
@@ -1726,7 +1726,7 @@
             pnlSelectedPayMethod.Location = new Point(303, 3);
             pnlSelectedPayMethod.Name = "pnlSelectedPayMethod";
             pnlSelectedPayMethod.Padding = new Padding(5);
-            pnlSelectedPayMethod.Size = new Size(1478, 408);
+            pnlSelectedPayMethod.Size = new Size(1461, 408);
             pnlSelectedPayMethod.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             pnlSelectedPayMethod.TabIndex = 21;
             pnlSelectedPayMethod.Text = "panel23";
@@ -1737,7 +1737,7 @@
             pnlPayWithCommerce.Dock = DockStyle.Fill;
             pnlPayWithCommerce.Location = new Point(5, 5);
             pnlPayWithCommerce.Name = "pnlPayWithCommerce";
-            pnlPayWithCommerce.Size = new Size(1468, 398);
+            pnlPayWithCommerce.Size = new Size(1451, 398);
             pnlPayWithCommerce.TabIndex = 21;
             pnlPayWithCommerce.Visible = false;
             // 
@@ -1755,7 +1755,7 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle());
             tableLayoutPanel3.RowStyles.Add(new RowStyle());
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(1468, 398);
+            tableLayoutPanel3.Size = new Size(1451, 398);
             tableLayoutPanel3.TabIndex = 2;
             // 
             // lblCommerceCode
@@ -1767,7 +1767,7 @@
             lblCommerceCode.Location = new Point(3, 0);
             lblCommerceCode.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblCommerceCode.Name = "lblCommerceCode";
-            lblCommerceCode.Size = new Size(1462, 87);
+            lblCommerceCode.Size = new Size(1445, 87);
             lblCommerceCode.TabIndex = 0;
             lblCommerceCode.Text = "RLD5-M4TR5-ZVH42-WVH5";
             lblCommerceCode.TextAlign = ContentAlignment.MiddleCenter;
@@ -1781,7 +1781,7 @@
             materialLabel24.Location = new Point(3, 135);
             materialLabel24.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel24.Name = "materialLabel24";
-            materialLabel24.Size = new Size(1462, 263);
+            materialLabel24.Size = new Size(1445, 263);
             materialLabel24.TabIndex = 1;
             materialLabel24.Text = "Usá este código para pagar en el comercio";
             materialLabel24.TextAlign = ContentAlignment.TopCenter;
@@ -1800,7 +1800,7 @@
             btnCopyCommerceCode.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnCopyCommerceCode.Name = "btnCopyCommerceCode";
             btnCopyCommerceCode.NoAccentTextColor = Color.Empty;
-            btnCopyCommerceCode.Size = new Size(1460, 36);
+            btnCopyCommerceCode.Size = new Size(1443, 36);
             btnCopyCommerceCode.TabIndex = 2;
             btnCopyCommerceCode.Text = "Copiar";
             btnCopyCommerceCode.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1814,7 +1814,7 @@
             pnlPayWithCard.Dock = DockStyle.Fill;
             pnlPayWithCard.Location = new Point(5, 5);
             pnlPayWithCard.Name = "pnlPayWithCard";
-            pnlPayWithCard.Size = new Size(1468, 398);
+            pnlPayWithCard.Size = new Size(1451, 398);
             pnlPayWithCard.TabIndex = 3;
             pnlPayWithCard.Visible = false;
             // 
@@ -1832,7 +1832,7 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle());
             tableLayoutPanel4.RowStyles.Add(new RowStyle());
             tableLayoutPanel4.RowStyles.Add(new RowStyle());
-            tableLayoutPanel4.Size = new Size(1468, 398);
+            tableLayoutPanel4.Size = new Size(1451, 398);
             tableLayoutPanel4.TabIndex = 23;
             // 
             // panel19
@@ -1843,7 +1843,7 @@
             panel19.Dock = DockStyle.Fill;
             panel19.Location = new Point(3, 3);
             panel19.Name = "panel19";
-            panel19.Size = new Size(1462, 67);
+            panel19.Size = new Size(1445, 67);
             panel19.TabIndex = 15;
             // 
             // tbCardNumber
@@ -1870,7 +1870,7 @@
             tbCardNumber.SelectionLength = 0;
             tbCardNumber.SelectionStart = 0;
             tbCardNumber.ShortcutsEnabled = true;
-            tbCardNumber.Size = new Size(1462, 48);
+            tbCardNumber.Size = new Size(1445, 48);
             tbCardNumber.TabIndex = 2;
             tbCardNumber.TabStop = false;
             tbCardNumber.TextAlign = HorizontalAlignment.Left;
@@ -1898,7 +1898,7 @@
             panel20.Dock = DockStyle.Fill;
             panel20.Location = new Point(3, 155);
             panel20.Name = "panel20";
-            panel20.Size = new Size(1462, 240);
+            panel20.Size = new Size(1445, 240);
             panel20.TabIndex = 17;
             // 
             // flowLayoutPanel4
@@ -1909,7 +1909,7 @@
             flowLayoutPanel4.Dock = DockStyle.Fill;
             flowLayoutPanel4.Location = new Point(0, 19);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(1462, 221);
+            flowLayoutPanel4.Size = new Size(1445, 221);
             flowLayoutPanel4.TabIndex = 7;
             // 
             // cbCardExpirationMonth
@@ -1984,7 +1984,7 @@
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(1462, 73);
+            tableLayoutPanel5.Size = new Size(1445, 73);
             tableLayoutPanel5.TabIndex = 19;
             // 
             // panel21
@@ -1995,7 +1995,7 @@
             panel21.Dock = DockStyle.Fill;
             panel21.Location = new Point(3, 3);
             panel21.Name = "panel21";
-            panel21.Size = new Size(725, 67);
+            panel21.Size = new Size(716, 67);
             panel21.TabIndex = 18;
             // 
             // tbCardHolder
@@ -2022,7 +2022,7 @@
             tbCardHolder.SelectionLength = 0;
             tbCardHolder.SelectionStart = 0;
             tbCardHolder.ShortcutsEnabled = true;
-            tbCardHolder.Size = new Size(725, 48);
+            tbCardHolder.Size = new Size(716, 48);
             tbCardHolder.TabIndex = 2;
             tbCardHolder.TabStop = false;
             tbCardHolder.TextAlign = HorizontalAlignment.Left;
@@ -2049,9 +2049,9 @@
             panel22.Controls.Add(tbCardCVV);
             panel22.Controls.Add(materialLabel19);
             panel22.Dock = DockStyle.Fill;
-            panel22.Location = new Point(734, 3);
+            panel22.Location = new Point(725, 3);
             panel22.Name = "panel22";
-            panel22.Size = new Size(725, 67);
+            panel22.Size = new Size(717, 67);
             panel22.TabIndex = 16;
             // 
             // tbCardCVV
@@ -2078,7 +2078,7 @@
             tbCardCVV.SelectionLength = 0;
             tbCardCVV.SelectionStart = 0;
             tbCardCVV.ShortcutsEnabled = true;
-            tbCardCVV.Size = new Size(725, 48);
+            tbCardCVV.Size = new Size(717, 48);
             tbCardCVV.TabIndex = 2;
             tbCardCVV.TabStop = false;
             tbCardCVV.TextAlign = HorizontalAlignment.Left;
@@ -2107,7 +2107,7 @@
             pnlPayWithMP.Dock = DockStyle.Fill;
             pnlPayWithMP.Location = new Point(5, 5);
             pnlPayWithMP.Name = "pnlPayWithMP";
-            pnlPayWithMP.Size = new Size(1468, 398);
+            pnlPayWithMP.Size = new Size(1451, 398);
             pnlPayWithMP.TabIndex = 21;
             pnlPayWithMP.Visible = false;
             // 
@@ -2119,7 +2119,7 @@
             materialLabel22.Location = new Point(0, 267);
             materialLabel22.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel22.Name = "materialLabel22";
-            materialLabel22.Size = new Size(1468, 19);
+            materialLabel22.Size = new Size(1451, 19);
             materialLabel22.TabIndex = 20;
             materialLabel22.Text = "Escaneá el código QR para poder pagar";
             materialLabel22.TextAlign = ContentAlignment.TopCenter;
@@ -2131,7 +2131,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1468, 267);
+            pictureBox1.Size = new Size(1451, 267);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
@@ -2238,7 +2238,7 @@
             mepSeats.Name = "mepSeats";
             mepSeats.Padding = new Padding(24, 64, 24, 16);
             mepSeats.ShowValidationButtons = false;
-            mepSeats.Size = new Size(1832, 534);
+            mepSeats.Size = new Size(1815, 534);
             mepSeats.TabIndex = 3;
             mepSeats.Title = "Asientos";
             // 
@@ -2353,7 +2353,7 @@
             tlpSeats.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tlpSeats.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tlpSeats.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tlpSeats.Size = new Size(1784, 430);
+            tlpSeats.Size = new Size(1767, 430);
             tlpSeats.TabIndex = 2;
             // 
             // materialButton124
@@ -2366,12 +2366,12 @@
             materialButton124.HighEmphasis = true;
             materialButton124.Icon = (Image)resources.GetObject("materialButton124.Icon");
             materialButton124.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton124.Location = new Point(1588, 382);
+            materialButton124.Location = new Point(1572, 382);
             materialButton124.Margin = new Padding(4, 6, 4, 6);
             materialButton124.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton124.Name = "materialButton124";
             materialButton124.NoAccentTextColor = Color.Empty;
-            materialButton124.Size = new Size(192, 42);
+            materialButton124.Size = new Size(191, 42);
             materialButton124.TabIndex = 112;
             materialButton124.Text = "I9";
             materialButton124.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2389,12 +2389,12 @@
             materialButton123.HighEmphasis = true;
             materialButton123.Icon = (Image)resources.GetObject("materialButton123.Icon");
             materialButton123.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton123.Location = new Point(1390, 382);
+            materialButton123.Location = new Point(1376, 382);
             materialButton123.Margin = new Padding(4, 6, 4, 6);
             materialButton123.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton123.Name = "materialButton123";
             materialButton123.NoAccentTextColor = Color.Empty;
-            materialButton123.Size = new Size(190, 42);
+            materialButton123.Size = new Size(188, 42);
             materialButton123.TabIndex = 111;
             materialButton123.Text = "I8";
             materialButton123.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2412,12 +2412,12 @@
             materialButton122.HighEmphasis = true;
             materialButton122.Icon = (Image)resources.GetObject("materialButton122.Icon");
             materialButton122.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton122.Location = new Point(1192, 382);
+            materialButton122.Location = new Point(1180, 382);
             materialButton122.Margin = new Padding(4, 6, 4, 6);
             materialButton122.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton122.Name = "materialButton122";
             materialButton122.NoAccentTextColor = Color.Empty;
-            materialButton122.Size = new Size(190, 42);
+            materialButton122.Size = new Size(188, 42);
             materialButton122.TabIndex = 110;
             materialButton122.Text = "I7";
             materialButton122.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2435,12 +2435,12 @@
             materialButton121.HighEmphasis = true;
             materialButton121.Icon = (Image)resources.GetObject("materialButton121.Icon");
             materialButton121.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton121.Location = new Point(994, 382);
+            materialButton121.Location = new Point(984, 382);
             materialButton121.Margin = new Padding(4, 6, 4, 6);
             materialButton121.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton121.Name = "materialButton121";
             materialButton121.NoAccentTextColor = Color.Empty;
-            materialButton121.Size = new Size(190, 42);
+            materialButton121.Size = new Size(188, 42);
             materialButton121.TabIndex = 109;
             materialButton121.Text = "I6";
             materialButton121.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2458,12 +2458,12 @@
             materialButton120.HighEmphasis = true;
             materialButton120.Icon = (Image)resources.GetObject("materialButton120.Icon");
             materialButton120.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton120.Location = new Point(796, 382);
+            materialButton120.Location = new Point(788, 382);
             materialButton120.Margin = new Padding(4, 6, 4, 6);
             materialButton120.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton120.Name = "materialButton120";
             materialButton120.NoAccentTextColor = Color.Empty;
-            materialButton120.Size = new Size(190, 42);
+            materialButton120.Size = new Size(188, 42);
             materialButton120.TabIndex = 108;
             materialButton120.Text = "I5";
             materialButton120.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2481,12 +2481,12 @@
             materialButton119.HighEmphasis = true;
             materialButton119.Icon = (Image)resources.GetObject("materialButton119.Icon");
             materialButton119.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton119.Location = new Point(598, 382);
+            materialButton119.Location = new Point(592, 382);
             materialButton119.Margin = new Padding(4, 6, 4, 6);
             materialButton119.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton119.Name = "materialButton119";
             materialButton119.NoAccentTextColor = Color.Empty;
-            materialButton119.Size = new Size(190, 42);
+            materialButton119.Size = new Size(188, 42);
             materialButton119.TabIndex = 107;
             materialButton119.Text = "I4";
             materialButton119.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2504,12 +2504,12 @@
             materialButton118.HighEmphasis = true;
             materialButton118.Icon = (Image)resources.GetObject("materialButton118.Icon");
             materialButton118.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton118.Location = new Point(400, 382);
+            materialButton118.Location = new Point(396, 382);
             materialButton118.Margin = new Padding(4, 6, 4, 6);
             materialButton118.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton118.Name = "materialButton118";
             materialButton118.NoAccentTextColor = Color.Empty;
-            materialButton118.Size = new Size(190, 42);
+            materialButton118.Size = new Size(188, 42);
             materialButton118.TabIndex = 106;
             materialButton118.Text = "I3";
             materialButton118.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2527,12 +2527,12 @@
             materialButton117.HighEmphasis = true;
             materialButton117.Icon = (Image)resources.GetObject("materialButton117.Icon");
             materialButton117.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton117.Location = new Point(202, 382);
+            materialButton117.Location = new Point(200, 382);
             materialButton117.Margin = new Padding(4, 6, 4, 6);
             materialButton117.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton117.Name = "materialButton117";
             materialButton117.NoAccentTextColor = Color.Empty;
-            materialButton117.Size = new Size(190, 42);
+            materialButton117.Size = new Size(188, 42);
             materialButton117.TabIndex = 105;
             materialButton117.Text = "I2";
             materialButton117.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2555,7 +2555,7 @@
             materialButton116.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton116.Name = "materialButton116";
             materialButton116.NoAccentTextColor = Color.Empty;
-            materialButton116.Size = new Size(190, 42);
+            materialButton116.Size = new Size(188, 42);
             materialButton116.TabIndex = 104;
             materialButton116.Text = "I1";
             materialButton116.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2573,12 +2573,12 @@
             materialButton111.HighEmphasis = true;
             materialButton111.Icon = (Image)resources.GetObject("materialButton111.Icon");
             materialButton111.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton111.Location = new Point(1588, 335);
+            materialButton111.Location = new Point(1572, 335);
             materialButton111.Margin = new Padding(4, 6, 4, 6);
             materialButton111.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton111.Name = "materialButton111";
             materialButton111.NoAccentTextColor = Color.Empty;
-            materialButton111.Size = new Size(192, 35);
+            materialButton111.Size = new Size(191, 35);
             materialButton111.TabIndex = 99;
             materialButton111.Text = "H9";
             materialButton111.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2596,12 +2596,12 @@
             materialButton110.HighEmphasis = true;
             materialButton110.Icon = (Image)resources.GetObject("materialButton110.Icon");
             materialButton110.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton110.Location = new Point(1390, 335);
+            materialButton110.Location = new Point(1376, 335);
             materialButton110.Margin = new Padding(4, 6, 4, 6);
             materialButton110.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton110.Name = "materialButton110";
             materialButton110.NoAccentTextColor = Color.Empty;
-            materialButton110.Size = new Size(190, 35);
+            materialButton110.Size = new Size(188, 35);
             materialButton110.TabIndex = 98;
             materialButton110.Text = "H8";
             materialButton110.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2619,12 +2619,12 @@
             materialButton109.HighEmphasis = true;
             materialButton109.Icon = (Image)resources.GetObject("materialButton109.Icon");
             materialButton109.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton109.Location = new Point(1192, 335);
+            materialButton109.Location = new Point(1180, 335);
             materialButton109.Margin = new Padding(4, 6, 4, 6);
             materialButton109.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton109.Name = "materialButton109";
             materialButton109.NoAccentTextColor = Color.Empty;
-            materialButton109.Size = new Size(190, 35);
+            materialButton109.Size = new Size(188, 35);
             materialButton109.TabIndex = 97;
             materialButton109.Text = "H7";
             materialButton109.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2642,12 +2642,12 @@
             materialButton108.HighEmphasis = true;
             materialButton108.Icon = (Image)resources.GetObject("materialButton108.Icon");
             materialButton108.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton108.Location = new Point(994, 335);
+            materialButton108.Location = new Point(984, 335);
             materialButton108.Margin = new Padding(4, 6, 4, 6);
             materialButton108.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton108.Name = "materialButton108";
             materialButton108.NoAccentTextColor = Color.Empty;
-            materialButton108.Size = new Size(190, 35);
+            materialButton108.Size = new Size(188, 35);
             materialButton108.TabIndex = 96;
             materialButton108.Text = "H6";
             materialButton108.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2665,12 +2665,12 @@
             materialButton107.HighEmphasis = true;
             materialButton107.Icon = (Image)resources.GetObject("materialButton107.Icon");
             materialButton107.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton107.Location = new Point(796, 335);
+            materialButton107.Location = new Point(788, 335);
             materialButton107.Margin = new Padding(4, 6, 4, 6);
             materialButton107.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton107.Name = "materialButton107";
             materialButton107.NoAccentTextColor = Color.Empty;
-            materialButton107.Size = new Size(190, 35);
+            materialButton107.Size = new Size(188, 35);
             materialButton107.TabIndex = 95;
             materialButton107.Text = "H5";
             materialButton107.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2688,12 +2688,12 @@
             materialButton106.HighEmphasis = true;
             materialButton106.Icon = (Image)resources.GetObject("materialButton106.Icon");
             materialButton106.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton106.Location = new Point(598, 335);
+            materialButton106.Location = new Point(592, 335);
             materialButton106.Margin = new Padding(4, 6, 4, 6);
             materialButton106.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton106.Name = "materialButton106";
             materialButton106.NoAccentTextColor = Color.Empty;
-            materialButton106.Size = new Size(190, 35);
+            materialButton106.Size = new Size(188, 35);
             materialButton106.TabIndex = 94;
             materialButton106.Text = "H4";
             materialButton106.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2711,12 +2711,12 @@
             materialButton105.HighEmphasis = true;
             materialButton105.Icon = (Image)resources.GetObject("materialButton105.Icon");
             materialButton105.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton105.Location = new Point(400, 335);
+            materialButton105.Location = new Point(396, 335);
             materialButton105.Margin = new Padding(4, 6, 4, 6);
             materialButton105.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton105.Name = "materialButton105";
             materialButton105.NoAccentTextColor = Color.Empty;
-            materialButton105.Size = new Size(190, 35);
+            materialButton105.Size = new Size(188, 35);
             materialButton105.TabIndex = 93;
             materialButton105.Text = "H3";
             materialButton105.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2734,12 +2734,12 @@
             materialButton104.HighEmphasis = true;
             materialButton104.Icon = (Image)resources.GetObject("materialButton104.Icon");
             materialButton104.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton104.Location = new Point(202, 335);
+            materialButton104.Location = new Point(200, 335);
             materialButton104.Margin = new Padding(4, 6, 4, 6);
             materialButton104.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton104.Name = "materialButton104";
             materialButton104.NoAccentTextColor = Color.Empty;
-            materialButton104.Size = new Size(190, 35);
+            materialButton104.Size = new Size(188, 35);
             materialButton104.TabIndex = 92;
             materialButton104.Text = "H2";
             materialButton104.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2762,7 +2762,7 @@
             materialButton103.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton103.Name = "materialButton103";
             materialButton103.NoAccentTextColor = Color.Empty;
-            materialButton103.Size = new Size(190, 35);
+            materialButton103.Size = new Size(188, 35);
             materialButton103.TabIndex = 91;
             materialButton103.Text = "H1";
             materialButton103.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2780,12 +2780,12 @@
             materialButton98.HighEmphasis = true;
             materialButton98.Icon = (Image)resources.GetObject("materialButton98.Icon");
             materialButton98.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton98.Location = new Point(1588, 288);
+            materialButton98.Location = new Point(1572, 288);
             materialButton98.Margin = new Padding(4, 6, 4, 6);
             materialButton98.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton98.Name = "materialButton98";
             materialButton98.NoAccentTextColor = Color.Empty;
-            materialButton98.Size = new Size(192, 35);
+            materialButton98.Size = new Size(191, 35);
             materialButton98.TabIndex = 86;
             materialButton98.Text = "G9";
             materialButton98.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2803,12 +2803,12 @@
             materialButton97.HighEmphasis = true;
             materialButton97.Icon = (Image)resources.GetObject("materialButton97.Icon");
             materialButton97.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton97.Location = new Point(1390, 288);
+            materialButton97.Location = new Point(1376, 288);
             materialButton97.Margin = new Padding(4, 6, 4, 6);
             materialButton97.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton97.Name = "materialButton97";
             materialButton97.NoAccentTextColor = Color.Empty;
-            materialButton97.Size = new Size(190, 35);
+            materialButton97.Size = new Size(188, 35);
             materialButton97.TabIndex = 85;
             materialButton97.Text = "G8";
             materialButton97.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2826,12 +2826,12 @@
             materialButton96.HighEmphasis = true;
             materialButton96.Icon = (Image)resources.GetObject("materialButton96.Icon");
             materialButton96.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton96.Location = new Point(1192, 288);
+            materialButton96.Location = new Point(1180, 288);
             materialButton96.Margin = new Padding(4, 6, 4, 6);
             materialButton96.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton96.Name = "materialButton96";
             materialButton96.NoAccentTextColor = Color.Empty;
-            materialButton96.Size = new Size(190, 35);
+            materialButton96.Size = new Size(188, 35);
             materialButton96.TabIndex = 84;
             materialButton96.Text = "G7";
             materialButton96.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2849,12 +2849,12 @@
             materialButton95.HighEmphasis = true;
             materialButton95.Icon = (Image)resources.GetObject("materialButton95.Icon");
             materialButton95.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton95.Location = new Point(994, 288);
+            materialButton95.Location = new Point(984, 288);
             materialButton95.Margin = new Padding(4, 6, 4, 6);
             materialButton95.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton95.Name = "materialButton95";
             materialButton95.NoAccentTextColor = Color.Empty;
-            materialButton95.Size = new Size(190, 35);
+            materialButton95.Size = new Size(188, 35);
             materialButton95.TabIndex = 83;
             materialButton95.Text = "G6";
             materialButton95.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2872,12 +2872,12 @@
             materialButton94.HighEmphasis = true;
             materialButton94.Icon = (Image)resources.GetObject("materialButton94.Icon");
             materialButton94.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton94.Location = new Point(796, 288);
+            materialButton94.Location = new Point(788, 288);
             materialButton94.Margin = new Padding(4, 6, 4, 6);
             materialButton94.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton94.Name = "materialButton94";
             materialButton94.NoAccentTextColor = Color.Empty;
-            materialButton94.Size = new Size(190, 35);
+            materialButton94.Size = new Size(188, 35);
             materialButton94.TabIndex = 82;
             materialButton94.Text = "G5";
             materialButton94.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2895,12 +2895,12 @@
             materialButton93.HighEmphasis = true;
             materialButton93.Icon = (Image)resources.GetObject("materialButton93.Icon");
             materialButton93.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton93.Location = new Point(598, 288);
+            materialButton93.Location = new Point(592, 288);
             materialButton93.Margin = new Padding(4, 6, 4, 6);
             materialButton93.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton93.Name = "materialButton93";
             materialButton93.NoAccentTextColor = Color.Empty;
-            materialButton93.Size = new Size(190, 35);
+            materialButton93.Size = new Size(188, 35);
             materialButton93.TabIndex = 81;
             materialButton93.Text = "G4";
             materialButton93.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2918,12 +2918,12 @@
             materialButton92.HighEmphasis = true;
             materialButton92.Icon = (Image)resources.GetObject("materialButton92.Icon");
             materialButton92.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton92.Location = new Point(400, 288);
+            materialButton92.Location = new Point(396, 288);
             materialButton92.Margin = new Padding(4, 6, 4, 6);
             materialButton92.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton92.Name = "materialButton92";
             materialButton92.NoAccentTextColor = Color.Empty;
-            materialButton92.Size = new Size(190, 35);
+            materialButton92.Size = new Size(188, 35);
             materialButton92.TabIndex = 80;
             materialButton92.Text = "G3";
             materialButton92.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2941,12 +2941,12 @@
             materialButton91.HighEmphasis = true;
             materialButton91.Icon = (Image)resources.GetObject("materialButton91.Icon");
             materialButton91.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton91.Location = new Point(202, 288);
+            materialButton91.Location = new Point(200, 288);
             materialButton91.Margin = new Padding(4, 6, 4, 6);
             materialButton91.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton91.Name = "materialButton91";
             materialButton91.NoAccentTextColor = Color.Empty;
-            materialButton91.Size = new Size(190, 35);
+            materialButton91.Size = new Size(188, 35);
             materialButton91.TabIndex = 79;
             materialButton91.Text = "G2";
             materialButton91.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2969,7 +2969,7 @@
             materialButton90.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton90.Name = "materialButton90";
             materialButton90.NoAccentTextColor = Color.Empty;
-            materialButton90.Size = new Size(190, 35);
+            materialButton90.Size = new Size(188, 35);
             materialButton90.TabIndex = 78;
             materialButton90.Text = "G1";
             materialButton90.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -2987,12 +2987,12 @@
             materialButton85.HighEmphasis = true;
             materialButton85.Icon = (Image)resources.GetObject("materialButton85.Icon");
             materialButton85.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton85.Location = new Point(1588, 241);
+            materialButton85.Location = new Point(1572, 241);
             materialButton85.Margin = new Padding(4, 6, 4, 6);
             materialButton85.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton85.Name = "materialButton85";
             materialButton85.NoAccentTextColor = Color.Empty;
-            materialButton85.Size = new Size(192, 35);
+            materialButton85.Size = new Size(191, 35);
             materialButton85.TabIndex = 73;
             materialButton85.Text = "F9";
             materialButton85.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3010,12 +3010,12 @@
             materialButton84.HighEmphasis = true;
             materialButton84.Icon = (Image)resources.GetObject("materialButton84.Icon");
             materialButton84.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton84.Location = new Point(1390, 241);
+            materialButton84.Location = new Point(1376, 241);
             materialButton84.Margin = new Padding(4, 6, 4, 6);
             materialButton84.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton84.Name = "materialButton84";
             materialButton84.NoAccentTextColor = Color.Empty;
-            materialButton84.Size = new Size(190, 35);
+            materialButton84.Size = new Size(188, 35);
             materialButton84.TabIndex = 72;
             materialButton84.Text = "F8";
             materialButton84.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3033,12 +3033,12 @@
             materialButton83.HighEmphasis = true;
             materialButton83.Icon = (Image)resources.GetObject("materialButton83.Icon");
             materialButton83.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton83.Location = new Point(1192, 241);
+            materialButton83.Location = new Point(1180, 241);
             materialButton83.Margin = new Padding(4, 6, 4, 6);
             materialButton83.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton83.Name = "materialButton83";
             materialButton83.NoAccentTextColor = Color.Empty;
-            materialButton83.Size = new Size(190, 35);
+            materialButton83.Size = new Size(188, 35);
             materialButton83.TabIndex = 71;
             materialButton83.Text = "F7";
             materialButton83.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3056,12 +3056,12 @@
             materialButton82.HighEmphasis = true;
             materialButton82.Icon = (Image)resources.GetObject("materialButton82.Icon");
             materialButton82.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton82.Location = new Point(994, 241);
+            materialButton82.Location = new Point(984, 241);
             materialButton82.Margin = new Padding(4, 6, 4, 6);
             materialButton82.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton82.Name = "materialButton82";
             materialButton82.NoAccentTextColor = Color.Empty;
-            materialButton82.Size = new Size(190, 35);
+            materialButton82.Size = new Size(188, 35);
             materialButton82.TabIndex = 70;
             materialButton82.Text = "F6";
             materialButton82.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3079,12 +3079,12 @@
             materialButton81.HighEmphasis = true;
             materialButton81.Icon = (Image)resources.GetObject("materialButton81.Icon");
             materialButton81.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton81.Location = new Point(796, 241);
+            materialButton81.Location = new Point(788, 241);
             materialButton81.Margin = new Padding(4, 6, 4, 6);
             materialButton81.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton81.Name = "materialButton81";
             materialButton81.NoAccentTextColor = Color.Empty;
-            materialButton81.Size = new Size(190, 35);
+            materialButton81.Size = new Size(188, 35);
             materialButton81.TabIndex = 69;
             materialButton81.Text = "F5";
             materialButton81.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3102,12 +3102,12 @@
             materialButton80.HighEmphasis = true;
             materialButton80.Icon = (Image)resources.GetObject("materialButton80.Icon");
             materialButton80.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton80.Location = new Point(598, 241);
+            materialButton80.Location = new Point(592, 241);
             materialButton80.Margin = new Padding(4, 6, 4, 6);
             materialButton80.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton80.Name = "materialButton80";
             materialButton80.NoAccentTextColor = Color.Empty;
-            materialButton80.Size = new Size(190, 35);
+            materialButton80.Size = new Size(188, 35);
             materialButton80.TabIndex = 68;
             materialButton80.Text = "F4";
             materialButton80.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3125,12 +3125,12 @@
             materialButton79.HighEmphasis = true;
             materialButton79.Icon = (Image)resources.GetObject("materialButton79.Icon");
             materialButton79.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton79.Location = new Point(400, 241);
+            materialButton79.Location = new Point(396, 241);
             materialButton79.Margin = new Padding(4, 6, 4, 6);
             materialButton79.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton79.Name = "materialButton79";
             materialButton79.NoAccentTextColor = Color.Empty;
-            materialButton79.Size = new Size(190, 35);
+            materialButton79.Size = new Size(188, 35);
             materialButton79.TabIndex = 67;
             materialButton79.Text = "F3";
             materialButton79.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3148,12 +3148,12 @@
             materialButton78.HighEmphasis = true;
             materialButton78.Icon = (Image)resources.GetObject("materialButton78.Icon");
             materialButton78.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton78.Location = new Point(202, 241);
+            materialButton78.Location = new Point(200, 241);
             materialButton78.Margin = new Padding(4, 6, 4, 6);
             materialButton78.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton78.Name = "materialButton78";
             materialButton78.NoAccentTextColor = Color.Empty;
-            materialButton78.Size = new Size(190, 35);
+            materialButton78.Size = new Size(188, 35);
             materialButton78.TabIndex = 66;
             materialButton78.Text = "F2";
             materialButton78.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3176,7 +3176,7 @@
             materialButton77.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton77.Name = "materialButton77";
             materialButton77.NoAccentTextColor = Color.Empty;
-            materialButton77.Size = new Size(190, 35);
+            materialButton77.Size = new Size(188, 35);
             materialButton77.TabIndex = 65;
             materialButton77.Text = "F1";
             materialButton77.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3194,12 +3194,12 @@
             materialButton72.HighEmphasis = true;
             materialButton72.Icon = (Image)resources.GetObject("materialButton72.Icon");
             materialButton72.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton72.Location = new Point(1588, 194);
+            materialButton72.Location = new Point(1572, 194);
             materialButton72.Margin = new Padding(4, 6, 4, 6);
             materialButton72.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton72.Name = "materialButton72";
             materialButton72.NoAccentTextColor = Color.Empty;
-            materialButton72.Size = new Size(192, 35);
+            materialButton72.Size = new Size(191, 35);
             materialButton72.TabIndex = 60;
             materialButton72.Text = "E9";
             materialButton72.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3217,12 +3217,12 @@
             materialButton71.HighEmphasis = true;
             materialButton71.Icon = (Image)resources.GetObject("materialButton71.Icon");
             materialButton71.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton71.Location = new Point(1390, 194);
+            materialButton71.Location = new Point(1376, 194);
             materialButton71.Margin = new Padding(4, 6, 4, 6);
             materialButton71.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton71.Name = "materialButton71";
             materialButton71.NoAccentTextColor = Color.Empty;
-            materialButton71.Size = new Size(190, 35);
+            materialButton71.Size = new Size(188, 35);
             materialButton71.TabIndex = 59;
             materialButton71.Text = "E8";
             materialButton71.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3240,12 +3240,12 @@
             materialButton70.HighEmphasis = true;
             materialButton70.Icon = (Image)resources.GetObject("materialButton70.Icon");
             materialButton70.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton70.Location = new Point(1192, 194);
+            materialButton70.Location = new Point(1180, 194);
             materialButton70.Margin = new Padding(4, 6, 4, 6);
             materialButton70.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton70.Name = "materialButton70";
             materialButton70.NoAccentTextColor = Color.Empty;
-            materialButton70.Size = new Size(190, 35);
+            materialButton70.Size = new Size(188, 35);
             materialButton70.TabIndex = 58;
             materialButton70.Text = "E7";
             materialButton70.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3263,12 +3263,12 @@
             materialButton69.HighEmphasis = true;
             materialButton69.Icon = (Image)resources.GetObject("materialButton69.Icon");
             materialButton69.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton69.Location = new Point(994, 194);
+            materialButton69.Location = new Point(984, 194);
             materialButton69.Margin = new Padding(4, 6, 4, 6);
             materialButton69.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton69.Name = "materialButton69";
             materialButton69.NoAccentTextColor = Color.Empty;
-            materialButton69.Size = new Size(190, 35);
+            materialButton69.Size = new Size(188, 35);
             materialButton69.TabIndex = 57;
             materialButton69.Text = "E6";
             materialButton69.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3286,12 +3286,12 @@
             materialButton68.HighEmphasis = true;
             materialButton68.Icon = (Image)resources.GetObject("materialButton68.Icon");
             materialButton68.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton68.Location = new Point(796, 194);
+            materialButton68.Location = new Point(788, 194);
             materialButton68.Margin = new Padding(4, 6, 4, 6);
             materialButton68.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton68.Name = "materialButton68";
             materialButton68.NoAccentTextColor = Color.Empty;
-            materialButton68.Size = new Size(190, 35);
+            materialButton68.Size = new Size(188, 35);
             materialButton68.TabIndex = 56;
             materialButton68.Text = "E5";
             materialButton68.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3309,12 +3309,12 @@
             materialButton67.HighEmphasis = true;
             materialButton67.Icon = (Image)resources.GetObject("materialButton67.Icon");
             materialButton67.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton67.Location = new Point(598, 194);
+            materialButton67.Location = new Point(592, 194);
             materialButton67.Margin = new Padding(4, 6, 4, 6);
             materialButton67.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton67.Name = "materialButton67";
             materialButton67.NoAccentTextColor = Color.Empty;
-            materialButton67.Size = new Size(190, 35);
+            materialButton67.Size = new Size(188, 35);
             materialButton67.TabIndex = 55;
             materialButton67.Text = "E4";
             materialButton67.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3332,12 +3332,12 @@
             materialButton66.HighEmphasis = true;
             materialButton66.Icon = (Image)resources.GetObject("materialButton66.Icon");
             materialButton66.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton66.Location = new Point(400, 194);
+            materialButton66.Location = new Point(396, 194);
             materialButton66.Margin = new Padding(4, 6, 4, 6);
             materialButton66.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton66.Name = "materialButton66";
             materialButton66.NoAccentTextColor = Color.Empty;
-            materialButton66.Size = new Size(190, 35);
+            materialButton66.Size = new Size(188, 35);
             materialButton66.TabIndex = 54;
             materialButton66.Text = "E3";
             materialButton66.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3355,12 +3355,12 @@
             materialButton65.HighEmphasis = true;
             materialButton65.Icon = (Image)resources.GetObject("materialButton65.Icon");
             materialButton65.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton65.Location = new Point(202, 194);
+            materialButton65.Location = new Point(200, 194);
             materialButton65.Margin = new Padding(4, 6, 4, 6);
             materialButton65.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton65.Name = "materialButton65";
             materialButton65.NoAccentTextColor = Color.Empty;
-            materialButton65.Size = new Size(190, 35);
+            materialButton65.Size = new Size(188, 35);
             materialButton65.TabIndex = 53;
             materialButton65.Text = "E2";
             materialButton65.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3383,7 +3383,7 @@
             materialButton64.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton64.Name = "materialButton64";
             materialButton64.NoAccentTextColor = Color.Empty;
-            materialButton64.Size = new Size(190, 35);
+            materialButton64.Size = new Size(188, 35);
             materialButton64.TabIndex = 52;
             materialButton64.Text = "E1";
             materialButton64.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3401,12 +3401,12 @@
             materialButton59.HighEmphasis = true;
             materialButton59.Icon = (Image)resources.GetObject("materialButton59.Icon");
             materialButton59.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton59.Location = new Point(1588, 147);
+            materialButton59.Location = new Point(1572, 147);
             materialButton59.Margin = new Padding(4, 6, 4, 6);
             materialButton59.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton59.Name = "materialButton59";
             materialButton59.NoAccentTextColor = Color.Empty;
-            materialButton59.Size = new Size(192, 35);
+            materialButton59.Size = new Size(191, 35);
             materialButton59.TabIndex = 47;
             materialButton59.Text = "D9";
             materialButton59.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3424,12 +3424,12 @@
             materialButton58.HighEmphasis = true;
             materialButton58.Icon = (Image)resources.GetObject("materialButton58.Icon");
             materialButton58.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton58.Location = new Point(1390, 147);
+            materialButton58.Location = new Point(1376, 147);
             materialButton58.Margin = new Padding(4, 6, 4, 6);
             materialButton58.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton58.Name = "materialButton58";
             materialButton58.NoAccentTextColor = Color.Empty;
-            materialButton58.Size = new Size(190, 35);
+            materialButton58.Size = new Size(188, 35);
             materialButton58.TabIndex = 46;
             materialButton58.Text = "D8";
             materialButton58.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3447,12 +3447,12 @@
             materialButton57.HighEmphasis = true;
             materialButton57.Icon = (Image)resources.GetObject("materialButton57.Icon");
             materialButton57.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton57.Location = new Point(1192, 147);
+            materialButton57.Location = new Point(1180, 147);
             materialButton57.Margin = new Padding(4, 6, 4, 6);
             materialButton57.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton57.Name = "materialButton57";
             materialButton57.NoAccentTextColor = Color.Empty;
-            materialButton57.Size = new Size(190, 35);
+            materialButton57.Size = new Size(188, 35);
             materialButton57.TabIndex = 45;
             materialButton57.Text = "D7";
             materialButton57.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3470,12 +3470,12 @@
             materialButton56.HighEmphasis = true;
             materialButton56.Icon = (Image)resources.GetObject("materialButton56.Icon");
             materialButton56.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton56.Location = new Point(994, 147);
+            materialButton56.Location = new Point(984, 147);
             materialButton56.Margin = new Padding(4, 6, 4, 6);
             materialButton56.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton56.Name = "materialButton56";
             materialButton56.NoAccentTextColor = Color.Empty;
-            materialButton56.Size = new Size(190, 35);
+            materialButton56.Size = new Size(188, 35);
             materialButton56.TabIndex = 44;
             materialButton56.Text = "D6";
             materialButton56.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3493,12 +3493,12 @@
             materialButton55.HighEmphasis = true;
             materialButton55.Icon = (Image)resources.GetObject("materialButton55.Icon");
             materialButton55.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton55.Location = new Point(796, 147);
+            materialButton55.Location = new Point(788, 147);
             materialButton55.Margin = new Padding(4, 6, 4, 6);
             materialButton55.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton55.Name = "materialButton55";
             materialButton55.NoAccentTextColor = Color.Empty;
-            materialButton55.Size = new Size(190, 35);
+            materialButton55.Size = new Size(188, 35);
             materialButton55.TabIndex = 43;
             materialButton55.Text = "D5";
             materialButton55.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3516,12 +3516,12 @@
             materialButton54.HighEmphasis = true;
             materialButton54.Icon = (Image)resources.GetObject("materialButton54.Icon");
             materialButton54.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton54.Location = new Point(598, 147);
+            materialButton54.Location = new Point(592, 147);
             materialButton54.Margin = new Padding(4, 6, 4, 6);
             materialButton54.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton54.Name = "materialButton54";
             materialButton54.NoAccentTextColor = Color.Empty;
-            materialButton54.Size = new Size(190, 35);
+            materialButton54.Size = new Size(188, 35);
             materialButton54.TabIndex = 42;
             materialButton54.Text = "D4";
             materialButton54.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3539,12 +3539,12 @@
             materialButton53.HighEmphasis = true;
             materialButton53.Icon = (Image)resources.GetObject("materialButton53.Icon");
             materialButton53.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton53.Location = new Point(400, 147);
+            materialButton53.Location = new Point(396, 147);
             materialButton53.Margin = new Padding(4, 6, 4, 6);
             materialButton53.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton53.Name = "materialButton53";
             materialButton53.NoAccentTextColor = Color.Empty;
-            materialButton53.Size = new Size(190, 35);
+            materialButton53.Size = new Size(188, 35);
             materialButton53.TabIndex = 41;
             materialButton53.Text = "D3";
             materialButton53.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3562,12 +3562,12 @@
             materialButton52.HighEmphasis = true;
             materialButton52.Icon = (Image)resources.GetObject("materialButton52.Icon");
             materialButton52.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton52.Location = new Point(202, 147);
+            materialButton52.Location = new Point(200, 147);
             materialButton52.Margin = new Padding(4, 6, 4, 6);
             materialButton52.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton52.Name = "materialButton52";
             materialButton52.NoAccentTextColor = Color.Empty;
-            materialButton52.Size = new Size(190, 35);
+            materialButton52.Size = new Size(188, 35);
             materialButton52.TabIndex = 40;
             materialButton52.Text = "D2";
             materialButton52.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3590,7 +3590,7 @@
             materialButton51.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton51.Name = "materialButton51";
             materialButton51.NoAccentTextColor = Color.Empty;
-            materialButton51.Size = new Size(190, 35);
+            materialButton51.Size = new Size(188, 35);
             materialButton51.TabIndex = 39;
             materialButton51.Text = "D1";
             materialButton51.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3608,12 +3608,12 @@
             materialButton46.HighEmphasis = true;
             materialButton46.Icon = (Image)resources.GetObject("materialButton46.Icon");
             materialButton46.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton46.Location = new Point(1588, 100);
+            materialButton46.Location = new Point(1572, 100);
             materialButton46.Margin = new Padding(4, 6, 4, 6);
             materialButton46.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton46.Name = "materialButton46";
             materialButton46.NoAccentTextColor = Color.Empty;
-            materialButton46.Size = new Size(192, 35);
+            materialButton46.Size = new Size(191, 35);
             materialButton46.TabIndex = 34;
             materialButton46.Text = "C9";
             materialButton46.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3631,12 +3631,12 @@
             materialButton45.HighEmphasis = true;
             materialButton45.Icon = (Image)resources.GetObject("materialButton45.Icon");
             materialButton45.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton45.Location = new Point(1390, 100);
+            materialButton45.Location = new Point(1376, 100);
             materialButton45.Margin = new Padding(4, 6, 4, 6);
             materialButton45.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton45.Name = "materialButton45";
             materialButton45.NoAccentTextColor = Color.Empty;
-            materialButton45.Size = new Size(190, 35);
+            materialButton45.Size = new Size(188, 35);
             materialButton45.TabIndex = 33;
             materialButton45.Text = "C8";
             materialButton45.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3654,12 +3654,12 @@
             materialButton44.HighEmphasis = true;
             materialButton44.Icon = (Image)resources.GetObject("materialButton44.Icon");
             materialButton44.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton44.Location = new Point(1192, 100);
+            materialButton44.Location = new Point(1180, 100);
             materialButton44.Margin = new Padding(4, 6, 4, 6);
             materialButton44.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton44.Name = "materialButton44";
             materialButton44.NoAccentTextColor = Color.Empty;
-            materialButton44.Size = new Size(190, 35);
+            materialButton44.Size = new Size(188, 35);
             materialButton44.TabIndex = 32;
             materialButton44.Text = "C7";
             materialButton44.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3677,12 +3677,12 @@
             materialButton43.HighEmphasis = true;
             materialButton43.Icon = (Image)resources.GetObject("materialButton43.Icon");
             materialButton43.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton43.Location = new Point(994, 100);
+            materialButton43.Location = new Point(984, 100);
             materialButton43.Margin = new Padding(4, 6, 4, 6);
             materialButton43.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton43.Name = "materialButton43";
             materialButton43.NoAccentTextColor = Color.Empty;
-            materialButton43.Size = new Size(190, 35);
+            materialButton43.Size = new Size(188, 35);
             materialButton43.TabIndex = 31;
             materialButton43.Text = "C6";
             materialButton43.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3700,12 +3700,12 @@
             materialButton42.HighEmphasis = true;
             materialButton42.Icon = (Image)resources.GetObject("materialButton42.Icon");
             materialButton42.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton42.Location = new Point(796, 100);
+            materialButton42.Location = new Point(788, 100);
             materialButton42.Margin = new Padding(4, 6, 4, 6);
             materialButton42.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton42.Name = "materialButton42";
             materialButton42.NoAccentTextColor = Color.Empty;
-            materialButton42.Size = new Size(190, 35);
+            materialButton42.Size = new Size(188, 35);
             materialButton42.TabIndex = 30;
             materialButton42.Text = "C5";
             materialButton42.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3723,12 +3723,12 @@
             materialButton41.HighEmphasis = true;
             materialButton41.Icon = (Image)resources.GetObject("materialButton41.Icon");
             materialButton41.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton41.Location = new Point(598, 100);
+            materialButton41.Location = new Point(592, 100);
             materialButton41.Margin = new Padding(4, 6, 4, 6);
             materialButton41.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton41.Name = "materialButton41";
             materialButton41.NoAccentTextColor = Color.Empty;
-            materialButton41.Size = new Size(190, 35);
+            materialButton41.Size = new Size(188, 35);
             materialButton41.TabIndex = 29;
             materialButton41.Text = "C4";
             materialButton41.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3746,12 +3746,12 @@
             materialButton40.HighEmphasis = true;
             materialButton40.Icon = (Image)resources.GetObject("materialButton40.Icon");
             materialButton40.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton40.Location = new Point(400, 100);
+            materialButton40.Location = new Point(396, 100);
             materialButton40.Margin = new Padding(4, 6, 4, 6);
             materialButton40.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton40.Name = "materialButton40";
             materialButton40.NoAccentTextColor = Color.Empty;
-            materialButton40.Size = new Size(190, 35);
+            materialButton40.Size = new Size(188, 35);
             materialButton40.TabIndex = 28;
             materialButton40.Text = "C3";
             materialButton40.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3769,12 +3769,12 @@
             materialButton39.HighEmphasis = true;
             materialButton39.Icon = (Image)resources.GetObject("materialButton39.Icon");
             materialButton39.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton39.Location = new Point(202, 100);
+            materialButton39.Location = new Point(200, 100);
             materialButton39.Margin = new Padding(4, 6, 4, 6);
             materialButton39.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton39.Name = "materialButton39";
             materialButton39.NoAccentTextColor = Color.Empty;
-            materialButton39.Size = new Size(190, 35);
+            materialButton39.Size = new Size(188, 35);
             materialButton39.TabIndex = 27;
             materialButton39.Text = "C2";
             materialButton39.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3797,7 +3797,7 @@
             materialButton38.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton38.Name = "materialButton38";
             materialButton38.NoAccentTextColor = Color.Empty;
-            materialButton38.Size = new Size(190, 35);
+            materialButton38.Size = new Size(188, 35);
             materialButton38.TabIndex = 26;
             materialButton38.Text = "C1";
             materialButton38.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3815,12 +3815,12 @@
             materialButton33.HighEmphasis = true;
             materialButton33.Icon = (Image)resources.GetObject("materialButton33.Icon");
             materialButton33.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton33.Location = new Point(1588, 53);
+            materialButton33.Location = new Point(1572, 53);
             materialButton33.Margin = new Padding(4, 6, 4, 6);
             materialButton33.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton33.Name = "materialButton33";
             materialButton33.NoAccentTextColor = Color.Empty;
-            materialButton33.Size = new Size(192, 35);
+            materialButton33.Size = new Size(191, 35);
             materialButton33.TabIndex = 21;
             materialButton33.Text = "B9";
             materialButton33.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3838,12 +3838,12 @@
             materialButton32.HighEmphasis = true;
             materialButton32.Icon = (Image)resources.GetObject("materialButton32.Icon");
             materialButton32.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton32.Location = new Point(1390, 53);
+            materialButton32.Location = new Point(1376, 53);
             materialButton32.Margin = new Padding(4, 6, 4, 6);
             materialButton32.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton32.Name = "materialButton32";
             materialButton32.NoAccentTextColor = Color.Empty;
-            materialButton32.Size = new Size(190, 35);
+            materialButton32.Size = new Size(188, 35);
             materialButton32.TabIndex = 20;
             materialButton32.Text = "B8";
             materialButton32.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3861,12 +3861,12 @@
             materialButton31.HighEmphasis = true;
             materialButton31.Icon = (Image)resources.GetObject("materialButton31.Icon");
             materialButton31.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton31.Location = new Point(1192, 53);
+            materialButton31.Location = new Point(1180, 53);
             materialButton31.Margin = new Padding(4, 6, 4, 6);
             materialButton31.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton31.Name = "materialButton31";
             materialButton31.NoAccentTextColor = Color.Empty;
-            materialButton31.Size = new Size(190, 35);
+            materialButton31.Size = new Size(188, 35);
             materialButton31.TabIndex = 19;
             materialButton31.Text = "B7";
             materialButton31.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3884,12 +3884,12 @@
             materialButton30.HighEmphasis = true;
             materialButton30.Icon = (Image)resources.GetObject("materialButton30.Icon");
             materialButton30.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton30.Location = new Point(994, 53);
+            materialButton30.Location = new Point(984, 53);
             materialButton30.Margin = new Padding(4, 6, 4, 6);
             materialButton30.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton30.Name = "materialButton30";
             materialButton30.NoAccentTextColor = Color.Empty;
-            materialButton30.Size = new Size(190, 35);
+            materialButton30.Size = new Size(188, 35);
             materialButton30.TabIndex = 18;
             materialButton30.Text = "B6";
             materialButton30.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3907,12 +3907,12 @@
             materialButton29.HighEmphasis = true;
             materialButton29.Icon = (Image)resources.GetObject("materialButton29.Icon");
             materialButton29.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton29.Location = new Point(796, 53);
+            materialButton29.Location = new Point(788, 53);
             materialButton29.Margin = new Padding(4, 6, 4, 6);
             materialButton29.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton29.Name = "materialButton29";
             materialButton29.NoAccentTextColor = Color.Empty;
-            materialButton29.Size = new Size(190, 35);
+            materialButton29.Size = new Size(188, 35);
             materialButton29.TabIndex = 17;
             materialButton29.Text = "B5";
             materialButton29.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3930,12 +3930,12 @@
             materialButton28.HighEmphasis = true;
             materialButton28.Icon = (Image)resources.GetObject("materialButton28.Icon");
             materialButton28.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton28.Location = new Point(598, 53);
+            materialButton28.Location = new Point(592, 53);
             materialButton28.Margin = new Padding(4, 6, 4, 6);
             materialButton28.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton28.Name = "materialButton28";
             materialButton28.NoAccentTextColor = Color.Empty;
-            materialButton28.Size = new Size(190, 35);
+            materialButton28.Size = new Size(188, 35);
             materialButton28.TabIndex = 16;
             materialButton28.Text = "B4";
             materialButton28.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3953,12 +3953,12 @@
             materialButton27.HighEmphasis = true;
             materialButton27.Icon = (Image)resources.GetObject("materialButton27.Icon");
             materialButton27.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton27.Location = new Point(400, 53);
+            materialButton27.Location = new Point(396, 53);
             materialButton27.Margin = new Padding(4, 6, 4, 6);
             materialButton27.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton27.Name = "materialButton27";
             materialButton27.NoAccentTextColor = Color.Empty;
-            materialButton27.Size = new Size(190, 35);
+            materialButton27.Size = new Size(188, 35);
             materialButton27.TabIndex = 15;
             materialButton27.Text = "B3";
             materialButton27.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -3976,12 +3976,12 @@
             materialButton26.HighEmphasis = true;
             materialButton26.Icon = (Image)resources.GetObject("materialButton26.Icon");
             materialButton26.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton26.Location = new Point(202, 53);
+            materialButton26.Location = new Point(200, 53);
             materialButton26.Margin = new Padding(4, 6, 4, 6);
             materialButton26.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton26.Name = "materialButton26";
             materialButton26.NoAccentTextColor = Color.Empty;
-            materialButton26.Size = new Size(190, 35);
+            materialButton26.Size = new Size(188, 35);
             materialButton26.TabIndex = 14;
             materialButton26.Text = "B2";
             materialButton26.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4004,7 +4004,7 @@
             materialButton25.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton25.Name = "materialButton25";
             materialButton25.NoAccentTextColor = Color.Empty;
-            materialButton25.Size = new Size(190, 35);
+            materialButton25.Size = new Size(188, 35);
             materialButton25.TabIndex = 13;
             materialButton25.Text = "B1";
             materialButton25.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4022,12 +4022,12 @@
             materialButton20.HighEmphasis = true;
             materialButton20.Icon = (Image)resources.GetObject("materialButton20.Icon");
             materialButton20.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton20.Location = new Point(1588, 6);
+            materialButton20.Location = new Point(1572, 6);
             materialButton20.Margin = new Padding(4, 6, 4, 6);
             materialButton20.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton20.Name = "materialButton20";
             materialButton20.NoAccentTextColor = Color.Empty;
-            materialButton20.Size = new Size(192, 35);
+            materialButton20.Size = new Size(191, 35);
             materialButton20.TabIndex = 8;
             materialButton20.Text = "A9";
             materialButton20.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4045,12 +4045,12 @@
             materialButton19.HighEmphasis = true;
             materialButton19.Icon = (Image)resources.GetObject("materialButton19.Icon");
             materialButton19.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton19.Location = new Point(1390, 6);
+            materialButton19.Location = new Point(1376, 6);
             materialButton19.Margin = new Padding(4, 6, 4, 6);
             materialButton19.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton19.Name = "materialButton19";
             materialButton19.NoAccentTextColor = Color.Empty;
-            materialButton19.Size = new Size(190, 35);
+            materialButton19.Size = new Size(188, 35);
             materialButton19.TabIndex = 7;
             materialButton19.Text = "A8";
             materialButton19.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4068,12 +4068,12 @@
             materialButton18.HighEmphasis = true;
             materialButton18.Icon = (Image)resources.GetObject("materialButton18.Icon");
             materialButton18.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton18.Location = new Point(1192, 6);
+            materialButton18.Location = new Point(1180, 6);
             materialButton18.Margin = new Padding(4, 6, 4, 6);
             materialButton18.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton18.Name = "materialButton18";
             materialButton18.NoAccentTextColor = Color.Empty;
-            materialButton18.Size = new Size(190, 35);
+            materialButton18.Size = new Size(188, 35);
             materialButton18.TabIndex = 6;
             materialButton18.Text = "A7";
             materialButton18.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4091,12 +4091,12 @@
             materialButton17.HighEmphasis = true;
             materialButton17.Icon = (Image)resources.GetObject("materialButton17.Icon");
             materialButton17.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton17.Location = new Point(994, 6);
+            materialButton17.Location = new Point(984, 6);
             materialButton17.Margin = new Padding(4, 6, 4, 6);
             materialButton17.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton17.Name = "materialButton17";
             materialButton17.NoAccentTextColor = Color.Empty;
-            materialButton17.Size = new Size(190, 35);
+            materialButton17.Size = new Size(188, 35);
             materialButton17.TabIndex = 5;
             materialButton17.Text = "A6";
             materialButton17.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4114,12 +4114,12 @@
             materialButton16.HighEmphasis = true;
             materialButton16.Icon = (Image)resources.GetObject("materialButton16.Icon");
             materialButton16.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton16.Location = new Point(796, 6);
+            materialButton16.Location = new Point(788, 6);
             materialButton16.Margin = new Padding(4, 6, 4, 6);
             materialButton16.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton16.Name = "materialButton16";
             materialButton16.NoAccentTextColor = Color.Empty;
-            materialButton16.Size = new Size(190, 35);
+            materialButton16.Size = new Size(188, 35);
             materialButton16.TabIndex = 4;
             materialButton16.Text = "A5";
             materialButton16.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4137,12 +4137,12 @@
             materialButton15.HighEmphasis = true;
             materialButton15.Icon = (Image)resources.GetObject("materialButton15.Icon");
             materialButton15.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton15.Location = new Point(598, 6);
+            materialButton15.Location = new Point(592, 6);
             materialButton15.Margin = new Padding(4, 6, 4, 6);
             materialButton15.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton15.Name = "materialButton15";
             materialButton15.NoAccentTextColor = Color.Empty;
-            materialButton15.Size = new Size(190, 35);
+            materialButton15.Size = new Size(188, 35);
             materialButton15.TabIndex = 3;
             materialButton15.Text = "A4";
             materialButton15.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4160,12 +4160,12 @@
             materialButton14.HighEmphasis = true;
             materialButton14.Icon = (Image)resources.GetObject("materialButton14.Icon");
             materialButton14.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton14.Location = new Point(400, 6);
+            materialButton14.Location = new Point(396, 6);
             materialButton14.Margin = new Padding(4, 6, 4, 6);
             materialButton14.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton14.Name = "materialButton14";
             materialButton14.NoAccentTextColor = Color.Empty;
-            materialButton14.Size = new Size(190, 35);
+            materialButton14.Size = new Size(188, 35);
             materialButton14.TabIndex = 2;
             materialButton14.Text = "A3";
             materialButton14.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4183,12 +4183,12 @@
             materialButton13.HighEmphasis = true;
             materialButton13.Icon = (Image)resources.GetObject("materialButton13.Icon");
             materialButton13.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            materialButton13.Location = new Point(202, 6);
+            materialButton13.Location = new Point(200, 6);
             materialButton13.Margin = new Padding(4, 6, 4, 6);
             materialButton13.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialButton13.Name = "materialButton13";
             materialButton13.NoAccentTextColor = Color.Empty;
-            materialButton13.Size = new Size(190, 35);
+            materialButton13.Size = new Size(188, 35);
             materialButton13.TabIndex = 1;
             materialButton13.Text = "A2";
             materialButton13.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4211,7 +4211,7 @@
             btnSeat1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnSeat1.Name = "btnSeat1";
             btnSeat1.NoAccentTextColor = Color.Empty;
-            btnSeat1.Size = new Size(190, 35);
+            btnSeat1.Size = new Size(188, 35);
             btnSeat1.TabIndex = 0;
             btnSeat1.Text = "A1";
             btnSeat1.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -4230,7 +4230,7 @@
             materialLabel28.Location = new Point(24, 64);
             materialLabel28.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             materialLabel28.Name = "materialLabel28";
-            materialLabel28.Size = new Size(1784, 19);
+            materialLabel28.Size = new Size(1767, 19);
             materialLabel28.TabIndex = 3;
             materialLabel28.Text = "Pantalla de la sala";
             materialLabel28.TextAlign = ContentAlignment.TopCenter;
@@ -4251,7 +4251,7 @@
             tableLayoutPanel8.RowCount = 2;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle());
-            tableLayoutPanel8.Size = new Size(1784, 304);
+            tableLayoutPanel8.Size = new Size(1767, 304);
             tableLayoutPanel8.TabIndex = 25;
             // 
             // flowLayoutPanel2
@@ -4262,7 +4262,7 @@
             flowLayoutPanel2.Dock = DockStyle.Top;
             flowLayoutPanel2.Location = new Point(3, 259);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(886, 37);
+            flowLayoutPanel2.Size = new Size(877, 37);
             flowLayoutPanel2.TabIndex = 16;
             // 
             // cbToS
@@ -4308,7 +4308,7 @@
             panel18.Dock = DockStyle.Fill;
             panel18.Location = new Point(3, 3);
             panel18.Name = "panel18";
-            panel18.Size = new Size(886, 250);
+            panel18.Size = new Size(877, 250);
             panel18.TabIndex = 0;
             // 
             // lblSummaryRoomType
@@ -4398,9 +4398,9 @@
             panel27.Controls.Add(lblSummarySurname);
             panel27.Controls.Add(lblSummaryName);
             panel27.Dock = DockStyle.Fill;
-            panel27.Location = new Point(895, 3);
+            panel27.Location = new Point(886, 3);
             panel27.Name = "panel27";
-            panel27.Size = new Size(886, 250);
+            panel27.Size = new Size(878, 250);
             panel27.TabIndex = 1;
             // 
             // lblSummaryPaymentMethod
@@ -4491,7 +4491,7 @@
             btnFinish.HighEmphasis = true;
             btnFinish.Icon = null;
             btnFinish.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnFinish.Location = new Point(1686, 262);
+            btnFinish.Location = new Point(1669, 262);
             btnFinish.Margin = new Padding(4, 6, 4, 6);
             btnFinish.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnFinish.Name = "btnFinish";
@@ -4521,7 +4521,7 @@
             mepSummary.Name = "mepSummary";
             mepSummary.Padding = new Padding(24, 64, 24, 16);
             mepSummary.ShowValidationButtons = false;
-            mepSummary.Size = new Size(1832, 384);
+            mepSummary.Size = new Size(1815, 384);
             mepSummary.TabIndex = 5;
             mepSummary.Title = "Resumen de compra";
             mepSummary.ValidationButtonText = "Aceptar";
@@ -4539,7 +4539,7 @@
             Controls.Add(mepBillboard);
             Name = "Booking";
             Padding = new Padding(3, 0, 3, 3);
-            Size = new Size(1838, 628);
+            Size = new Size(1821, 628);
             Load += Booking_Load;
             mepPersonalData.ResumeLayout(false);
             mepPersonalData.PerformLayout();
