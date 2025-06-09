@@ -17,11 +17,11 @@
 <body>
     <nav>
         <div class="nav-content">
-            <a href="/" class="logo"><img class="logo" src="./assets/images/logo-white-outline.webp"
-                    alt="Logo Premium Quality" /></a>
-            <div class="search">
-                <input type="search">
-                <button>Buscar</button>
+            <div class="logo">
+                <a href="/">
+                    <img class="logo-image" src="./assets/images/logo-black-outline.webp"
+                        alt="Logo Premium Quality" /></a>
+                <h1><a href="/">Premium Quality</a></h1>
             </div>
             <div class="options">
                 <a href="#">Página Principal</a>
@@ -32,9 +32,18 @@
     </nav>
     <main>
         <section class="hero">
+            <video autoplay muted loop class="hero-video">
+                <source src="./assets/videos/hero.webm" type="video/webm">
+                Tu navegador no soporta el video.
+            </video>
 
+            <div class="hero-text">
+                <h1>Concesionaria Premium Quality</h1>
+                <p>Encuentra el auto de tus sueños con nosotros.</p>
+            </div>
         </section>
         <section class="catalog">
+
             <script type="module">
                 import { displayCars } from './modules/catalog.js';
                 displayCars();

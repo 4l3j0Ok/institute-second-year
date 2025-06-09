@@ -1,7 +1,7 @@
 /* global variables */
 :root {
-    --accent-color: #4b00a0;
-    --alt-accent-color: #3c0080;
+    --accent-color: #004d99;
+    --alt-accent-color: #005580;
     --background-color: #ededed;
     --border-radius: .5em;
     --box-shadow: 0 0 .5em rgba(0, 0, 0, 0.4);
@@ -20,15 +20,16 @@ body {
 
 nav {
     width: 100%;
-    background-color: var(--accent-color);
-    color: white;
+    background-color: white;
+    color: black;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
-    height: 5em;
+    height: 4em;
     box-shadow: var(--box-shadow);
+    z-index: 1000;
 }
 
 .nav-content {
@@ -42,12 +43,18 @@ nav {
 }
 
 .nav-content .logo {
-    height: 100%;
+    display: flex;
+    align-items: center;
 }
+
+.nav-content .logo-image {
+    height: 3em;
+}
+
 
 .nav-content a {
     margin-right: 2em;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -79,7 +86,6 @@ nav {
 }
 
 main {
-    margin-top: 6em;
     width: 80%;
     display: flex;
     align-items: center;
