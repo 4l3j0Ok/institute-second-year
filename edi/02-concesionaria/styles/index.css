@@ -1,11 +1,10 @@
-.catalog {
+.catalog-cars {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2em;
-    justify-content: space-between;
-    margin-top: 5em;
+    justify-content: space-evenly;
 }
 
 section {
@@ -13,6 +12,7 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 5em;
 }
 
 .car {
@@ -41,26 +41,73 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-bottom: 5em;
 }
 
 .hero-video {
     position: absolute;
-    /* top: 0;
-    left: 0; */
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+    box-shadow: var(--box-shadow);
 }
 
 .hero .hero-text {
     position: relative;
-    z-index: 2;
     display: flex;
     align-items: center;
     flex-direction: column;
     color: white;
-    /* Para mejor contraste sobre el video */
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-    /* Opcional: mejora la legibilidad */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .hero-text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+
+.service-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 1em;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    padding-right: 4em;
+    padding-left: 4em;
+}
+
+.service-card button {
+    background-color: white;
+    color: var(--accent-color);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero .hero-text h1 {
+        font-size: 2em;
+    }
+
 }

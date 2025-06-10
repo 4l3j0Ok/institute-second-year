@@ -182,7 +182,7 @@ export const cars = [
 ];
 
 export function displayCars() {
-    const container = document.querySelector(".catalog");
+    const container = document.querySelector(".catalog-cars");
     container.innerHTML = "";
     cars.forEach(car => {
         const div = document.createElement("div");
