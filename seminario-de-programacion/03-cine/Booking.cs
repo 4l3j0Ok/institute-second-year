@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _05_cine
+namespace _03_cine
 {
     public partial class Booking : UserControl
     {
@@ -379,7 +379,7 @@ namespace _05_cine
             SuccessPurchase successPurchase = new SuccessPurchase(mainForm);
             successPurchase.Dock = DockStyle.Fill;
             successPurchase.Show();
-            
+
             mainForm.MainPanel.Controls.Add(successPurchase);
         }
     }

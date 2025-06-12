@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ReaLTaiizor.Forms;
-namespace _05_cine
+namespace _03_cine
 {
     public partial class Landing : UserControl
     {

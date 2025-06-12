@@ -1,4 +1,4 @@
-namespace _04_listbox_a_data_grid_view
+namespace _03_cine
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace _04_listbox_a_data_grid_view
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace _05_cine
+namespace _03_cine
 {
     public partial class SuccessPurchase : UserControl
     {
