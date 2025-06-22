@@ -2,6 +2,7 @@ using Microsoft.Data.SqlClient;
 using ReaLTaiizor.Forms;
 using System.Data;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace _04_conexion_bbdd
 {
@@ -39,16 +40,16 @@ namespace _04_conexion_bbdd
             dgvData.DataSource = dt;
         }
 
-        private void dgvData_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvData_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //obtenemos el seleccionado y sacamos datos por el nombre de la columna
             DataGridViewRow selectedRow = dgvData.Rows[e.RowIndex];
-            string dni = selectedRow.Cells["DNI"].Value.ToString();
-            string nombre = selectedRow.Cells["Nombre"].Value.ToString();
-            string apellido = selectedRow.Cells["Apellido"].Value.ToString();
-            string direccion = selectedRow.Cells["Direccion"].Value.ToString();
-            string email = selectedRow.Cells["Email"].Value.ToString();
-            string telefono = selectedRow.Cells["Telefono"].Value.ToString();
+            if (selectedRow == null || selectedRow.IsNewRow) return;
+            string dni = selectedRow.Cells["DNI"].Value.ToString() ?? string.Empty;
+            string nombre = selectedRow.Cells["Nombre"].Value.ToString() ?? string.Empty;
+            string apellido = selectedRow.Cells["Apellido"].Value.ToString() ?? string.Empty;
+            string direccion = selectedRow.Cells["Direccion"].Value.ToString() ?? string.Empty;
+            string email = selectedRow.Cells["Email"].Value.ToString() ?? string.Empty;
+            string telefono = selectedRow.Cells["Telefono"].Value.ToString() ?? string.Empty;
 
             tbDNI.Text = dni;
             tbName.Text = nombre;
@@ -57,9 +58,12 @@ namespace _04_conexion_bbdd
             tbEmail.Text = email;
             tbPhone.Text = telefono;
 
+            btnDelete.Enabled = true;
+            btnCancel.Enabled = true;
+            btnSave.Text = "Actualizar";
             this.updating = true;
             this.oldDNI = dni;
-            btnSave.Text = "Actualizar";
+            return;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -93,9 +97,70 @@ namespace _04_conexion_bbdd
                 string.IsNullOrEmpty(tbSurname.Text) ||
                 string.IsNullOrEmpty(tbAddress.Text) ||
                 string.IsNullOrEmpty(tbEmail.Text) ||
-                string.IsNullOrEmpty(tbPhone.Text)))
+                string.IsNullOrEmpty(tbPhone.Text) ||
+                tbDNI.Text.Length < 8 ||
+                tbPhone.Text.Length < 10))
                 btnSave.Enabled = true;
             else btnSave.Enabled = false;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "¿Estás seguro de que quieres eliminar este registro?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+            if (result != DialogResult.Yes) return;
+            string dni = this.oldDNI;
+            string query = File.ReadAllText(".\\queries\\05-delete.sql");
+            query = query.Replace("{ DNI }", dni);
+            Database.ExecuteNonQuery(query);
+            MessageBox.Show("Datos eliminados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadDataGridView();
+            ClearForm();
+        }
+
+        private void tbDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Regex regex = new Regex(@"^[0-9]{0,8}?$");
+            if (!regex.IsMatch(tbDNI.Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Evita que se ingrese el carácter no permitido
+            }
+        }
+
+        private void tbPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Regex regex = new Regex(@"^[0-9]{0,13}?$");
+            if (!regex.IsMatch(tbPhone.Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Evita que se ingrese el carácter no permitido
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+        }
+
+        private void ClearForm()
+        {
+            btnCancel.Enabled = false;
+            btnDelete.Enabled = false;
+            btnSave.Enabled = false;
+            btnSave.Text = "Guardar";
+            this.updating = false;
+            this.oldDNI = string.Empty;
+            tbDNI.Clear();
+            tbName.Clear();
+            tbSurname.Clear();
+            tbAddress.Clear();
+            tbEmail.Clear();
+            tbPhone.Clear();
+            tbAddress.Clear();
+            tbDNI.Focus();
         }
     }
 }
