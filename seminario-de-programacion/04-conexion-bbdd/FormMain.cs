@@ -10,6 +10,7 @@ namespace _04_conexion_bbdd
     {
         private bool updating = false;
         private string oldDNI = "";
+
         public FormMain()
         {
             InitializeComponent();
@@ -50,20 +51,32 @@ namespace _04_conexion_bbdd
             string direccion = selectedRow.Cells["Direccion"].Value.ToString() ?? string.Empty;
             string email = selectedRow.Cells["Email"].Value.ToString() ?? string.Empty;
             string telefono = selectedRow.Cells["Telefono"].Value.ToString() ?? string.Empty;
-
             tbDNI.Text = dni;
             tbName.Text = nombre;
             tbSurname.Text = apellido;
             tbAddress.Text = direccion;
             tbEmail.Text = email;
             tbPhone.Text = telefono;
-
             btnDelete.Enabled = true;
             btnCancel.Enabled = true;
             btnSave.Text = "Actualizar";
             this.updating = true;
             this.oldDNI = dni;
             return;
+        }
+
+        private void tb_TextChanged(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(tbDNI.Text) ||
+                string.IsNullOrEmpty(tbName.Text) ||
+                string.IsNullOrEmpty(tbSurname.Text) ||
+                string.IsNullOrEmpty(tbAddress.Text) ||
+                string.IsNullOrEmpty(tbEmail.Text) ||
+                string.IsNullOrEmpty(tbPhone.Text) ||
+                tbDNI.Text.Length < 8 ||
+                tbPhone.Text.Length < 10))
+                btnSave.Enabled = true;
+            else btnSave.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -90,20 +103,6 @@ namespace _04_conexion_bbdd
             LoadDataGridView();
         }
 
-        private void tb_TextChanged(object sender, EventArgs e)
-        {
-            if (!(string.IsNullOrEmpty(tbDNI.Text) ||
-                string.IsNullOrEmpty(tbName.Text) ||
-                string.IsNullOrEmpty(tbSurname.Text) ||
-                string.IsNullOrEmpty(tbAddress.Text) ||
-                string.IsNullOrEmpty(tbEmail.Text) ||
-                string.IsNullOrEmpty(tbPhone.Text) ||
-                tbDNI.Text.Length < 8 ||
-                tbPhone.Text.Length < 10))
-                btnSave.Enabled = true;
-            else btnSave.Enabled = false;
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
@@ -120,24 +119,6 @@ namespace _04_conexion_bbdd
             MessageBox.Show("Datos eliminados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadDataGridView();
             ClearForm();
-        }
-
-        private void tbDNI_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Regex regex = new Regex(@"^[0-9]{0,8}?$");
-            if (!regex.IsMatch(tbDNI.Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true; // Evita que se ingrese el carácter no permitido
-            }
-        }
-
-        private void tbPhone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Regex regex = new Regex(@"^[0-9]{0,13}?$");
-            if (!regex.IsMatch(tbPhone.Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true; // Evita que se ingrese el carácter no permitido
-            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -161,6 +142,24 @@ namespace _04_conexion_bbdd
             tbPhone.Clear();
             tbAddress.Clear();
             tbDNI.Focus();
+        }
+
+        private void tbDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Regex regex = new Regex(@"^[0-9]{0,8}?$");
+            if (!regex.IsMatch(tbDNI.Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Evita que se ingrese el carácter no permitido
+            }
+        }
+
+        private void tbPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Regex regex = new Regex(@"^[0-9]{0,13}?$");
+            if (!regex.IsMatch(tbPhone.Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Evita que se ingrese el carácter no permitido
+            }
         }
     }
 }
