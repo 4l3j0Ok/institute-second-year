@@ -55,11 +55,15 @@
         </section>
         <section class="catalog">
             <h2>Catálogo</h2>
-            <div class="catalog-cars">
-                <script type="module">
-                    import { displayCars } from './modules/catalog.js';
-                    displayCars();
-                </script>
+            <div class="catalog-content">
+                <button id="prevButton"></button>
+                <div class="catalog-cars">
+                    <script type="module">
+                        import { displayCars } from './modules/catalog.js';
+                        displayCars();
+                    </script>
+                </div>
+                <button id="nextButton"></button>
             </div>
         </section>
     </main>

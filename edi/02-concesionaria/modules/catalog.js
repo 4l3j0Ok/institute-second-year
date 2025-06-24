@@ -203,3 +203,10 @@ export function displayCars() {
         container.appendChild(div);
     });
 }
+
+const carrousel = document.getElementById("carrousel");
+const nextButton = document.getElementById("next");
+const prevButton = document.getElementById("prev");
+const items = document.querySelectorAll(".car-link");
+let currentIndex = 0;
+
