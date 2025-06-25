@@ -183,6 +183,8 @@ export const cars = [
 
 export function displayCars() {
     const container = document.querySelector(".catalog-cars");
+    const prevButton = document.querySelector("#prev-button");
+    const nextButton = document.querySelector("#next-button");
     container.innerHTML = "";
     cars.forEach(car => {
         const div = document.createElement("div");
@@ -201,12 +203,19 @@ export function displayCars() {
             </a>
         `;
         container.appendChild(div);
+    })
+    prevButton.addEventListener('click', () => {
+        container.scrollBy({
+            left: -300,
+            behavior: 'smooth'
+        });
+    });
+    nextButton.addEventListener('click', () => {
+        container.scrollBy({
+            left: 300,
+            behavior: 'smooth'
+        });
     });
 }
 
-const carrousel = document.getElementById("carrousel");
-const nextButton = document.getElementById("next");
-const prevButton = document.getElementById("prev");
-const items = document.querySelectorAll(".car-link");
-let currentIndex = 0;
 

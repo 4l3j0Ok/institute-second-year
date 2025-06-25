@@ -37,17 +37,18 @@
                 displayCar();
             </script>
         </section>
+        <section class="contact">
+            <h2>Contacto</h2>
+            <form class="contact-form">
+                <label for="name">Nombre y apellido:</label>
+                <input type="text" name="name" placeholder="Juan Pérez" required id="name">
+                <label for="message">Mensaje:</label>
+                <textarea name="message" placeholder="Hola, quisiera contactarme por..." required
+                    id="message"></textarea>
+                <button type="submit" onclick="handleClick(event)">Enviar</button>
+            </form>
+        </section>
     </main>
-    <section class="contact">
-        <h2>Contacto</h2>
-        <form class="contact-form">
-            <label for="name">Nombre y apellido:</label>
-            <input type="text" name="name" placeholder="Juan Pérez" required id="name">
-            <label for="message">Mensaje:</label>
-            <textarea name="message" placeholder="Hola, quisiera contactarme por..." required id="message"></textarea>
-            <button type="submit" onclick="handleClick(event)">Enviar</button>
-        </form>
-    </section>
     <footer>
         <div class="footer-content">
             <p>© 2021 Premium Quality.<br>Todos los derechos reservados.</p>

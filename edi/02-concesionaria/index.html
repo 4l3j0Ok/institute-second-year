@@ -12,6 +12,7 @@
         import { handleClick } from './modules/contact.js';
         window.handleClick = handleClick;
     </script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
 </head>
 
 <body>
@@ -56,27 +57,30 @@
         <section class="catalog">
             <h2>Catálogo</h2>
             <div class="catalog-content">
-                <button id="prevButton"></button>
+                <button class="arrow-button" id="prev-button"><iconify-icon
+                        icon="bxs:left-arrow"></iconify-icon></button>
                 <div class="catalog-cars">
                     <script type="module">
                         import { displayCars } from './modules/catalog.js';
                         displayCars();
                     </script>
                 </div>
-                <button id="nextButton"></button>
+                <button class="arrow-button" id="next-button"><iconify-icon
+                        icon="bxs:right-arrow"></iconify-icon></button>
             </div>
         </section>
+        <section class="contact">
+            <h2>Contacto</h2>
+            <form class="contact-form">
+                <label for="name">Nombre y apellido:</label>
+                <input type="text" name="name" placeholder="Juan Pérez" required id="name">
+                <label for="message">Mensaje:</label>
+                <textarea name="message" placeholder="Hola, quisiera contactarme por..." required
+                    id="message"></textarea>
+                <button type="submit" onclick="handleClick(event)">Enviar</button>
+            </form>
+        </section>
     </main>
-    <section class="contact">
-        <h2>Contacto</h2>
-        <form class="contact-form">
-            <label for="name">Nombre y apellido:</label>
-            <input type="text" name="name" placeholder="Juan Pérez" required id="name">
-            <label for="message">Mensaje:</label>
-            <textarea name="message" placeholder="Hola, quisiera contactarme por..." required id="message"></textarea>
-            <button type="submit" onclick="handleClick(event)">Enviar</button>
-        </form>
-    </section>
     <footer>
         <div class="footer-content">
             <p>© 2025 Premium Quality.<br>Todos los derechos reservados.</p>
