@@ -13,6 +13,11 @@
     margin-bottom: 2em;
 }
 
+.car .old-price {
+    text-decoration: line-through;
+    color: var(--red-color);
+}
+
 .car-header {
     display: flex;
     flex-direction: row;

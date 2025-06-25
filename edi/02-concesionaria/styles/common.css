@@ -1,8 +1,11 @@
 /* global variables */
 :root {
-    --accent-color: #004d99;
-    --alt-accent-color: #003161;
-    --background-color: #ededed;
+    --primary-color: #0357AF;
+    --secondary-color: #0180CC;
+    --accent-color: #E4815A;
+    --alt-accent-color: #F2A07B;
+    --red-color: #FF4C4C;
+    --background-color: #E6FBFA;
     --border-radius: .5em;
     --box-shadow: 0 0 .5em rgba(0, 0, 0, 0.4);
 }
@@ -16,6 +19,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    ::selection {
+        background-color: var(--accent-color);
+        color: white;
+    }
+
+    ::-moz-selection {
+        background-color: var(--accent-color);
+        color: white;
+    }
 }
 
 nav {
@@ -62,29 +75,6 @@ nav {
     margin-right: 0;
 }
 
-.search {
-    display: flex;
-}
-
-.search input {
-    width: 60%;
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
-    border: none;
-    outline: none;
-    padding-left: 1em
-}
-
-.search button {
-    background-color: white;
-    color: var(--accent-color);
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-}
-
-.search button:hover {
-    background-color: var(--alt-accent-color);
-    color: white;
-}
-
 main {
     width: 80%;
     display: flex;
@@ -100,7 +90,7 @@ main {
 }
 
 button {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: var(--border-radius);
@@ -109,7 +99,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--alt-accent-color);
+    background-color: var(--secondary-color);
 }
 
 .contact-form {

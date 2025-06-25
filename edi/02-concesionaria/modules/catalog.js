@@ -191,7 +191,7 @@ export function displayCars() {
         let price = `<b>Precio</b>: $${car.price}`;
         let endpoint = `./cars/${car.brand.toLowerCase()}-${car.model.toLowerCase()}.html`;
         if (car.promotionPrice !== undefined) {
-            price = `<b>Precio</b>: <span style="color:red;"><s>$${car.price}</s></span> $${car.promotionPrice}`;
+            price = `<b>Precio</b>: <span class="old-price"><s>$${car.price}</s></span> $${car.promotionPrice}`;
         }
         div.innerHTML = `
             <a href="${endpoint}" class="car-link">

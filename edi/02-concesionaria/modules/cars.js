@@ -7,13 +7,13 @@ export function displayCar() {
     const carId = fileName.replace('.html', '');
     cars.forEach(car => {
         if (car.id != carId) { return; }
-        let price = `<span style="color: green">${car.price}</span>`;
+        let price = `<span>${car.price}</span>`;
         if (car.promotionPrice !== undefined) {
-            price = `<span style="color:red;">
+            price = `<span class="old-price">
                         <s>$${car.price}</s>
                     </span>
                     <br>
-                    <b><span style="color: green; font-size: 1.3rem">
+                    <b><span class="price">
                         $${car.promotionPrice}
                     </span></b>`;
         }
