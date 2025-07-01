@@ -5,9 +5,13 @@
     --accent-color: #E4815A;
     --alt-accent-color: #F2A07B;
     --red-color: #FF4C4C;
-    --background-color: #E6FBFA;
+    --background-color: #EEEEEE;
     --border-radius: .5em;
     --box-shadow: 0 0 .5em rgba(0, 0, 0, 0.4);
+}
+
+@view-transition {
+    navigation: auto
 }
 
 html {
@@ -80,6 +84,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 3em;
 }
 
 .contact {

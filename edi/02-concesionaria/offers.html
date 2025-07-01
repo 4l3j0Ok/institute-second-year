@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script type="module" src="./modules/catalog.js"></script>
+    <script type="module">
+        import { handleClick } from './modules/contact.js';
+        window.handleClick = handleClick;
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="/">
+                    <img class="logo-image" src="./assets/images/logo-black-outline.webp"
+                        alt="Logo Premium Quality" /></a>
+                <h1><a href="/">Premium Quality</a></h1>
+            </div>
+            <div class="options">
+                <a href="/">Página Principal</a>
+                <a href="/financing.html">Financiación</a>
+                <a href="/offers.html">Ofertas</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="content">
+            <h1>Página en construcción 👷‍♂️...</h1>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Premium Quality.<br>Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+<style>
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65vh;
+        text-align: center;
+    }
+</style>
+
+</html>
