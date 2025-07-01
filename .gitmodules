@@ -1,3 +1,6 @@
 [submodule "programacion-orientada-a-objetos/99-prime-systems"]
 	path = programacion-orientada-a-objetos/99-prime-systems
 	url = git@github.com:4l3j0Ok/prime-systems.git
+[submodule "analisis-de-sistemas/01-premium-quality"]
+	path = analisis-de-sistemas/01-premium-quality
+	url = https://github.com/FerLalle/PremiumQuality_AnalisisSistemas.git
