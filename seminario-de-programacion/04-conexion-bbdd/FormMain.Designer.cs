@@ -32,6 +32,7 @@
             dgvData = new DataGridView();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
+            btnCancel = new ReaLTaiizor.Controls.MaterialButton();
             btnSave = new ReaLTaiizor.Controls.MaterialButton();
             btnDelete = new ReaLTaiizor.Controls.MaterialButton();
             panel2 = new Panel();
@@ -47,7 +48,6 @@
             materialLabel2 = new ReaLTaiizor.Controls.MaterialLabel();
             tbDNI = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
-            btnCancel = new ReaLTaiizor.Controls.MaterialButton();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             tableLayoutPanel3.SuspendLayout();
@@ -117,6 +117,29 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.Size = new Size(308, 44);
             tableLayoutPanel2.TabIndex = 16;
+            // 
+            // btnCancel
+            // 
+            btnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnCancel.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnCancel.Depth = 0;
+            btnCancel.Dock = DockStyle.Top;
+            btnCancel.Enabled = false;
+            btnCancel.HighEmphasis = true;
+            btnCancel.Icon = null;
+            btnCancel.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnCancel.Location = new Point(209, 5);
+            btnCancel.Margin = new Padding(5);
+            btnCancel.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnCancel.Name = "btnCancel";
+            btnCancel.NoAccentTextColor = Color.Empty;
+            btnCancel.Size = new Size(94, 34);
+            btnCancel.TabIndex = 16;
+            btnCancel.Text = "Cancelar";
+            btnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnCancel.UseAccentColor = false;
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
@@ -350,6 +373,7 @@
             tbSurname.TextAlign = HorizontalAlignment.Left;
             tbSurname.TrailingIcon = null;
             tbSurname.UseSystemPasswordChar = false;
+            tbSurname.KeyPress += tbOnlyChar_KeyPress;
             tbSurname.TextChanged += tb_TextChanged;
             // 
             // materialLabel3
@@ -395,6 +419,7 @@
             tbName.TextAlign = HorizontalAlignment.Left;
             tbName.TrailingIcon = null;
             tbName.UseSystemPasswordChar = false;
+            tbName.KeyPress += tbOnlyChar_KeyPress;
             tbName.TextChanged += tb_TextChanged;
             // 
             // materialLabel2
@@ -455,29 +480,6 @@
             materialLabel1.Size = new Size(27, 19);
             materialLabel1.TabIndex = 13;
             materialLabel1.Text = "DNI";
-            // 
-            // btnCancel
-            // 
-            btnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnCancel.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnCancel.Depth = 0;
-            btnCancel.Dock = DockStyle.Top;
-            btnCancel.Enabled = false;
-            btnCancel.HighEmphasis = true;
-            btnCancel.Icon = null;
-            btnCancel.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnCancel.Location = new Point(209, 5);
-            btnCancel.Margin = new Padding(5);
-            btnCancel.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            btnCancel.Name = "btnCancel";
-            btnCancel.NoAccentTextColor = Color.Empty;
-            btnCancel.Size = new Size(94, 34);
-            btnCancel.TabIndex = 16;
-            btnCancel.Text = "Cancelar";
-            btnCancel.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Outlined;
-            btnCancel.UseAccentColor = false;
-            btnCancel.UseVisualStyleBackColor = true;
-            btnCancel.Click += btnCancel_Click;
             // 
             // FormMain
             // 

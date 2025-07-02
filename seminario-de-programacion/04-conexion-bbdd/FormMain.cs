@@ -74,7 +74,8 @@ namespace _04_conexion_bbdd
                 string.IsNullOrEmpty(tbEmail.Text) ||
                 string.IsNullOrEmpty(tbPhone.Text) ||
                 tbDNI.Text.Length < 8 ||
-                tbPhone.Text.Length < 10))
+                tbPhone.Text.Length < 10 ||
+                !tbEmail.Text.Contains("@")))
                 btnSave.Enabled = true;
             else btnSave.Enabled = false;
         }
@@ -149,7 +150,7 @@ namespace _04_conexion_bbdd
             Regex regex = new Regex(@"^[0-9]{0,8}?$");
             if (!regex.IsMatch(tbDNI.Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
             {
-                e.Handled = true; // Evita que se ingrese el carácter no permitido
+                e.Handled = true;
             }
         }
 
@@ -158,7 +159,16 @@ namespace _04_conexion_bbdd
             Regex regex = new Regex(@"^[0-9]{0,13}?$");
             if (!regex.IsMatch(tbPhone.Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
             {
-                e.Handled = true; // Evita que se ingrese el carácter no permitido
+                e.Handled = true;
+            }
+        }
+
+        private void tbOnlyChar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Regex regex = new Regex(@"^[a-zA-Z\s]{0,50}?$");
+            if (!regex.IsMatch(((TextBox)sender).Text + e.KeyChar.ToString()) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
             }
         }
     }
