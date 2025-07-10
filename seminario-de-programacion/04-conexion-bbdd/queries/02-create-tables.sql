@@ -11,5 +11,6 @@ IF NOT EXISTS (
     Direccion VARCHAR(60),
     Email VARCHAR(100),
     Telefono VARCHAR(15),
+    Activo BIT DEFAULT 1,
 )
 END;
