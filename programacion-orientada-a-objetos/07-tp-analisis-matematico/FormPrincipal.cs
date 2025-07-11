@@ -5,7 +5,7 @@ namespace _07_tp_analisis_matematico
 {
     public partial class FormPrincipal : Form
     {
-        private PlotModel plotModel = new PlotModel { Title = "Polynomial y Derivada" };
+        private PlotModel plotModel = new PlotModel { Title = "Polinomio y Derivada" };
         private LineSeries lineaFuncion = new LineSeries { Color = OxyColors.Blue };
         private LineSeries lineaDerivada = new LineSeries { Color = OxyColors.Red };
         public FormPrincipal()
@@ -31,11 +31,11 @@ namespace _07_tp_analisis_matematico
                     return;
                 }
             }
-            Polynomial Polynomial = new Polynomial(coeficientes);
-            Polynomial derivada = Polynomial.Derivate();
+            Polynomial polinomio = new Polynomial(coeficientes);
+            Polynomial derivada = polinomio.Derivate();
             lineaFuncion.Points.Clear();
             lineaDerivada.Points.Clear();
-            lineaFuncion.Title = Polynomial.ToString();
+            lineaFuncion.Title = polinomio.ToString();
             lineaDerivada.Title = derivada.ToString();
             // Evaluamos los puntos de la función y su derivada
             for (double x = -10; x <= 10; x += 0.1) // 
@@ -52,7 +52,7 @@ namespace _07_tp_analisis_matematico
                 lineaDerivada.Points.Add(new DataPoint(x, yDerivada));
             }
             // El \n por alguna razón en el subtítulo no funciona. Si te daña la vista, podes cerrar los ojos.
-            plotModel.Subtitle = @$"f(x): {Polynomial}
+            plotModel.Subtitle = @$"f(x): {polinomio}
 f'(x): {derivada}";
             plotModel.InvalidatePlot(true);
         }
