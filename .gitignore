@@ -39,3 +39,6 @@ launchSettings.json
 
 #draw.io
 *.dtmp
+# Python
+__pycache__/
+*.pyc
