@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Depends, Query
-from typing import Annotated
-from pydantic import BaseModel
+from typing import Annotated, Optional
 from sqlmodel import Field, Session, SQLModel, create_engine, select
 import uvicorn
 
@@ -11,7 +10,28 @@ app = FastAPI()
 class Car(SQLModel, table=True):
     __tablename__ = "car"
     __table_args__ = {"extend_existing": True}
-    id: int = Field(default=None, primary_key=True)
+    id: Optional[int] = Field(default=None, primary_key=True)
+    car_code: str = Field(
+        default="",
+        index=True,
+        description="Unique code for the car, used for identification",
+    )
+    brand: str = Field(index=True)
+    model: str = Field(index=True)
+    description: str = Field(
+        default="",
+        description="HTML content describing the car, can include paragraphs and other HTML elements.",
+    )
+    price: float = Field(gt=0, description="Price of the car in currency units")
+    promotion_price: float | None = Field(
+        default=None, description="Promotional price if available"
+    )
+    km: int = Field(gt=0, description="Kilometers driven by the car")
+    year: int = Field(gt=1900, le=2100, description="Year of manufacture")
+    img: str = Field(
+        default="",
+        description="Path to the image of the car, can be a URL or local path",
+    )
 
 
 sqlite_file_name = "database.db"
@@ -22,6 +42,10 @@ engine = create_engine(sqlite_url, connect_args=connect_args)
 
 
 def create_db_and_tables():
+    # Drop existing tables to ensure the database schema matches the current models.
+    # WARNING: This will erase existing data — use only in development or when you
+    # intentionally want to reset the database.
+    SQLModel.metadata.drop_all(engine)
     SQLModel.metadata.create_all(engine)
 
 
