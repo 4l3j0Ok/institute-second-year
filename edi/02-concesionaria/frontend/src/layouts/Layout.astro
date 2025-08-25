@@ -1,0 +1,72 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro Basics</title>
+    </head>
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --primary-color: #0357af;
+        --secondary-color: #0180cc;
+        --accent-color: #e4815a;
+        --alt-accent-color: #f2a07b;
+        --red-color: #ff4c4c;
+        --background-color: #eeeeee;
+        --border-radius: 0.5em;
+        --box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4);
+    }
+
+    html,
+    body {
+        font-family: "Roboto", sans-serif;
+        background-color: var(--background-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+        margin-bottom: 5em;
+        padding: 0 1em;
+    }
+
+    ::selection {
+        background-color: var(--accent-color);
+        color: white;
+    }
+
+    ::-moz-selection {
+        background-color: var(--accent-color);
+        color: white;
+    }
+
+    button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: var(--border-radius);
+        padding: 0 1em;
+        height: 3em;
+    }
+
+    button:hover {
+        background-color: var(--secondary-color);
+    }
+</style>

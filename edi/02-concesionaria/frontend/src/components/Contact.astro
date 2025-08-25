@@ -1,0 +1,46 @@
+<section class="contact">
+    <h2>Contacto</h2>
+    <form class="contact-form">
+        <label for="name">Nombre y apellido:</label>
+        <input
+            type="text"
+            name="name"
+            placeholder="Juan Pérez"
+            required
+            id="name"
+        />
+        <label for="message">Mensaje:</label>
+        <textarea
+            name="message"
+            placeholder="Hola, quisiera contactarme por..."
+            required
+            id="message"></textarea>
+        <button type="submit" onclick="handleClick(event)">Enviar</button>
+    </form>
+</section>
+<style>
+    .contact {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5em;
+    }
+    input {
+        width: 100%;
+        height: 3em;
+        border-radius: var(--border-radius);
+    }
+
+    textarea {
+        height: 6em;
+        resize: none;
+        width: 100%;
+        border-radius: var(--border-radius);
+    }
+</style>

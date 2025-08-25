@@ -1,3 +1,6 @@
+---
+import { Image } from "astro:assets";
+import CarImage from "../assets/images/chevrolet-astra.webp";
 export const cars = [
     {
         id: "fiat-uno",
@@ -17,7 +20,7 @@ export const cars = [
         promotionPrice: undefined,
         km: 20,
         year: 2020,
-        img: "./assets/images/fiat-uno.webp"
+        img: "./assets/images/fiat-uno.webp",
     },
     {
         id: "ford-ka",
@@ -37,7 +40,7 @@ export const cars = [
         promotionPrice: 14000000,
         km: 0,
         year: 2020,
-        img: "./assets/images/ford-ka.webp"
+        img: "./assets/images/ford-ka.webp",
     },
     {
         id: "chevrolet-onix",
@@ -57,7 +60,7 @@ export const cars = [
         promotionPrice: 19000000,
         km: 0,
         year: 2020,
-        img: "./assets/images/chevrolet-onix.webp"
+        img: "./assets/images/chevrolet-onix.webp",
     },
     {
         id: "fiat-uno",
@@ -77,7 +80,7 @@ export const cars = [
         promotionPrice: undefined,
         km: 20,
         year: 2020,
-        img: "./assets/images/fiat-uno.webp"
+        img: "./assets/images/fiat-uno.webp",
     },
     {
         id: "ford-ka",
@@ -97,7 +100,7 @@ export const cars = [
         promotionPrice: 14000000,
         km: 0,
         year: 2020,
-        img: "./assets/images/ford-ka.webp"
+        img: "./assets/images/ford-ka.webp",
     },
     {
         id: "chevrolet-onix",
@@ -117,7 +120,7 @@ export const cars = [
         promotionPrice: 19000000,
         km: 0,
         year: 2020,
-        img: "./assets/images/chevrolet-onix.webp"
+        img: "./assets/images/chevrolet-onix.webp",
     },
     {
         id: "fiat-uno",
@@ -137,7 +140,7 @@ export const cars = [
         promotionPrice: undefined,
         km: 20,
         year: 2020,
-        img: "./assets/images/fiat-uno.webp"
+        img: "./assets/images/fiat-uno.webp",
     },
     {
         id: "ford-ka",
@@ -157,7 +160,7 @@ export const cars = [
         promotionPrice: 14000000,
         km: 0,
         year: 2020,
-        img: "./assets/images/ford-ka.webp"
+        img: "./assets/images/ford-ka.webp",
     },
     {
         id: "chevrolet-onix",
@@ -177,45 +180,119 @@ export const cars = [
         promotionPrice: 19000000,
         km: 0,
         year: 2020,
-        img: "./assets/images/chevrolet-onix.webp"
-    }
+        img: "./assets/images/chevrolet-onix.webp",
+    },
 ];
+---
 
-export function displayCars() {
-    const container = document.querySelector(".catalog-cars");
-    const prevButton = document.querySelector("#prev-button");
-    const nextButton = document.querySelector("#next-button");
-    container.innerHTML = "";
-    cars.forEach(car => {
-        const div = document.createElement("div");
-        let price = `<b>Precio</b>: $${car.price}`;
-        let endpoint = `./cars/${car.brand.toLowerCase()}-${car.model.toLowerCase()}.html`;
-        if (car.promotionPrice !== undefined) {
-            price = `<b>Precio</b>: <span class="old-price"><s>$${car.price}</s></span> $${car.promotionPrice}`;
-        }
-        div.innerHTML = `
-            <a href="${endpoint}" class="car-link">
-                <div class="car" id="${car.brand}-${car.model}">
-                    <img src="${car.img}" alt="${car.brand} ${car.model}">
-                    <h2>${car.brand} ${car.model}</h2>
-                    <p class="price">${price}</p>
-                </div>
-            </a>
-        `;
-        container.appendChild(div);
-    })
-    prevButton.addEventListener('click', () => {
-        container.scrollBy({
-            left: -300,
-            behavior: 'smooth'
-        });
-    });
-    nextButton.addEventListener('click', () => {
-        container.scrollBy({
-            left: 300,
-            behavior: 'smooth'
-        });
-    });
-}
+<section class="catalog">
+    <h2>Ofertas</h2>
+    <div class="catalog-content">
+        <button class="arrow-button" id="prev-button"
+            ><iconify-icon icon="bxs:left-arrow"></iconify-icon></button
+        >
+        <div class="catalog-cars">
+            {
+                cars.map((car) => (
+                    <a href="${endpoint}" class="car-link">
+                        <div class="car" id="${car.brand}-${car.model}">
+                            <Image
+                                src={CarImage}
+                                alt="${car.brand} ${car.model}"
+                                class="car-image"
+                            />
+                            <h2>
+                                ${car.brand} ${car.model}
+                            </h2>
+                            <p class="price">${car.price}</p>
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+        <button class="arrow-button" id="next-button"
+            ><iconify-icon icon="bxs:right-arrow"></iconify-icon></button
+        >
+    </div>
+    <div class="view-all">
+        <button class="view-all-offers" id="view-all-offers"
+            >Ver todas las ofertas</button
+        >
+        <button class="view-all-button" id="view-all-button"
+            >Ver todo el catálogo</button
+        >
+    </div>
+</section>
 
+<style>
+    .car {
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        padding: 1em;
+        box-shadow: var(--box-shadow);
+    }
 
+    .car img {
+        width: 240px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+    }
+
+    .car-link {
+        text-decoration: none;
+        color: black;
+    }
+
+    .car .old-price {
+        text-decoration: line-through;
+        color: var(--red-color);
+    }
+
+    .catalog-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .catalog-content .arrow-button {
+        position: absolute;
+        box-shadow: var(--box-shadow);
+        border-radius: 100%;
+        margin: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: white;
+        color: var(--primary-color);
+    }
+
+    .catalog-content #prev-button {
+        left: 0;
+    }
+
+    .catalog-content #next-button {
+        right: 0;
+    }
+
+    .catalog-cars {
+        display: flex;
+        gap: 2em;
+        padding: 1em;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    .catalog .view-all {
+        margin-top: 1em;
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+    }
+</style>

@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import Catalog from "../components/Catalog.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout>
+	<main>
+		<Hero />
+		<Services />
+		<Catalog />
+		<Contact />
+	</main>
+</Layout>
+
+<style>
+	main {
+		width: 80%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 5em;
+	}
+</style>

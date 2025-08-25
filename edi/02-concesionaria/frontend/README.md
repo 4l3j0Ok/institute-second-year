@@ -1,25 +1,43 @@
-# Concesionaria V1
+# Astro Starter Kit: Minimal
 
-Este proyecto contiene la implementación de un sistema de concesionaria de autos. El sistema permite visualizar los autos que son disponibilizados por la concesionaria, con sus respectivos precios, características y enviar una consulta a la concesionaria para obtener más información sobre un auto en particular.
+```sh
+pnpm create astro@latest -- --template minimal
+```
 
-## Tecnologías utilizadas
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-- HTML: Para la estructura básica de la página.
-- CSS: Para el diseño y estilo de la página.
-- JavaScript: Para la interactividad y dinamismo de la página, además de la disponibilización de los autos mediante un objeto que funciona como datos para el catálogo.
+## 🚀 Project Structure
 
-## Estructura del proyecto
-├── `assets`: archivo de recursos estáticos.  
-│   └── `images`: imágenes de los autos.  
-├── `cars`: páginas HTML de los autos.  
-├── `catalog.js`: archivo JavaScript que contiene la lógica del catálogo.  
-├── `docs`: documentación y requisitos del proyecto.  
-├── `favicon.ico`: icono de la página.  
-├── `index.html`: página principal del sistema.  
-├── `README.md`: documentación del proyecto.  
-├── `style.css`: archivo CSS que contiene los estilos de la página.  
-└── `templates`: plantillas HTML para los autos.  
+Inside of your Astro project, you'll see the following folders and files:
 
-## Acceso a la web
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-Puedes acceder a la web en el siguiente enlace: [4l3j0ok.github.io/institute-second-year/projects/edi/02-concesionaria/index.html](https://4l3j0ok.github.io/institute-second-year/projects/edi/02-concesionaria/index.html)
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
