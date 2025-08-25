@@ -14,6 +14,9 @@ app = FastAPI()
 @app.get("/cars", response_model=CarResponse)
 def get_cars(
     session: Annotated[db.Session, Depends(db.get_session)],
+    car_code: Annotated[
+        str | None, Query(description="Filtrar por código del vehículo")
+    ] = None,
     brand: Annotated[str | None, Query(description="Filtrar por marca")] = None,
     model: Annotated[str | None, Query(description="Filtrar por modelo")] = None,
     year: Annotated[int | None, Query(description="Filtrar por año")] = None,
@@ -23,6 +26,8 @@ def get_cars(
     ),
 ):
     query = select(Car)
+    if car_code:
+        query = query.where(Car.car_code == car_code)
     if brand:
         query = query.where(Car.brand.contains(brand))
     if model:
