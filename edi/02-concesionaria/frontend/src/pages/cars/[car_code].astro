@@ -1,0 +1,92 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCar } from "../../lib/cars";
+const { car_code } = Astro.params;
+const response = await getCar(car_code);
+const car = response.items[0];
+---
+
+<Layout>
+    <main>
+        <section class="car">
+            <section class="car-header">
+                <section class="car-presentation">
+                    {
+                        car.img && (
+                            <img
+                                src={car.img}
+                                alt={`Imagen de ${car.brand} ${car.model}`}
+                            />
+                        )
+                    }
+                </section>
+                <section class="car-info">
+                    <h1>{car.brand} {car.model}</h1>
+                    <p><b>{car.km} km</b></p>
+                    <p>
+                        {
+                            car.promotion_price &&
+                            car.promotion_price < car.price ? (
+                                <span class="old-price">${car.price}</span>
+                            ) : null
+                        }
+                        ${car.promotion_price ?? car.price}
+                    </p>
+                </section>
+            </section>
+            <section class="car-description">
+                <p>{car.description}</p>
+            </section>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .car {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-around;
+        background-color: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 4em;
+    }
+
+    .car section {
+        margin-bottom: 2em;
+    }
+
+    .car .old-price {
+        text-decoration: line-through;
+        color: var(--red-color);
+    }
+
+    .car-header {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .car-presentation img {
+        width: 640px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+
+    .car-info {
+        text-align: right;
+    }
+
+    .car-info h1 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin: 0;
+    }
+
+    .car-description {
+        width: 100%;
+    }
+</style>
