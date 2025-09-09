@@ -1,46 +1,81 @@
-## Informe de instalación de VirtualBox
+<head>
+<title>Informe de instalación de VirtualBox y Ubuntu 24.04 en Fedora 41</title>
+</head>
+
+# Informe de instalación de VirtualBox y Ubuntu 24.04 LTS en Fedora 41
+
+**Alumno**: Alejo Sarmiento  
+**Curso**: 2° A  
+**Materia**: Sistemas Operativos  
+**Profesora**: Daniela Mercau
+
+---
+
+## Información
+
+**VirtualBox** es un software de virtualización de código abierto desarrollado por Oracle Corporation. Permite a los usuarios ejecutar múltiples sistemas operativos en una sola máquina física, creando entornos virtuales independientes. VirtualBox es compatible con una amplia variedad de sistemas operativos invitados, incluyendo Windows, Linux, macOS y otros.
+
+En este informe se documenta el proceso de instalación de VirtualBox en Fedora 41, la creación de una máquina virtual y la instalación de Ubuntu 24.04 LTS en dicha máquina virtual. Además, se detallan los problemas encontrados durante el proceso y las soluciones implementadas para resolverlos.
+
+Detalles del entorno utilizado:
+
+- **Sistema operativo anfitrión**: Fedora 41
+- **Sistema operativo invitado**: Ubuntu 24.04 LTS
+- **Versión de VirtualBox**: 7.2.0
+- **Hardware**: Lenovo V15 G2 ITL
+  - **Procesador**: Intel Core i5-1135G7 
+  - **Memoria RAM**: 16 GB DDR4
+  - **Disco duro**: SSD 512 GB
+
+## Descarga e instalación de VirtualBox en Fedora 41
 
 Se accedió al sitio web de VirtualBox y se descargó el paquete correspondiente a Fedora 41:
 
-![Sitio de VirtualBox](1.png)
+> ![Sitio de VirtualBox](1.png)
 
 En el sitio de descargas se seleccionó "Linux distributions" y se eligió el paquete correspondiente a Fedora 41, que es un archivo `.rpm`. Se descargó el paquete y se guardó en la carpeta de descargas.
 
-![Sitio de descargas de VirtualBox](2.png)
+> ![Sitio de descargas de VirtualBox](2.png)
 
-![Sitio de descargas para distribuciones de Linux](3.png)
+> ![Sitio de descargas para distribuciones de Linux](3.png)
 
 Luego de descargar el paquete, se procedió abrirlo con la aplicación de software de Fedora e instalarlo:
 
-![Instalación del .rpm](4.png)
+> ![Instalación del .rpm](4.png)
+
+## Descarga de la imagen ISO de Ubuntu 24.04 LTS y creación de la máquina virtual
 
 Posteriormente, se procedió descargar la imagen ISO de Ubuntu 24.04 LTS desde el sitio web oficial de Ubuntu:
 
-![Sitio de descarga de Ubuntu](5.png)
+> ![Sitio de descarga de Ubuntu](5.png)
 
 Luego de descargar la imagen ISO, se procedió a crear una nueva máquina virtual en VirtualBox.
 
-![Creación de la máquina virtual 1](6.png)
+> ![Creación de la máquina virtual 1](6.png)
 
 Se comenzó seleccionando la imagen ISO de Ubuntu 24.04 LTS que se descargó previamente, se establecieron los parámetros básicos solicitados en la primer sección de configuración de la máquina virtual y se habilitó la opción de "Omitir la instalación desatendida" por cuestiones de preferencia personal.
 
-![Configuración de la máquina virtual 2](7.png)
+> ![Configuración de la máquina virtual 2](7.png)
 
 En el apartado "Hardware" se estableció la cantidad de memoria RAM y los recursos de CPU que se le asignarían a la máquina virtual. En este caso, se asignó 4 GB de RAM y 2 núcleo de CPU.
 
-![Configuración de la máquina virtual 3](8.png)
+> ![Configuración de la máquina virtual 3](8.png)
 
 En cuanto al disco duro, se seleccionó la opción de crear un disco duro virtual nuevo y se eligió el formato VDI (VirtualBox Disk Image). Se asignó un tamaño de 25 GB al disco duro virtual y se seleccionó la opción de "Almacenamiento dinámico".
 
-![Configuración de la máquina virtual 4](9.png)
+> ![Configuración de la máquina virtual 4](9.png)
 
 Al finalizar el setup, se observa que la máquina virtual está disponible para ser iniciada.
 
-![Máquina virtual creada](10.png)
+## Solución de problemas al iniciar la máquina virtual
+
+### Primer error: Módulos del kernel no compilados
+
+> ![Máquina virtual creada](10.png)
 
 Al iniciarla por primera vez, se obtiene el siguiente error:
 
-![Error 1](11.png)
+> ![Error 1](11.png)
 
 Ejecutando el comando sugerido, se observa el siguiente resultado:
 
@@ -85,9 +120,11 @@ vboxdrv.sh: Starting VirtualBox services.
 vboxdrv.sh: Building VirtualBox kernel modules.
 ```
 
+### Segundo error: KVM kernel extension
+
 Ya con los módulos del kernel compilados, se procedió a iniciar la máquina virtual nuevamente. Sin embargo, se obtuvo el siguiente error:
 
-![Error 2](12.png)
+> ![Error 2](12.png)
 
 `VirtualBox can't operate in VMX root mode. Please disable the KVM kernel extension, recompile your kernel and reboot (VERR_VMX_IN_VMX_ROOT_MODE).`
 
@@ -108,6 +145,8 @@ Luego de ejecutar el comando, se procedió a iniciar nuevamente la máquina virt
 
 > Fuente https://forums.virtualbox.org/viewtopic.php?t=50517
 
+### Tercer error: Reaparición del error de KVM
+
 Luego de probar en otra ocasión habiendo reiniado la máquina, el error apareció nuevamente, se corrigió usando el mismo comando anteriormente mencionado.
 
 Buscando a través de internet, parece que se puede deshabilitar el módulo de forma permanente, para ello se debe crear un archivo en `/etc/modprobe.d/` con extensión `.conf` y agregar la siguiente línea:
@@ -122,12 +161,14 @@ Luego de crear el archivo, se debe reiniciar la máquina para que los cambios te
 
 Luego de reiniciar la máquina, se pudo iniciar la máquina virtual sin problemas.
 
+## Instalación de Ubuntu 24.04 LTS
+
 Se procede con la instalación de Ubuntu ya en la máquina virtual:
 
-![Instalación de Ubuntu 1](13.png)
+> ![Instalación de Ubuntu 1](13.png)
 > Pantalla de GRUB. Seleccionamos Try or install Ubuntu.
 
-![Instalación de Ubuntu 2](14.png)
+> ![Instalación de Ubuntu 2](14.png)
 > Pantalla de preparación del instalador.
 
 > ![Instalación de Ubuntu 3](15.png)
@@ -162,3 +203,24 @@ Se procede con la instalación de Ubuntu ya en la máquina virtual:
 
 > ![Instalación de Ubuntu 13](25.png)
 > Pantalla de instalación finalizada. Reiniciamos el sistema.
+
+> ![Instalación de Ubuntu 14](27.png)
+> Asistente de bienvenida; Al iniciar el sistema se nos da la bienvenida a Ubuntu.
+
+> ![Instalación de Ubuntu 15](28.png)
+> Asistente de bienvenida; Se nos ofrece obtener Ubuntu Pro y omitimos
+
+> ![Instalación de Ubuntu 16](29.png)
+> Asistente de bienvenida; Se nos ofrece enviar datos de uso y omitimos.
+
+> ![Instalación de Ubuntu 17](30.png)
+> Asistente de bienvenida; Se nos ofrece explorar la tienda de aplicaciones.
+
+> ![Instalación de Ubuntu 18](31.png)
+> Escritorio de Ubuntu 24.04 LTS ya instalado en la máquina virtual.
+
+Se menciona que luego de instalar Ubuntu, se procedió a instalar las "Guest Additions" de VirtualBox para mejorar el rendimiento y la integración entre el sistema anfitrión y el invitado.
+
+---
+
+Con esto finaliza el informe de instalación de VirtualBox y Ubuntu 24.04 LTS en una máquina virtual.
