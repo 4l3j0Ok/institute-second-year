@@ -11,7 +11,7 @@
 
 ---
 
-## Información
+## Información general
 
 **VirtualBox** es un software de virtualización de código abierto desarrollado por Oracle Corporation. Permite a los usuarios ejecutar múltiples sistemas operativos en una sola máquina física, creando entornos virtuales independientes. VirtualBox es compatible con una amplia variedad de sistemas operativos invitados, incluyendo Windows, Linux, macOS y otros.
 
@@ -26,6 +26,20 @@ Detalles del entorno utilizado:
   - **Procesador**: Intel Core i5-1135G7 
   - **Memoria RAM**: 16 GB DDR4
   - **Disco duro**: SSD 512 GB
+
+## Objetivo
+
+Este trabajo tiene como objetivo documentar el proceso de instalación de VirtualBox (en este caso en Fedora 41), la creación de una máquina virtual y la instalación de Ubuntu 24.04 LTS en dicha máquina virtual con el fin de aprender sobre virtualización y la gestión de sistemas operativos en entornos virtuales.
+
+Además, se busca identificar y resolver posibles problemas que puedan surgir durante el proceso de instalación y configuración, proporcionando soluciones detalladas para cada uno de ellos.
+
+## Requerimientos técnicos
+
+Según la [documentación oficial de VirtualBox](https://www.virtualbox.org/manual/ch02.html#idp55464400), los requerimientos técnicos para instalar VirtualBox en un sistema Linux son los siguientes:
+
+- Conexión a internet para descargar los paquetes necesarios.
+- Espacio suficiente en el disco duro para alojar la máquina virtual y el sistema operativo invitado.
+
 
 ## Descarga e instalación de VirtualBox en Fedora 41
 
@@ -221,6 +235,13 @@ Se procede con la instalación de Ubuntu ya en la máquina virtual:
 
 Se menciona que luego de instalar Ubuntu, se procedió a instalar las "Guest Additions" de VirtualBox para mejorar el rendimiento y la integración entre el sistema anfitrión y el invitado.
 
----
-
 Con esto finaliza el informe de instalación de VirtualBox y Ubuntu 24.04 LTS en una máquina virtual.
+
+## Conclusión
+
+La instalación de VirtualBox y la posterior creación de una máquina virtual para instalar Ubuntu 24.04 LTS fue un proceso que presentó algunos desafíos, principalmente relacionados con la configuración del entorno de virtualización y la compatibilidad. Sin embargo, gracias a la documentación disponible y a la comunidad en línea, se pudieron resolver los problemas encontrados.  
+Estos problemas pueden surgir en cualquier entorno de virtualización, por lo que es importante estar preparado para enfrentarlos y buscar soluciones adecuadas apoyándose en recursos confiables y la comunidad.
+
+La experiencia adquirida durante este proceso fue valiosa, ya que permitió comprender mejor el funcionamiento de la virtualización y los requisitos necesarios para ejecutar sistemas operativos en máquinas virtuales de manera eficiente.
+
+El sistema Ubuntu 24.04 LTS instalado en la máquina virtual funciona correctamente, y se espera utilizarlo para futuros proyectos y experimentos relacionados con sistemas operativos y desarrollo de software.
