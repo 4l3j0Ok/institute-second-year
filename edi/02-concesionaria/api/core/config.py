@@ -1,4 +1,9 @@
 import os
+from pathlib import Path
+
+
+# Get the base directory (api folder)
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class AppConfig:
@@ -10,5 +15,5 @@ class AppConfig:
         "APP_DESCRIPTION", "API para gestionar vehículos en una concesionaria"
     )
     VERSION = os.getenv("APP_VERSION", "1.0.0")
-    STATIC_DIR = os.getenv("STATIC_DIR", "public")
+    STATIC_DIR = os.getenv("STATIC_DIR", str(BASE_DIR / "public"))
     STATIC_URL = os.getenv("STATIC_URL", "/public")
