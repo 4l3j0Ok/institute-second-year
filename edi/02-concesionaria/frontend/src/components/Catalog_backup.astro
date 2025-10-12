@@ -1,0 +1,298 @@
+---
+import { Image } from "astro:assets";
+import CarImage from "../assets/images/chevrolet-astra.webp";
+export const cars = [
+    {
+        id: "fiat-uno",
+        brand: "Fiat",
+        model: "Uno",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 10000000,
+        promotionPrice: undefined,
+        km: 20,
+        year: 2020,
+        img: "./assets/images/fiat-uno.webp",
+    },
+    {
+        id: "ford-ka",
+        brand: "Ford",
+        model: "Ka",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 15000000,
+        promotionPrice: 14000000,
+        km: 0,
+        year: 2020,
+        img: "./assets/images/ford-ka.webp",
+    },
+    {
+        id: "chevrolet-onix",
+        brand: "Chevrolet",
+        model: "Onix",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 20000000,
+        promotionPrice: 19000000,
+        km: 0,
+        year: 2020,
+        img: "./assets/images/chevrolet-onix.webp",
+    },
+    {
+        id: "fiat-uno",
+        brand: "Fiat",
+        model: "Uno",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 10000000,
+        promotionPrice: undefined,
+        km: 20,
+        year: 2020,
+        img: "./assets/images/fiat-uno.webp",
+    },
+    {
+        id: "ford-ka",
+        brand: "Ford",
+        model: "Ka",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 15000000,
+        promotionPrice: 14000000,
+        km: 0,
+        year: 2020,
+        img: "./assets/images/ford-ka.webp",
+    },
+    {
+        id: "chevrolet-onix",
+        brand: "Chevrolet",
+        model: "Onix",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 20000000,
+        promotionPrice: 19000000,
+        km: 0,
+        year: 2020,
+        img: "./assets/images/chevrolet-onix.webp",
+    },
+    {
+        id: "fiat-uno",
+        brand: "Fiat",
+        model: "Uno",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 10000000,
+        promotionPrice: undefined,
+        km: 20,
+        year: 2020,
+        img: "./assets/images/fiat-uno.webp",
+    },
+    {
+        id: "ford-ka",
+        brand: "Ford",
+        model: "Ka",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 15000000,
+        promotionPrice: 14000000,
+        km: 0,
+        year: 2020,
+        img: "./assets/images/ford-ka.webp",
+    },
+    {
+        id: "chevrolet-onix",
+        brand: "Chevrolet",
+        model: "Onix",
+        description: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sit dignissimos laborum consectetur illum optio enim velit. Sed repellendus iure unde eveniet pariatur vel, voluptatum eos, ipsum aliquid, fugiat animi.</p>
+                        <p>Explicabo quisquam ducimus aspernatur. Molestiae repudiandae ratione ipsam quo nulla veritatis, corporis nemo natus cupiditate quam ea, esse sunt odit molestias voluptates nostrum amet hic, odio similique. Exercitationem, eos commodi?</p>
+                        <p>Explicabo dolor id error libero, voluptas deleniti veritatis voluptates omnis, nisi exercitationem nihil culpa! Ipsum exercitationem consectetur corporis commodi quis rerum quo iusto aperiam harum, alias repellendus, libero, cum suscipit?</p>
+                        <p>Laboriosam commodi repudiandae hic quod fugit vero beatae explicabo eum, officia nihil modi enim consequuntur sed? Culpa a repudiandae obcaecati voluptatem iste aliquid ullam! Laudantium cumque nisi tempore cupiditate illum?</p>
+                        <p>Nobis, dolorem fugiat inventore veniam, nulla nesciunt aspernatur est mollitia illo modi sapiente suscipit dolor, temporibus quis quia? Ut quas modi tempora, id dolores molestiae autem. Quaerat voluptatum dolores nihil!</p>
+                        <p>Laborum debitis incidunt quo dignissimos architecto, itaque distinctio sequi, fugit eaque cumque veritatis praesentium quos eveniet! Ut quidem possimus numquam incidunt aperiam! Quasi delectus hic et cupiditate, voluptates sapiente ex.</p>
+                        <p>Soluta amet dolores perferendis aperiam cum quis ipsa molestias quam laborum, sint aut excepturi. Perspiciatis, illum fugit? Assumenda saepe soluta laudantium eius officia? Asperiores iusto voluptates quia facilis. Quas, saepe!</p>
+                        <p>Nemo recusandae repudiandae nesciunt ad ducimus minus a dolor fugiat, iusto, suscipit provident quidem nisi consequatur aliquid illum est asperiores praesentium vel amet atque deserunt exercitationem rem hic dolores. Id!</p>
+                        <p>Harum ullam, et itaque labore tenetur velit consequatur excepturi necessitatibus hic aliquid recusandae cupiditate dolores exercitationem earum. Commodi maxime natus sunt, tenetur molestias eos reiciendis saepe, eligendi ab, ullam necessitatibus?</p>
+                        <p>Perspiciatis consectetur reprehenderit esse cupiditate eligendi eum unde assumenda accusantium hic sit! Accusantium vitae voluptates, ut sint unde nesciunt maxime magni blanditiis laudantium nulla ipsa. Esse mollitia harum voluptas. Eius.</p>`,
+        price: 20000000,
+        promotionPrice: 19000000,
+        km: 0,
+        year: 2020,
+        img: "./assets/images/chevrolet-onix.webp",
+    },
+];
+---
+
+<section class="catalog">
+    <h2>Ofertas</h2>
+    <div class="catalog-content">
+        <button class="arrow-button" id="prev-button"
+            ><iconify-icon icon="bxs:left-arrow"></iconify-icon></button
+        >
+        <div class="catalog-cars">
+            {
+                cars.map((car) => (
+                    <a href="${endpoint}" class="car-link">
+                        <div class="car" id="${car.brand}-${car.model}">
+                            <Image
+                                src={CarImage}
+                                alt="{car.brand} {car.model}"
+                                class="car-image"
+                            />
+                            <h2>
+                                ${car.brand} ${car.model}
+                            </h2>
+                            <p class="price">${car.price}</p>
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+        <button class="arrow-button" id="next-button"
+            ><iconify-icon icon="bxs:right-arrow"></iconify-icon></button
+        >
+    </div>
+    <div class="view-all">
+        <button class="view-all-offers" id="view-all-offers"
+            >Ver todas las ofertas</button
+        >
+        <button class="view-all-button" id="view-all-button"
+            >Ver todo el catálogo</button
+        >
+    </div>
+</section>
+
+<style>
+    .car {
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        padding: 1em;
+        box-shadow: var(--box-shadow);
+    }
+
+    .car img {
+        width: 240px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+    }
+
+    .car-link {
+        text-decoration: none;
+        color: black;
+    }
+
+    .car .old-price {
+        text-decoration: line-through;
+        color: var(--red-color);
+    }
+
+    .catalog-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .catalog-content .arrow-button {
+        position: absolute;
+        box-shadow: var(--box-shadow);
+        border-radius: 100%;
+        margin: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: white;
+        color: var(--primary-color);
+    }
+
+    .catalog-content #prev-button {
+        left: 0;
+    }
+
+    .catalog-content #next-button {
+        right: 0;
+    }
+
+    .catalog-cars {
+        display: flex;
+        gap: 2em;
+        padding: 1em;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    .catalog .view-all {
+        margin-top: 1em;
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+    }
+</style>

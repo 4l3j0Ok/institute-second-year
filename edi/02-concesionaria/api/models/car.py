@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional, List
 from sqlmodel import SQLModel, Field, UniqueConstraint
+from pydantic.networks import AnyUrl
 
 
 # Base con validaciones
@@ -19,7 +20,10 @@ class CarBase(SQLModel):
     )
     km: int = Field(ge=0, description="Kilómetros recorridos del vehículo")
     year: int = Field(ge=1886, le=2100, description="Año de fabricación")
-    img: str = Field(min_length=1, description="URL o ruta de la imagen del vehículo")
+    # utilizamos modelo de url
+    img: Optional[AnyUrl] = Field(
+        default=None, description="URL de la imagen del vehículo"
+    )
 
 
 # Modelo de creación (input del POST)
@@ -30,8 +34,6 @@ class CarCreate(CarBase):
 # Modelo de respuesta (output)
 class CarRead(CarBase):
     id: int
-
-    model_config = {"from_attributes": True}
 
 
 class CarResponse(BaseModel):
@@ -49,3 +51,6 @@ class Car(CarBase, table=True):
         {"extend_existing": True},
     )
     id: Optional[int] = Field(default=None, primary_key=True)
+    img: Optional[str] = Field(
+        default=None, description="URL de la imagen del vehículo"
+    )
