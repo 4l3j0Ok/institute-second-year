@@ -1,9 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCar } from "../../lib/cars";
+import { mapCarFromAPI } from "../../types/car";
+
 const { car_code } = Astro.params;
 const response = await getCar(car_code);
-const car = response.items[0];
+const carFromAPI = response.items[0];
+const car = mapCarFromAPI(carFromAPI);
 ---
 
 <Layout>
@@ -25,12 +28,12 @@ const car = response.items[0];
                     <p><b>{car.km} km</b></p>
                     <p>
                         {
-                            car.promotion_price &&
-                            car.promotion_price < car.price ? (
+                            car.promotionPrice &&
+                            car.promotionPrice < car.price ? (
                                 <span class="old-price">${car.price}</span>
                             ) : null
                         }
-                        ${car.promotion_price ?? car.price}
+                        ${car.promotionPrice ?? car.price}
                     </p>
                 </section>
             </section>

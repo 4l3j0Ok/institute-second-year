@@ -26,7 +26,7 @@ class CarCreate(CarBase):
     @computed_field
     @property
     def car_code(self) -> str:
-        return f"{self.brand.lower()}_{self.model.lower()}"
+        return f"{self.brand.lower()}-{self.model.lower()}"
 
 
 class CarRead(CarBase):

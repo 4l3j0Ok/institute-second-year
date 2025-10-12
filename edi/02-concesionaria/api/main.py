@@ -1,16 +1,27 @@
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
-import core.db as db
+from fastapi.staticfiles import StaticFiles
+from core import db
+from core.config import AppConfig
 from routers import car
 import uvicorn
 
 
-app = FastAPI()
+app = FastAPI(
+    title=AppConfig.TITLE,
+    description=AppConfig.DESCRIPTION,
+    version=AppConfig.VERSION,
+    debug=AppConfig.DEBUG,
+)
 
 app.include_router(car.router)
+app.mount(
+    AppConfig.STATIC_URL,
+    StaticFiles(directory=AppConfig.STATIC_DIR),
+    name="static",
+)
 
 
-# redirect to docs
 @app.get("/", include_in_schema=False)
 def root():
     return RedirectResponse(url="/docs")
