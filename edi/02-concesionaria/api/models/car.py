@@ -1,14 +1,10 @@
-from pydantic import BaseModel
-from typing import Optional, List
+from pydantic import AnyUrl, BaseModel, computed_field
+from typing import Optional, List, Union
 from sqlmodel import SQLModel, Field, UniqueConstraint
-from pydantic.networks import AnyUrl
 
 
 # Base con validaciones
 class CarBase(SQLModel):
-    car_code: str = Field(
-        min_length=1, max_length=50, description="Código único del vehículo"
-    )
     brand: str = Field(min_length=1, max_length=50, description="Marca del vehículo")
     model: str = Field(min_length=1, max_length=50, description="Modelo del vehículo")
     description: str = Field(
@@ -20,20 +16,25 @@ class CarBase(SQLModel):
     )
     km: int = Field(ge=0, description="Kilómetros recorridos del vehículo")
     year: int = Field(ge=1886, le=2100, description="Año de fabricación")
-    # utilizamos modelo de url
-    img: Optional[AnyUrl] = Field(
+    image: Optional[Union[AnyUrl, bytes]] = Field(
         default=None, description="URL de la imagen del vehículo"
     )
 
 
 # Modelo de creación (input del POST)
 class CarCreate(CarBase):
-    pass
+    @computed_field
+    @property
+    def car_code(self) -> str:
+        return f"{self.brand.lower()}_{self.model.lower()}"
 
 
-# Modelo de respuesta (output)
 class CarRead(CarBase):
     id: int
+    car_code: str
+    image: Optional[str] = Field(
+        default=None, description="Imagen del vehículo en formato base64"
+    )
 
 
 class CarResponse(BaseModel):
@@ -50,7 +51,10 @@ class Car(CarBase, table=True):
         UniqueConstraint("car_code", name="uq_car_code"),
         {"extend_existing": True},
     )
-    id: Optional[int] = Field(default=None, primary_key=True)
-    img: Optional[str] = Field(
-        default=None, description="URL de la imagen del vehículo"
+    car_code: str = Field(
+        min_length=1, max_length=50, description="Código único del vehículo"
     )
+    image: Optional[bytes] = Field(
+        default=None, description="Imagen del vehículo en formato binario"
+    )
+    id: Optional[int] = Field(default=None, primary_key=True)
