@@ -24,9 +24,10 @@ import Footer from "../components/Footer.astro";
         --primary-color: #0357af;
         --primary-color-light: #4a90e2;
         --primary-color-dark: #003d80;
-        --secondary-color: #0180cc;
         --accent-color: #e4815a;
-        --alt-accent-color: #f2a07b;
+        --accent-color-light: #f2a785;
+        --accent-color-dark: #c76b45;
+        --text-color: #333333;
         --red-color: #ff4c4c;
         --background-color: #eeeeee;
         --border-radius: 0.5em;
@@ -38,6 +39,7 @@ import Footer from "../components/Footer.astro";
     body {
         font-family: "Roboto", sans-serif;
         background-color: var(--background-color);
+        color: var(--text-color);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -77,6 +79,13 @@ import Footer from "../components/Footer.astro";
         font-family: inherit;
         box-sizing: border-box;
         border-radius: var(--border-radius);
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0.5em rgba(3, 87, 175, 0.5);
     }
 
     @view-transition {

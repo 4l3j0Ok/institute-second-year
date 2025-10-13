@@ -24,40 +24,41 @@ try {
 console.log("Final cars array:", cars);
 ---
 
-<section class="catalog">
+<section class="offers">
     <h2>Ofertas</h2>
-    <div class="catalog-content">
+    <div class="offers-content">
         <button class="arrow-button" id="prev-button"
             ><Icon name="bxs:left-arrow" /></button
         >
-        <div class="catalog-cars">
+        <div class="offers-cars">
             {
                 cars.length > 0 ? (
-                    cars.map((car: Car) => (
-                        <a href={`/cars/${car.code}`} class="car-link">
-                            <div
-                                class="car"
-                                id={`${car.brand}-${car.model}`}
-                                style={`view-transition-name: car-${car.code}`}
-                            >
-                                {car.img && car.img.startsWith("data:") ? (
-                                    <img
-                                        src={car.img}
-                                        alt={`${car.brand} ${car.model}`}
-                                        class="car-image"
-                                        style={`view-transition-name: image-${car.code}`}
-                                    />
-                                ) : (
-                                    <Image
-                                        src={CarImage}
-                                        alt={`${car.brand} ${car.model}`}
-                                        class="car-image"
-                                    />
-                                )}
-                                <h2>
-                                    {car.brand} {car.model}
-                                </h2>
-                                {car.promotionPrice ? (
+                    cars.map((car: Car) =>
+                        // si es una oferta, mostrar el carro, sino no
+                        car.promotionPrice ? (
+                            <a href={`/cars/${car.code}`} class="car-link">
+                                <div
+                                    class="car"
+                                    id={`${car.brand}-${car.model}`}
+                                    style={`view-transition-name: car-${car.code}`}
+                                >
+                                    {car.img && car.img.startsWith("data:") ? (
+                                        <img
+                                            src={car.img}
+                                            alt={`${car.brand} ${car.model}`}
+                                            class="car-image"
+                                            style={`view-transition-name: image-${car.code}`}
+                                        />
+                                    ) : (
+                                        <Image
+                                            src={CarImage}
+                                            alt={`${car.brand} ${car.model}`}
+                                            class="car-image"
+                                        />
+                                    )}
+                                    <h2>
+                                        {car.brand} {car.model}
+                                    </h2>
                                     <div>
                                         <p class="old-price">
                                             ${car.price.toLocaleString()}
@@ -67,17 +68,14 @@ console.log("Final cars array:", cars);
                                             {car.promotionPrice.toLocaleString()}
                                         </p>
                                     </div>
-                                ) : (
-                                    <p class="price">
-                                        ${car.price.toLocaleString()}
+                                    <p class="car-details">
+                                        {car.year} • {car.km.toLocaleString()}{" "}
+                                        km
                                     </p>
-                                )}
-                                <p class="car-details">
-                                    {car.year} • {car.km.toLocaleString()} km
-                                </p>
-                            </div>
-                        </a>
-                    ))
+                                </div>
+                            </a>
+                        ) : null,
+                    )
                 ) : (
                     <div class="no-cars-message">
                         <p>No hay vehículos disponibles en este momento.</p>
@@ -125,7 +123,7 @@ console.log("Final cars array:", cars);
 
     .car-link {
         text-decoration: none;
-        color: black;
+        color: inherit;
     }
 
     .car .old-price {
@@ -148,16 +146,16 @@ console.log("Final cars array:", cars);
         margin: 0;
     }
 
-    .catalog {
+    .offers {
         margin: 2em 0;
     }
 
-    .catalog h2 {
+    .offers h2 {
         text-align: center;
         margin-bottom: 1em;
     }
 
-    .catalog-content {
+    .offers-content {
         position: relative;
         display: flex;
         align-items: center;
@@ -193,7 +191,7 @@ console.log("Final cars array:", cars);
         right: 0;
     }
 
-    .catalog-cars {
+    .offers-cars {
         display: flex;
         gap: 2em;
         padding: 1em;
@@ -210,7 +208,7 @@ console.log("Final cars array:", cars);
         );
     }
 
-    .catalog-cars::-webkit-scrollbar {
+    .offers-cars::-webkit-scrollbar {
         display: none;
     }
 
@@ -229,7 +227,7 @@ console.log("Final cars array:", cars);
         margin: 0.5em 0;
     }
 
-    .catalog .view-all {
+    .offers .view-all {
         margin-top: 1em;
         display: flex;
         justify-content: center;
@@ -237,7 +235,7 @@ console.log("Final cars array:", cars);
     }
 
     @media (max-width: 768px) {
-        .catalog-cars {
+        .offers-cars {
             max-width: calc(100vw - 80px);
         }
 
@@ -247,7 +245,7 @@ console.log("Final cars array:", cars);
             font-size: 1em;
         }
 
-        .catalog .view-all {
+        .offers .view-all {
             flex-direction: column;
             align-items: center;
         }
@@ -256,17 +254,17 @@ console.log("Final cars array:", cars);
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const catalogCars = document.querySelector(".catalog-cars");
+        const offersCars = document.querySelector(".offers-cars");
         const prevButton = document.getElementById("prev-button");
         const nextButton = document.getElementById("next-button");
 
-        if (catalogCars && prevButton && nextButton) {
+        if (offersCars && prevButton && nextButton) {
             prevButton.addEventListener("click", () => {
-                catalogCars.scrollBy({ left: -300, behavior: "smooth" });
+                offersCars.scrollBy({ left: -300, behavior: "smooth" });
             });
 
             nextButton.addEventListener("click", () => {
-                catalogCars.scrollBy({ left: 300, behavior: "smooth" });
+                offersCars.scrollBy({ left: 300, behavior: "smooth" });
             });
         }
     });
