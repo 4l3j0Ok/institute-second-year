@@ -1,0 +1,142 @@
+.contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.contact-form textarea {
+    height: 6em;
+    resize: none;
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* Car Attachment Styles */
+.car-attachment {
+    background-color: #f0f8ff;
+    border: 2px solid var(--primary-color-light);
+    border-radius: var(--border-radius);
+    padding: 1em;
+    margin-bottom: 1em;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.attachment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.75em;
+    font-size: 0.95rem;
+}
+
+.attachment-info {
+    display: flex;
+    align-items: start;
+    gap: 0.5em;
+}
+
+.attachment-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.car-tag {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: white;
+    padding: 0.75em;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.car-tag-image {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius) / 2);
+    flex-shrink: 0;
+}
+
+.car-tag-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    flex-grow: 1;
+}
+
+.car-tag-info strong {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.car-tag-details {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.remove-attachment {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.remove-attachment:hover {
+    background-color: #fee;
+    color: var(--red-color);
+}
+
+.remove-attachment svg {
+    font-size: 1.5em;
+}
+
+@media (max-width: 480px) {
+    .car-tag {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .car-tag-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .remove-attachment {
+        align-self: flex-end;
+        margin-top: -2em;
+    }
+}

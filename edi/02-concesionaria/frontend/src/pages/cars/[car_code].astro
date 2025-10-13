@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { getCar } from "../../lib/cars";
 import { mapCarFromAPI } from "../../types/car";
 import CarFeaturesAccordion from "../../components/CarFeatures";
+import Contact from "../../components/Contact";
 import { Icon } from "astro-icon/components";
 
 const { car_code } = Astro.params;
@@ -47,6 +48,9 @@ const car = mapCarFromAPI(carFromAPI);
                         }
                         ${car.promotionPrice ?? car.price}
                     </p>
+                    <a href="#contact">
+                        <button class="contact-button">Contactar</button>
+                    </a>
                 </section>
             </section>
             <section class="car-description">
@@ -55,25 +59,26 @@ const car = mapCarFromAPI(carFromAPI);
             </section>
             <CarFeaturesAccordion features={car.features} client:load />
         </section>
+        <Contact car={car} client:load />
     </main>
 </Layout>
 
 <style>
     main {
-        position: relative;
         background-color: white;
-        padding: 2em;
         display: flex;
-        justify-content: center;
-        border-radius: var(--border-radius-bottom);
+        flex-direction: column;
+        border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
-        width: 100%;
+        width: 80%;
+        padding: 2em;
         padding-bottom: 5em;
         margin-bottom: 5em;
+        margin-top: 2em;
     }
 
     .car {
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -110,6 +115,7 @@ const car = mapCarFromAPI(carFromAPI);
 
     .back-button {
         position: fixed;
+        z-index: 10;
         top: 7em;
         left: 7em;
         background-color: var(--primary-color);
@@ -117,5 +123,10 @@ const car = mapCarFromAPI(carFromAPI);
         border-radius: 50%;
         width: 50px;
         height: 50px;
+    }
+
+    .contact-button {
+        padding: 0.5em 1em;
+        font-size: 1rem;
     }
 </style>

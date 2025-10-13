@@ -1,0 +1,186 @@
+---
+import { Image } from "astro:assets";
+import CarImage from "../assets/images/chevrolet-astra.webp";
+import type { Car } from "../types/car";
+
+interface Props {
+    cars: Car[];
+    showOnlyOffers?: boolean;
+}
+
+const { cars, showOnlyOffers = false } = Astro.props;
+
+// Filtrar autos según el modo
+const displayCars = showOnlyOffers
+    ? cars.filter((car) => car.promotionPrice && car.promotionPrice < car.price)
+    : cars;
+---
+
+<section class="car-grid">
+    {
+        displayCars.length > 0 ? (
+            displayCars.map((car: Car) => (
+                <a href={`/cars/${car.code}`} class="car-link">
+                    <div
+                        class="car"
+                        id={`${car.brand}-${car.model}`}
+                        style={`view-transition-name: car-card-${car.code}`}
+                    >
+                        {car.img && car.img.startsWith("data:") ? (
+                            <img
+                                src={car.img}
+                                alt={`${car.brand} ${car.model}`}
+                                class="car-image"
+                                style={`view-transition-name: image-${car.code}`}
+                            />
+                        ) : (
+                            <Image
+                                src={CarImage}
+                                alt={`Imagen de ${car.brand} ${car.model}`}
+                                class="car-image"
+                            />
+                        )}
+                        <h2
+                            style={`view-transition-name: car-name-${car.code}`}
+                        >
+                            {car.brand} {car.model}
+                        </h2>
+                        <div class="price-container">
+                            {car.promotionPrice &&
+                            car.promotionPrice < car.price ? (
+                                <>
+                                    <p class="old-price">
+                                        ${car.price.toLocaleString()}
+                                    </p>
+                                    <p class="price">
+                                        ${car.promotionPrice.toLocaleString()}
+                                    </p>
+                                </>
+                            ) : (
+                                <p class="price">
+                                    ${car.price.toLocaleString()}
+                                </p>
+                            )}
+                        </div>
+                        <p class="car-details">
+                            {car.year} • {car.km.toLocaleString()} km
+                        </p>
+                    </div>
+                </a>
+            ))
+        ) : (
+            <div class="no-cars-message">
+                <p>No hay vehículos disponibles en este momento.</p>
+                <p>
+                    Por favor, verifica que la API esté funcionando
+                    correctamente.
+                </p>
+            </div>
+        )
+    }
+</section>
+
+<style>
+    .car-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2em;
+        width: 100%;
+        padding: 2em 0;
+    }
+
+    .car {
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        padding: 1em;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .car:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .car img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+    }
+
+    .car-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .car h2 {
+        font-size: 1.5rem;
+        margin: 0.5em 0 0.25em 0;
+    }
+
+    .price-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+    }
+
+    .car .old-price {
+        text-decoration: line-through;
+        color: var(--red-color);
+        font-size: 0.9em;
+        margin: 0;
+    }
+
+    .car .price {
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 1.3em;
+        margin: 0;
+    }
+
+    .car-details {
+        color: #666;
+        font-size: 0.9em;
+        margin: 0;
+    }
+
+    .no-cars-message {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3em;
+        text-align: center;
+        color: #666;
+        min-height: 300px;
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+
+    .no-cars-message p {
+        margin: 0.5em 0;
+        font-size: 1.1em;
+    }
+
+    @media (max-width: 768px) {
+        .car-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5em;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .car-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>

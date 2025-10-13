@@ -13,13 +13,14 @@ import Logo from "../assets/images/logo-black-outline.webp";
                     alt="Logo Premium Quality"
                 /></a
             >
-            <h1><a href="/">Premium Quality</a></h1>
+            <h1><a href="/" class="logo-title">Premium Quality</a></h1>
         </div>
-        <div class="options">
-            <a href="/">Página Principal</a>
-            <a href="./financing.html">Financiación</a>
-            <a href="./offers.html">Ofertas</a>
-        </div>
+        <nav class="options">
+            <a href="/">Inicio</a>
+            <a href="/catalog">Catálogo</a>
+            <a href="/offers">Ofertas</a>
+            <a href="/financing">Financiación</a>
+        </nav>
     </div>
 </header>
 
@@ -51,6 +52,7 @@ import Logo from "../assets/images/logo-black-outline.webp";
     .header-content .logo {
         display: flex;
         align-items: center;
+        gap: 0.7em;
     }
 
     .header-content .logo-image {
@@ -62,13 +64,77 @@ import Logo from "../assets/images/logo-black-outline.webp";
         height: 100%;
     }
 
-    .header-content a {
-        margin-right: 2em;
-        color: inherit;
-        text-decoration: none;
+    .options {
+        display: flex;
+        gap: 2em;
+        align-items: center;
     }
 
-    .header-content a:last-child {
-        margin-right: 0;
+    .options a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+        padding: 0.5em 0;
+    }
+
+    .options a:hover {
+        color: var(--primary-color);
+    }
+
+    .options a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+
+    .options a:hover::after {
+        width: 100%;
+    }
+
+    .logo-title {
+        margin-right: 1em;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 1000;
+    }
+
+    @media (max-width: 768px) {
+        .header-content {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        .options {
+            gap: 1em;
+            font-size: 0.9rem;
+        }
+
+        .logo h1 {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header {
+            height: auto;
+            padding: 0.5em 0;
+        }
+
+        .header-content {
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .options {
+            gap: 0.75em;
+            font-size: 0.85rem;
+        }
     }
 </style>
