@@ -1,7 +1,7 @@
-from models.car import Car, CarCreate
+from models.car import Car, CarCreate, CarFeatures
 from sqlmodel import select, Session
 from typing import List, Optional
-from fastapi import Depends, HTTPException, Query, UploadFile
+from fastapi import HTTPException
 import requests
 import base64
 
@@ -12,6 +12,13 @@ class CarController:
         """Convierte la imagen de bytes a base64 para la respuesta"""
         if car.image and isinstance(car.image, bytes):
             car.image = base64.b64encode(car.image).decode("utf-8")
+        return car
+
+    @staticmethod
+    def _convert_features_to_model(car: Car) -> Car:
+        """Convierte el dict de features a CarFeatures si es necesario"""
+        if car.features and isinstance(car.features, dict):
+            car.features = CarFeatures(**car.features)
         return car
 
     @staticmethod
@@ -34,8 +41,12 @@ class CarController:
         if year:
             query = query.where(Car.year == year)
         cars = session.exec(query.offset(offset).limit(limit)).all()
-        # Convertir bytes a base64 en todas las imágenes
-        cars_serialized = [CarController._convert_image_to_base64(car) for car in cars]
+        # Convertir bytes a base64 y features a modelo en todas los coches
+        cars_serialized = []
+        for car in cars:
+            car = CarController._convert_image_to_base64(car)
+            car = CarController._convert_features_to_model(car)
+            cars_serialized.append(car)
         return cars_serialized
 
     @staticmethod
@@ -59,12 +70,18 @@ class CarController:
                         status_code=400,
                         detail="La URL proporcionada no contiene una imagen válida.",
                     )
-        car = Car(**car.model_dump())
+        car_data = car.model_dump()
+        # Convertir features a dict si existe
+        if car_data.get("features") and hasattr(car_data["features"], "model_dump"):
+            car_data["features"] = car_data["features"].model_dump()
+        car = Car(**car_data)
         session.add(car)
         session.commit()
         session.refresh(car)
-        # Convertir bytes a base64 antes de devolver
-        return CarController._convert_image_to_base64(car)
+        # Convertir bytes a base64 y features a modelo antes de devolver
+        car = CarController._convert_image_to_base64(car)
+        car = CarController._convert_features_to_model(car)
+        return car
 
     @staticmethod
     def update_car(session: Session, car_id: int, car_data: Car) -> Car:
@@ -76,8 +93,10 @@ class CarController:
         session.add(car)
         session.commit()
         session.refresh(car)
-        # Convertir bytes a base64 antes de devolver
-        return CarController._convert_image_to_base64(car)
+        # Convertir bytes a base64 y features a modelo antes de devolver
+        car = CarController._convert_image_to_base64(car)
+        car = CarController._convert_features_to_model(car)
+        return car
 
     @staticmethod
     def delete_car(session: Session, car_id: int) -> None:

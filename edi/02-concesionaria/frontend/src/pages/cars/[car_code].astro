@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCar } from "../../lib/cars";
 import { mapCarFromAPI } from "../../types/car";
+import CarFeaturesAccordion from "../../components/CarFeatures";
+import { Icon } from "astro-icon/components";
 
 const { car_code } = Astro.params;
 const response = await getCar(car_code);
@@ -11,7 +13,13 @@ const car = mapCarFromAPI(carFromAPI);
 
 <Layout>
     <main>
-        <section class="car" style={`view-transition-name: car-${car.code}`}>
+        <button class="back-button" onclick="history.back()">
+            <Icon name="bxs:left-arrow" />
+        </button>
+        <section
+            class="car"
+            style={`view-transition-name: car-card-${car.code}`}
+        >
             <section class="car-header">
                 <section class="car-presentation">
                     {
@@ -25,7 +33,10 @@ const car = mapCarFromAPI(carFromAPI);
                     }
                 </section>
                 <section class="car-info">
-                    <h1>{car.brand} {car.model}</h1>
+                    <h1 style={`view-transition-name: car-name-${car.code}`}>
+                        {car.brand}
+                        {car.model}
+                    </h1>
                     <p><b>{car.km} km</b></p>
                     <p>
                         {
@@ -42,18 +53,23 @@ const car = mapCarFromAPI(carFromAPI);
                 <h2>Descripción</h2>
                 <p>{car.description}</p>
             </section>
+            <CarFeaturesAccordion features={car.features} client:load />
         </section>
     </main>
 </Layout>
 
 <style>
     main {
+        position: relative;
         background-color: white;
         padding: 2em;
         display: flex;
         justify-content: center;
         border-radius: var(--border-radius-bottom);
         box-shadow: var(--box-shadow);
+        width: 100%;
+        padding-bottom: 5em;
+        margin-bottom: 5em;
     }
 
     .car {
@@ -68,14 +84,12 @@ const car = mapCarFromAPI(carFromAPI);
         gap: 2em;
         margin-bottom: 2em;
     }
-
     .car-info {
         text-align: right;
     }
 
     .car-info h1 {
         font-size: 2rem;
-        color: var(--primary-color);
         margin: 0;
     }
 
@@ -92,5 +106,16 @@ const car = mapCarFromAPI(carFromAPI);
         width: 640px;
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
+    }
+
+    .back-button {
+        position: fixed;
+        top: 7em;
+        left: 7em;
+        background-color: var(--primary-color);
+        box-shadow: var(--box-shadow);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
     }
 </style>

@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
 import icon from 'astro-icon';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,5 +12,5 @@ export default defineConfig({
     mode: 'standalone'
   }),
 
-  integrations: [icon()]
+  integrations: [icon(), react()]
 });

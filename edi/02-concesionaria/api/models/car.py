@@ -1,9 +1,37 @@
 from pydantic import AnyUrl, BaseModel, computed_field
 from typing import Optional, List, Union
-from sqlmodel import SQLModel, Field, UniqueConstraint
+from sqlmodel import SQLModel, Field, UniqueConstraint, Column
+from sqlalchemy import JSON
 
 
-# Base con validaciones
+# Modelos de características simplificados
+class CarFeatures(BaseModel):
+    """Características del vehículo"""
+
+    fuel_type: Optional[str] = Field(
+        default=None,
+        description="Tipo de combustible (Nafta, Diésel, Eléctrico, Híbrido)",
+    )
+    transmission: Optional[str] = Field(
+        default=None, description="Tipo de transmisión (Manual, Automática, CVT)"
+    )
+    body_type: Optional[str] = Field(
+        default=None, description="Tipo de carrocería (Sedán, Hatchback, SUV, Pickup)"
+    )
+    passengers: Optional[int] = Field(
+        default=None, ge=1, le=9, description="Capacidad de pasajeros"
+    )
+    doors: Optional[int] = Field(
+        default=None, ge=2, le=5, description="Número de puertas"
+    )
+    air_conditioning: Optional[bool] = Field(
+        default=None, description="Tiene aire acondicionado"
+    )
+    airbags: Optional[int] = Field(default=None, ge=0, description="Número de airbags")
+    abs: Optional[bool] = Field(default=None, description="Sistema de frenos ABS")
+
+
+# Base con validaciones (sin features)
 class CarBase(SQLModel):
     brand: str = Field(min_length=1, max_length=50, description="Marca del vehículo")
     model: str = Field(min_length=1, max_length=50, description="Modelo del vehículo")
@@ -23,6 +51,10 @@ class CarBase(SQLModel):
 
 # Modelo de creación (input del POST)
 class CarCreate(CarBase):
+    features: Optional[CarFeatures] = Field(
+        default=None, description="Características del vehículo"
+    )
+
     @computed_field
     @property
     def car_code(self) -> str:
@@ -35,6 +67,11 @@ class CarRead(CarBase):
     image: Optional[str] = Field(
         default=None, description="Imagen del vehículo en formato base64"
     )
+    features: Optional[CarFeatures] = Field(
+        default=None, description="Características del vehículo"
+    )
+
+    model_config = {"from_attributes": True}
 
 
 class CarResponse(BaseModel):
@@ -56,5 +93,8 @@ class Car(CarBase, table=True):
     )
     image: Optional[bytes] = Field(
         default=None, description="Imagen del vehículo en formato binario"
+    )
+    features: Optional[dict] = Field(
+        default=None, sa_column=Column(JSON), description="Características del vehículo"
     )
     id: Optional[int] = Field(default=None, primary_key=True)

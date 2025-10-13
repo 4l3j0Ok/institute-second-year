@@ -1,3 +1,15 @@
+// Tipos para las características del vehículo
+export interface CarFeatures {
+    fuel_type?: string; // Tipo de combustiblec
+    transmission?: string; // Tipo de transmisión: manual, automática, et.
+    body_type?: string; // Tipo de carrocería: SUV, sedán, hatchback, etc.
+    passengers?: number; // Número de pasajeros
+    doors?: number; // Número de puertas
+    air_conditioning?: boolean; // Aire acondicionado
+    airbags?: number; // Número de airbags
+    abs?: boolean; // Frenos ABS
+}
+
 // Tipos para los datos que vienen de la API
 export interface CarFromAPI {
     id: number;
@@ -10,6 +22,7 @@ export interface CarFromAPI {
     year: number;
     car_code: string;
     image: string | null; // Base64 string
+    features?: CarFeatures;
 }
 
 export interface CarAPIResponse {
@@ -30,6 +43,7 @@ export interface Car {
     km: number;
     year: number;
     img: string; // Data URL o path a imagen por defecto
+    features?: CarFeatures;
 }
 
 // Función helper para convertir de API a formato frontend
@@ -47,5 +61,6 @@ export function mapCarFromAPI(car: CarFromAPI): Car {
         img: car.image
             ? `data:image/jpeg;base64,${car.image}`
             : "/assets/images/chevrolet-astra.webp",
+        features: car.features,
     };
 }

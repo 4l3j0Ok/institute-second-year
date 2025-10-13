@@ -8,7 +8,17 @@
         "km": 85000,
         "year": 2010,
         "image": "http://localhost:8000/public/tests/ford-ka.jpg",
-        "car_code": "ford-ka"
+        "car_code": "ford-ka",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Manual",
+            "body_type": "Hatchback",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 2,
+            "abs": true
+        }
     },
     {
         "brand": "Chevrolet",
@@ -19,7 +29,17 @@
         "km": 67000,
         "year": 2012,
         "image": "http://localhost:8000/public/tests/chevrolet-spark.jpg",
-        "car_code": "chevrolet-spark"
+        "car_code": "chevrolet-spark",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Manual",
+            "body_type": "Hatchback",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 2,
+            "abs": true
+        }
     },
     {
         "brand": "Toyota",
@@ -30,7 +50,17 @@
         "km": 45000,
         "year": 2018,
         "image": "http://localhost:8000/public/tests/toyota-corolla.jpg",
-        "car_code": "toyota-corolla"
+        "car_code": "toyota-corolla",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Automática",
+            "body_type": "Sedán",
+            "passengers": 5,
+            "doors": 4,
+            "air_conditioning": true,
+            "airbags": 7,
+            "abs": true
+        }
     },
     {
         "brand": "Volkswagen",
@@ -41,7 +71,17 @@
         "km": 92000,
         "year": 2015,
         "image": "http://localhost:8000/public/tests/volkswagen-gol.jpg",
-        "car_code": "volkswagen-gol"
+        "car_code": "volkswagen-gol",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Manual",
+            "body_type": "Hatchback",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 2,
+            "abs": true
+        }
     },
     {
         "brand": "Renault",
@@ -52,7 +92,17 @@
         "km": 60000,
         "year": 2017,
         "image": "http://localhost:8000/public/tests/renault-sandero.jpg",
-        "car_code": "renault-sandero"
+        "car_code": "renault-sandero",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Manual",
+            "body_type": "Hatchback",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 4,
+            "abs": true
+        }
     },
     {
         "brand": "Peugeot",
@@ -63,7 +113,17 @@
         "km": 30000,
         "year": 2020,
         "image": "http://localhost:8000/public/tests/peugeot-208.jpg",
-        "car_code": "peugeot-208"
+        "car_code": "peugeot-208",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Automática",
+            "body_type": "Hatchback",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 6,
+            "abs": true
+        }
     },
     {
         "brand": "Fiat",
@@ -74,7 +134,17 @@
         "km": 25000,
         "year": 2021,
         "image": "http://localhost:8000/public/tests/fiat-cronos.jpg",
-        "car_code": "fiat-cronos"
+        "car_code": "fiat-cronos",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Manual",
+            "body_type": "Sedán",
+            "passengers": 5,
+            "doors": 4,
+            "air_conditioning": true,
+            "airbags": 4,
+            "abs": true
+        }
     },
     {
         "brand": "Honda",
@@ -85,7 +155,17 @@
         "km": 38000,
         "year": 2019,
         "image": "http://localhost:8000/public/tests/honda-civic.jpg",
-        "car_code": "honda-civic"
+        "car_code": "honda-civic",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "CVT",
+            "body_type": "Sedán",
+            "passengers": 5,
+            "doors": 4,
+            "air_conditioning": true,
+            "airbags": 6,
+            "abs": true
+        }
     },
     {
         "brand": "Nissan",
@@ -96,7 +176,17 @@
         "km": 54000,
         "year": 2018,
         "image": "http://localhost:8000/public/tests/nissan-versa.jpg",
-        "car_code": "nissan-versa"
+        "car_code": "nissan-versa",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Automática",
+            "body_type": "Sedán",
+            "passengers": 5,
+            "doors": 4,
+            "air_conditioning": true,
+            "airbags": 4,
+            "abs": true
+        }
     },
     {
         "brand": "Hyundai",
@@ -107,7 +197,17 @@
         "km": 41000,
         "year": 2020,
         "image": "http://localhost:8000/public/tests/hyundai-i20.jpg",
-        "car_code": "hyundai-i20"
+        "car_code": "hyundai-i20",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Manual",
+            "body_type": "Hatchback",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 6,
+            "abs": true
+        }
     },
     {
         "brand": "Kia",
@@ -118,7 +218,17 @@
         "km": 36000,
         "year": 2020,
         "image": "http://localhost:8000/public/tests/kia-rio.jpg",
-        "car_code": "kia-rio"
+        "car_code": "kia-rio",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Automática",
+            "body_type": "Hatchback",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 6,
+            "abs": true
+        }
     },
     {
         "brand": "Jeep",
@@ -129,7 +239,17 @@
         "km": 42000,
         "year": 2019,
         "image": "http://localhost:8000/public/tests/jeep-renegade.jpg",
-        "car_code": "jeep-renegade"
+        "car_code": "jeep-renegade",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Automática",
+            "body_type": "SUV",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 7,
+            "abs": true
+        }
     },
     {
         "brand": "Ford",
@@ -140,7 +260,17 @@
         "km": 60000,
         "year": 2020,
         "image": "http://localhost:8000/public/tests/ford-ranger.jpg",
-        "car_code": "ford-ranger"
+        "car_code": "ford-ranger",
+        "features": {
+            "fuel_type": "Diésel",
+            "transmission": "Automática",
+            "body_type": "Pickup",
+            "passengers": 5,
+            "doors": 4,
+            "air_conditioning": true,
+            "airbags": 6,
+            "abs": true
+        }
     },
     {
         "brand": "Chevrolet",
@@ -151,7 +281,17 @@
         "km": 29000,
         "year": 2021,
         "image": "http://localhost:8000/public/tests/chevrolet-onix.jpg",
-        "car_code": "chevrolet-onix"
+        "car_code": "chevrolet-onix",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Automática",
+            "body_type": "Hatchback",
+            "passengers": 5,
+            "doors": 5,
+            "air_conditioning": true,
+            "airbags": 6,
+            "abs": true
+        }
     },
     {
         "brand": "Mazda",
@@ -162,6 +302,16 @@
         "km": 31000,
         "year": 2021,
         "image": "http://localhost:8000/public/tests/mazda-3.jpg",
-        "car_code": "mazda-3"
+        "car_code": "mazda-3",
+        "features": {
+            "fuel_type": "Nafta",
+            "transmission": "Automática",
+            "body_type": "Sedán",
+            "passengers": 5,
+            "doors": 4,
+            "air_conditioning": true,
+            "airbags": 6,
+            "abs": true
+        }
     }
 ]
