@@ -62,7 +62,11 @@ import "@fontsource/work-sans";
     }
 
     button {
-        background-color: var(--primary-color);
+        background: linear-gradient(
+            180deg,
+            var(--primary-color),
+            var(--primary-color-dark)
+        );
         color: white;
         border: none;
         border-radius: var(--border-radius);
@@ -70,10 +74,15 @@ import "@fontsource/work-sans";
         cursor: pointer;
         padding: 0 1.25em;
         font-size: 1em;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            filter 0.3s ease;
     }
 
     button:hover {
-        background-color: var(--primary-color-dark);
+        box-shadow: var(--box-shadow);
+        filter: brightness(1.1);
     }
 
     input,

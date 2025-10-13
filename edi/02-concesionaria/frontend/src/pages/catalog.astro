@@ -4,6 +4,7 @@ import { getCar } from "../lib/cars";
 import { mapCarFromAPI, type Car } from "../types/car";
 import CarGrid from "../components/CarGrid.astro";
 import Contact from "../components/Contact";
+import Stats from "../components/Stats.astro";
 
 // Obtener todos los autos
 let cars: Car[] = [];
@@ -17,6 +18,13 @@ try {
     console.error("Error fetching cars from API:", error);
     cars = [];
 }
+
+const catalogStats = [
+    {
+        number: cars.length,
+        label: "Vehículos disponibles",
+    },
+];
 ---
 
 <Layout>
@@ -26,12 +34,7 @@ try {
             <p class="subtitle">
                 Explora nuestra amplia selección de vehículos disponibles
             </p>
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">{cars.length}</span>
-                    <span class="stat-label">Vehículos disponibles</span>
-                </div>
-            </div>
+            <Stats stats={catalogStats} />
         </section>
 
         <CarGrid cars={cars} />
@@ -71,33 +74,6 @@ try {
         margin-bottom: 2em;
     }
 
-    .stats {
-        display: flex;
-        justify-content: center;
-        gap: 2em;
-        margin-top: 2em;
-    }
-
-    .stat {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1em 2em;
-        background-color: var(--background-color);
-        border-radius: var(--border-radius);
-    }
-
-    .stat-number {
-        font-size: 2rem;
-        font-weight: bold;
-        color: var(--primary-color);
-    }
-
-    .stat-label {
-        font-size: 0.9rem;
-        color: #666;
-    }
-
     @media (max-width: 768px) {
         main {
             width: 95%;
@@ -110,11 +86,6 @@ try {
 
         .subtitle {
             font-size: 1rem;
-        }
-
-        .stats {
-            flex-direction: column;
-            gap: 1em;
         }
     }
 </style>

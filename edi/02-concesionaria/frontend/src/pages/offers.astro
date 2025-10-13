@@ -4,6 +4,7 @@ import { getCar } from "../lib/cars";
 import { mapCarFromAPI, type Car } from "../types/car";
 import CarGrid from "../components/CarGrid.astro";
 import Contact from "../components/Contact";
+import Stats from "../components/Stats.astro";
 import { Icon } from "astro-icon/components";
 
 // Obtener todos los autos
@@ -23,6 +24,33 @@ try {
 const offerCars = cars.filter(
     (car) => car.promotionPrice && car.promotionPrice < car.price,
 );
+
+// Calcular estadísticas
+const averageDiscount =
+    offerCars.length > 0
+        ? Math.round(
+              (offerCars.reduce(
+                  (acc, car) =>
+                      acc +
+                      ((car.price - (car.promotionPrice || 0)) / car.price) *
+                          100,
+                  0,
+              ) /
+                  offerCars.length) *
+                  10,
+          ) / 10
+        : 0;
+
+const offerStats = [
+    {
+        number: offerCars.length,
+        label: "Ofertas activas",
+    },
+    {
+        number: `${averageDiscount}%`,
+        label: "Descuento promedio",
+    },
+];
 ---
 
 <Layout>
@@ -37,34 +65,7 @@ const offerCars = cars.filter(
                 Vehículos seleccionados con descuentos exclusivos por tiempo
                 limitado
             </p>
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">{offerCars.length}</span>
-                    <span class="stat-label">Ofertas activas</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">
-                        {
-                            offerCars.length > 0
-                                ? Math.round(
-                                      (offerCars.reduce(
-                                          (acc, car) =>
-                                              acc +
-                                              ((car.price -
-                                                  (car.promotionPrice || 0)) /
-                                                  car.price) *
-                                                  100,
-                                          0,
-                                      ) /
-                                          offerCars.length) *
-                                          10,
-                                  ) / 10
-                                : 0
-                        }%
-                    </span>
-                    <span class="stat-label">Descuento promedio</span>
-                </div>
-            </div>
+            <Stats stats={offerStats} />
         </section>
 
         <CarGrid cars={cars} showOnlyOffers={true} />
@@ -133,35 +134,6 @@ const offerCars = cars.filter(
         margin-bottom: 2em;
     }
 
-    .stats {
-        display: flex;
-        justify-content: center;
-        gap: 2em;
-        margin-top: 2em;
-    }
-
-    .stat {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1em 2em;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        border-radius: var(--border-radius);
-        min-width: 150px;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: var(--accent-color-dark);
-    }
-
-    .stat-label {
-        font-size: 0.9rem;
-        color: #666;
-        font-weight: 500;
-    }
-
     .cta-section {
         text-align: center;
         padding: 3em 2em;
@@ -212,15 +184,6 @@ const offerCars = cars.filter(
 
         .subtitle {
             font-size: 1rem;
-        }
-
-        .stats {
-            flex-direction: column;
-            gap: 1em;
-        }
-
-        .stat {
-            min-width: 100%;
         }
 
         .cta-section {

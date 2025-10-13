@@ -48,9 +48,13 @@ const car = mapCarFromAPI(carFromAPI);
                         }
                         ${car.promotionPrice ?? car.price}
                     </p>
-                    <a href="#contact">
-                        <button class="contact-button">Contactar</button>
-                    </a>
+                    <button
+                        class="contact-button"
+                        id="contact-btn"
+                        data-car={JSON.stringify(car)}
+                    >
+                        Contactar
+                    </button>
                 </section>
             </section>
             <section class="car-description">
@@ -59,7 +63,7 @@ const car = mapCarFromAPI(carFromAPI);
             </section>
             <CarFeaturesAccordion features={car.features} client:load />
         </section>
-        <Contact car={car} client:load />
+        <Contact client:load />
     </main>
 </Layout>
 
@@ -123,6 +127,14 @@ const car = mapCarFromAPI(carFromAPI);
         border-radius: 50%;
         width: 50px;
         height: 50px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .back-button::before {
+        border-radius: 50%;
     }
 
     .contact-button {
@@ -130,3 +142,17 @@ const car = mapCarFromAPI(carFromAPI);
         font-size: 1rem;
     }
 </style>
+
+<script>
+    const contactBtn = document.getElementById("contact-btn");
+    if (contactBtn) {
+        contactBtn.addEventListener("click", () => {
+            const carData = contactBtn.getAttribute("data-car");
+            if (carData) {
+                localStorage.setItem("contact_car", carData);
+                window.dispatchEvent(new Event("storage"));
+                window.location.hash = "#contact";
+            }
+        });
+    }
+</script>

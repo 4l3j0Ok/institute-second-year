@@ -11,7 +11,9 @@ import carImage from "../assets/images/white-toyota-transparent.png";
         <div class="description">
             <h3>Financiá tu auto</h3>
             <p>Ofrecemos planes de financiación adaptados a tus necesidades.</p>
-            <button>Más información</button>
+            <a href="/financing">
+                <button class="more-info">Más información</button>
+            </a>
         </div>
     </article>
 </section>
@@ -22,23 +24,17 @@ import carImage from "../assets/images/white-toyota-transparent.png";
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: var(--primary-color);
+        background: linear-gradient(
+            135deg,
+            var(--accent-color-light),
+            var(--accent-color-dark)
+        );
         color: white;
         border-radius: var(--border-radius);
         padding: 1em;
         box-shadow: var(--box-shadow);
         padding-right: 4em;
         padding-left: 4em;
-    }
-
-    .service-card button {
-        background-color: white;
-        color: var(--primary-color);
-        border: none;
-        padding: 0.5em 1em;
-        border-radius: var(--border-radius);
-        cursor: pointer;
-        transition: background-color 0.3s ease;
     }
 
     .service-card img {

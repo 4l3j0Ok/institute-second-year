@@ -3,38 +3,51 @@ import { Icon } from "@iconify/react";
 import type { Car } from "../types/car";
 import "./Contact.css";
 
-interface ContactProps {
-    car?: Car;
-}
 
 const STORAGE_KEY = "contact_car";
 
-export default function Contact({ car: initialCar }: ContactProps) {
+export default function Contact() {
     const [attachedCar, setAttachedCar] = useState<Car | null>(null);
+    const [isRemoving, setIsRemoving] = useState(false);
 
     useEffect(() => {
-        // Si hay un car pasado como prop, usarlo y guardarlo
-        if (initialCar) {
-            setAttachedCar(initialCar);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(initialCar));
-        } else {
-            // Si no, intentar cargar desde localStorage
+        // Función para cargar el carro desde localStorage
+        const loadCarFromStorage = () => {
             const stored = localStorage.getItem(STORAGE_KEY);
             if (stored) {
                 try {
                     const storedCar = JSON.parse(stored);
                     setAttachedCar(storedCar);
+                    setIsRemoving(false);
                 } catch (e) {
                     console.error("Error parsing stored car:", e);
                     localStorage.removeItem(STORAGE_KEY);
                 }
             }
-        }
-    }, [initialCar]);
+        };
+
+        // Escuchar cambios en el storage
+        const handleStorageChange = () => {
+            loadCarFromStorage();
+        };
+        window.addEventListener("storage", handleStorageChange);
+
+        loadCarFromStorage();
+
+        // Limpiar el listener al desmontar para evitar fugas de memoria
+        return () => {
+            window.removeEventListener("storage", handleStorageChange);
+        };
+    }, []);
 
     const handleRemoveCar = () => {
-        setAttachedCar(null);
-        localStorage.removeItem(STORAGE_KEY);
+        setIsRemoving(true);
+        // Esperar a que termine la animación antes de remover
+        setTimeout(() => {
+            setAttachedCar(null);
+            localStorage.removeItem(STORAGE_KEY);
+            setIsRemoving(false);
+        }, 300); // Duración de la animación bounceOut
     };
 
     return (
@@ -42,7 +55,10 @@ export default function Contact({ car: initialCar }: ContactProps) {
             <h2>Contacto</h2>
             <form className="contact-form" id="contact-form">
                 {attachedCar && (
-                    <div className="car-attachment" id="car-attachment">
+                    <div
+                        className={`car-attachment${isRemoving ? ' removing' : ''}`}
+                        id="car-attachment"
+                    >
                         <div className="attachment-header">
                             <div className="attachment-info">
                                 <Icon icon="mdi:information" />
