@@ -21,7 +21,7 @@ export interface CarAPIResponse {
 
 // Tipo para el auto procesado en el frontend
 export interface Car {
-    id: string;
+    code: string;
     brand: string;
     model: string;
     description: string;
@@ -35,7 +35,7 @@ export interface Car {
 // Función helper para convertir de API a formato frontend
 export function mapCarFromAPI(car: CarFromAPI): Car {
     return {
-        id: car.car_code,
+        code: car.car_code,
         brand: car.brand,
         model: car.model,
         description: car.description,

@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import CarImage from "../assets/images/chevrolet-astra.webp";
 import { getCar } from "../lib/cars";
 import { mapCarFromAPI, type Car } from "../types/car";
+import { Icon } from "astro-icon/components";
 
 // Inicializar con array vacío
 let cars: Car[] = [];
@@ -27,19 +28,24 @@ console.log("Final cars array:", cars);
     <h2>Ofertas</h2>
     <div class="catalog-content">
         <button class="arrow-button" id="prev-button"
-            ><iconify-icon icon="bxs:left-arrow"></iconify-icon></button
+            ><Icon name="bxs:left-arrow" /></button
         >
         <div class="catalog-cars">
             {
                 cars.length > 0 ? (
-                    cars.map((car: any) => (
-                        <a href={`/cars/${car.id}`} class="car-link">
-                            <div class="car" id={`${car.brand}-${car.model}`}>
+                    cars.map((car: Car) => (
+                        <a href={`/cars/${car.code}`} class="car-link">
+                            <div
+                                class="car"
+                                id={`${car.brand}-${car.model}`}
+                                style={`view-transition-name: car-${car.code}`}
+                            >
                                 {car.img && car.img.startsWith("data:") ? (
                                     <img
                                         src={car.img}
                                         alt={`${car.brand} ${car.model}`}
                                         class="car-image"
+                                        style={`view-transition-name: image-${car.code}`}
                                     />
                                 ) : (
                                     <Image
@@ -84,7 +90,7 @@ console.log("Final cars array:", cars);
             }
         </div>
         <button class="arrow-button" id="next-button">
-            <iconify-icon icon="bxs:right-arrow"></iconify-icon>
+            <Icon name="bxs:right-arrow" />
         </button>
     </div>
     <div class="view-all">
@@ -176,7 +182,7 @@ console.log("Final cars array:", cars);
     }
 
     .arrow-button:hover {
-        background-color: var(--primary-dark);
+        background-color: var(--primary-color-dark);
     }
 
     #prev-button {
@@ -195,6 +201,13 @@ console.log("Final cars array:", cars);
         scroll-behavior: smooth;
         scrollbar-width: none;
         max-width: calc(100vw - 120px);
+        mask: linear-gradient(
+            to right,
+            transparent,
+            black 5%,
+            black 95%,
+            transparent
+        );
     }
 
     .catalog-cars::-webkit-scrollbar {
@@ -221,22 +234,6 @@ console.log("Final cars array:", cars);
         display: flex;
         justify-content: center;
         gap: 2em;
-    }
-
-    .view-all-offers,
-    .view-all-button {
-        background-color: var(--secondary-color);
-        color: white;
-        border: none;
-        padding: 1em 2em;
-        border-radius: var(--border-radius);
-        cursor: pointer;
-        font-size: 1em;
-    }
-
-    .view-all-offers:hover,
-    .view-all-button:hover {
-        background-color: var(--secondary-dark);
     }
 
     @media (max-width: 768px) {

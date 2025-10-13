@@ -22,12 +22,15 @@ import Footer from "../components/Footer.astro";
 <style is:global>
     :root {
         --primary-color: #0357af;
+        --primary-color-light: #4a90e2;
+        --primary-color-dark: #003d80;
         --secondary-color: #0180cc;
         --accent-color: #e4815a;
         --alt-accent-color: #f2a07b;
         --red-color: #ff4c4c;
         --background-color: #eeeeee;
         --border-radius: 0.5em;
+        --border-radius-bottom: 0 0 0.5em 0.5em;
         --box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4);
     }
 
@@ -39,12 +42,8 @@ import Footer from "../components/Footer.astro";
         flex-direction: column;
         align-items: center;
         width: 100%;
-    }
-
-    section {
-        width: 100%;
-        margin-bottom: 5em;
-        padding: 0 1em;
+        margin: 0;
+        padding: 0;
     }
 
     ::selection {
@@ -62,11 +61,25 @@ import Footer from "../components/Footer.astro";
         color: white;
         border: none;
         border-radius: var(--border-radius);
-        padding: 0 1em;
         height: 3em;
+        cursor: pointer;
     }
 
     button:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--primary-color-dark);
+    }
+
+    input,
+    textarea {
+        border: 1px solid #ccc;
+        padding: 0.5em;
+        font-size: 1em;
+        font-family: inherit;
+        box-sizing: border-box;
+        border-radius: var(--border-radius);
+    }
+
+    @view-transition {
+        navigation: auto;
     }
 </style>

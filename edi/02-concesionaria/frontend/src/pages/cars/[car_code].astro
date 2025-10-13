@@ -11,7 +11,7 @@ const car = mapCarFromAPI(carFromAPI);
 
 <Layout>
     <main>
-        <section class="car">
+        <section class="car" style={`view-transition-name: car-${car.code}`}>
             <section class="car-header">
                 <section class="car-presentation">
                     {
@@ -19,6 +19,7 @@ const car = mapCarFromAPI(carFromAPI);
                             <img
                                 src={car.img}
                                 alt={`Imagen de ${car.brand} ${car.model}`}
+                                style={`view-transition-name: image-${car.code}`}
                             />
                         )
                     }
@@ -38,6 +39,7 @@ const car = mapCarFromAPI(carFromAPI);
                 </section>
             </section>
             <section class="car-description">
+                <h2>Descripción</h2>
                 <p>{car.description}</p>
             </section>
         </section>
@@ -45,38 +47,26 @@ const car = mapCarFromAPI(carFromAPI);
 </Layout>
 
 <style>
+    main {
+        background-color: white;
+        padding: 2em;
+        display: flex;
+        justify-content: center;
+        border-radius: var(--border-radius-bottom);
+        box-shadow: var(--box-shadow);
+    }
+
     .car {
+        width: 80%;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        justify-content: space-around;
-        background-color: white;
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        padding: 4em;
-    }
-
-    .car section {
-        margin-bottom: 2em;
-    }
-
-    .car .old-price {
-        text-decoration: line-through;
-        color: var(--red-color);
     }
 
     .car-header {
         display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        width: 100%;
         justify-content: space-between;
-    }
-
-    .car-presentation img {
-        width: 640px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
+        gap: 2em;
+        margin-bottom: 2em;
     }
 
     .car-info {
@@ -91,5 +81,16 @@ const car = mapCarFromAPI(carFromAPI);
 
     .car-description {
         width: 100%;
+    }
+
+    .car .old-price {
+        text-decoration: line-through;
+        color: var(--red-color);
+    }
+
+    .car-presentation img {
+        width: 640px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
     }
 </style>
