@@ -1,6 +1,6 @@
 import type { CarAPIResponse } from '../types/car';
 
-const domain = import.meta.env.CARS_API_DOMAIN
+const domain = import.meta.env.API_URL
 const apiUrl = `${domain}/cars`
 
 

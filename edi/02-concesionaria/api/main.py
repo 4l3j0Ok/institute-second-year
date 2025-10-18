@@ -3,7 +3,7 @@ from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from core import db
 from core.config import AppConfig
-from routers import car
+from routers import car, contact
 import uvicorn
 
 
@@ -15,6 +15,7 @@ app = FastAPI(
 )
 
 app.include_router(car.router)
+app.include_router(contact.router)
 app.mount(
     AppConfig.STATIC_URL,
     StaticFiles(directory=AppConfig.STATIC_DIR),

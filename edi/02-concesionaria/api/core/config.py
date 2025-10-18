@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,3 +31,11 @@ class LoggerConfig:
         "ERROR": "red",
         "CRITICAL": "bold_red",
     }
+
+
+class EmailConfig:
+    RESEND_API_KEY = os.getenv("RESEND_API_KEY")
+    # Email que figura como remitente en los correos enviados.
+    FROM_EMAIL = os.getenv("FROM_EMAIL", "contacto@alejoide.com")
+    # Email que recibe los mensajes de contacto, mail de la concesionaria.
+    TO_EMAIL = os.getenv("TO_EMAIL", "contacto@alejoide.com")
