@@ -59,21 +59,32 @@ class CarController:
                 status_code=409,
                 detail=f"El código del vehículo '{car.car_code}' ya existe.",
             )
+
+        # Primero obtener los datos del modelo
+        car_data = car.model_dump()
+
+        # Convertir features a dict si existe
+        if car_data.get("features") and hasattr(car_data["features"], "model_dump"):
+            car_data["features"] = car_data["features"].model_dump()
+
+        # Procesar la imagen después de hacer model_dump
         if car.image:
-            response = requests.get(car.image)
+            response = requests.get(str(car.image))
             if response.status_code == 200:
                 content_type = response.headers.get("Content-Type", "")
                 if content_type.startswith("image/"):
-                    car.image = response.content
+                    car_data["image"] = response.content
                 else:
                     raise HTTPException(
                         status_code=400,
                         detail="La URL proporcionada no contiene una imagen válida.",
                     )
-        car_data = car.model_dump()
-        # Convertir features a dict si existe
-        if car_data.get("features") and hasattr(car_data["features"], "model_dump"):
-            car_data["features"] = car_data["features"].model_dump()
+            else:
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"No se pudo descargar la imagen. Status code: {response.status_code}",
+                )
+
         car = Car(**car_data)
         session.add(car)
         session.commit()

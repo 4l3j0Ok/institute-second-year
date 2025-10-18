@@ -17,6 +17,8 @@ RUN pnpm install
 
 FROM build-deps AS build
 COPY . .
+ARG API_URL
+ENV API_URL=$API_URL
 RUN pnpm run build
 
 FROM base AS runtime

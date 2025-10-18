@@ -17,7 +17,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=./pyproject.toml,target=pyproject.toml \
     uv sync --locked --no-install-project --no-dev
 COPY ./ /app
-COPY ./LICENSE /
+# COPY ./LICENSE /
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked --no-dev
 
@@ -44,7 +44,7 @@ COPY --from=builder --chown=app:app /app /app
 # Place executables in the environment at the front of the path
 ENV PATH="/app/.venv/bin:$PATH"
 
-WORKDIR /app/src
+WORKDIR /app
 
 # Run the FastAPI application by default
 CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
