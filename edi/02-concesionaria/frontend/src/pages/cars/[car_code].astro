@@ -14,9 +14,11 @@ const car = mapCarFromAPI(carFromAPI);
 
 <Layout>
     <main>
-        <button class="back-button" onclick="history.back()">
-            <Icon name="bxs:left-arrow" />
-        </button>
+        <a href="/#offers">
+            <button class="back-button">
+                <Icon name="bxs:left-arrow" />
+            </button>
+        </a>
         <section
             class="car"
             style={`view-transition-name: car-card-${car.code}`}
@@ -151,7 +153,7 @@ const car = mapCarFromAPI(carFromAPI);
             if (carData) {
                 localStorage.setItem("contact_car", carData);
                 window.dispatchEvent(new Event("storage"));
-                window.location.hash = "#contact";
+                window.scrollTo(0, document.body.scrollHeight);
             }
         });
     }
