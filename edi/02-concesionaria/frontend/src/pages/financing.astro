@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Contact from "../components/Contact";
 import { Icon } from "astro-icon/components";
+import { FINANCING_PLANS } from "../data/financingPlans";
 ---
 
 <Layout>
@@ -57,102 +58,62 @@ import { Icon } from "astro-icon/components";
       </div>
     </section>
 
-    <section class="financing-plans">
+    <section class="financing-plans" id="plans">
       <h2>Nuestros Planes de Financiación</h2>
       <div class="plans-grid">
-        <div class="plan-card">
-          <div class="plan-header plan-basic">
-            <h3>Plan Básico</h3>
-            <div class="plan-price">
-              <span class="rate">12%</span>
-              <span class="rate-label">TNA</span>
+        {
+          FINANCING_PLANS.map((plan) => (
+            <div class={`plan-card${plan.featured ? " featured" : ""}`}>
+              {plan.featured && <div class="featured-badge">Más Popular</div>}
+              <div
+                class={`plan-header plan-${plan.id}`}
+                style={`background: ${plan.gradient}`}
+              >
+                <h3>{plan.name}</h3>
+                <div class="plan-price">
+                  <span class="rate">{plan.rate}</span>
+                  <span class="rate-label">{plan.rateLabel}</span>
+                </div>
+              </div>
+              <div class="plan-info">
+                <ul class="plan-features">
+                  {plan.features.map((feature, index) => (
+                    <li
+                      class={
+                        index === plan.features.length - 1 &&
+                        plan.id === "promo"
+                          ? "highlight"
+                          : ""
+                      }
+                    >
+                      <Icon
+                        name={
+                          index === plan.features.length - 1 &&
+                          plan.id === "promo"
+                            ? "mdi:star"
+                            : "mdi:check-circle"
+                        }
+                      />{" "}
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a href="#contact">
+                  <button
+                    class="plan-button"
+                    data-plan-name={plan.name}
+                    data-plan-rate={plan.rate}
+                    data-plan-rate-label={plan.rateLabel}
+                    data-plan-months={plan.months}
+                    data-plan-down-payment={plan.downPayment}
+                  >
+                    Solicitar
+                  </button>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="plan-info">
-            <ul class="plan-features">
-              <li>
-                <Icon name="mdi:check-circle" /> Hasta 36 meses
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> 20% de anticipo
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> Cuotas fijas
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> Seguro incluido
-              </li>
-            </ul>
-            <a href="#contact">
-              <button class="plan-button">Solicitar</button>
-            </a>
-          </div>
-        </div>
-
-        <div class="plan-card featured">
-          <div class="featured-badge">Más Popular</div>
-          <div class="plan-header plan-premium">
-            <h3>Plan Premium</h3>
-            <div class="plan-price">
-              <span class="rate">8%</span>
-              <span class="rate-label">TNA</span>
-            </div>
-          </div>
-          <div class="plan-info">
-            <ul class="plan-features">
-              <li>
-                <Icon name="mdi:check-circle" /> Hasta 60 meses
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> 15% de anticipo
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> Cuotas fijas
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> Seguro premium incluido
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> Mantenimiento 1er año
-              </li>
-            </ul>
-            <a href="#contact">
-              <button class="plan-button">Solicitar</button>
-            </a>
-          </div>
-        </div>
-
-        <div class="plan-card">
-          <div class="plan-header plan-promo">
-            <h3>Plan Promocional</h3>
-            <div class="plan-price">
-              <span class="rate">0%</span>
-              <span class="rate-label">TNA</span>
-            </div>
-          </div>
-          <div class="plan-info">
-            <ul class="plan-features">
-              <li>
-                <Icon name="mdi:check-circle" /> Hasta 24 meses
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> 30% de anticipo
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> Cuotas fijas
-              </li>
-              <li>
-                <Icon name="mdi:check-circle" /> Seguro incluido
-              </li>
-              <li class="highlight">
-                <Icon name="mdi:star" /> Solo autos seleccionados
-              </li>
-            </ul>
-            <a href="#contact">
-              <button class="plan-button">Solicitar</button>
-            </a>
-          </div>
-        </div>
+          ))
+        }
       </div>
     </section>
 
@@ -377,7 +338,7 @@ import { Icon } from "astro-icon/components";
 
   .featured-badge {
     position: absolute;
-    top: 10px;
+    top: 30px;
     right: -30px;
     background-color: var(--accent-color);
     color: white;
@@ -386,24 +347,13 @@ import { Icon } from "astro-icon/components";
     font-size: 0.85rem;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
   }
 
   .plan-header {
     padding: 2em;
     color: white;
     text-align: center;
-  }
-
-  .plan-basic {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-
-  .plan-premium {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  }
-
-  .plan-promo {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   }
 
   .plan-header h3 {
@@ -625,3 +575,32 @@ import { Icon } from "astro-icon/components";
     }
   }
 </style>
+
+<script>
+  const STORAGE_PLAN_KEY = "contact_plan";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const planButtons = document.querySelectorAll(".plan-button");
+
+    planButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const btn = e.currentTarget as HTMLButtonElement;
+        const plan = {
+          name: btn.dataset.planName,
+          rate: btn.dataset.planRate,
+          rateLabel: btn.dataset.planRateLabel,
+          months: parseInt(btn.dataset.planMonths || "0"),
+          downPayment: parseInt(btn.dataset.planDownPayment || "0"),
+        };
+
+        console.log("Plan guardado:", plan);
+
+        // Guardar el plan en localStorage
+        localStorage.setItem(STORAGE_PLAN_KEY, JSON.stringify(plan));
+
+        // Disparar evento de storage manualmente para la misma pestaña
+        window.dispatchEvent(new Event("storage"));
+      });
+    });
+  });
+</script>

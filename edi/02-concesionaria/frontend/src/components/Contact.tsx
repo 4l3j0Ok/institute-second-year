@@ -1,38 +1,54 @@
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import type { Car } from "../types/car";
+import type { FinancingPlan } from "../types/plan";
+import { getPlanGradient } from "../data/financingPlans";
 import "./Contact.css";
 
 
-const STORAGE_KEY = "contact_car";
+const STORAGE_CAR_KEY = "contact_car";
+const STORAGE_PLAN_KEY = "contact_plan";
 
 export default function Contact() {
   const [attachedCar, setAttachedCar] = useState<Car | null>(null);
-  const [isRemoving, setIsRemoving] = useState(false);
+  const [attachedPlan, setAttachedPlan] = useState<FinancingPlan | null>(null);
+  const [isRemoving, setCarIsRemoving] = useState(false);
+  const [isRemovingPlan, setPlanIsRemoving] = useState(false);
 
   useEffect(() => {
-    // Función para cargar el carro desde localStorage
-    const loadCarFromStorage = () => {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
+    // Función para cargar el carro y plan desde localStorage
+    const loadComponentsFromStorage = () => {
+      const storedCar = localStorage.getItem(STORAGE_CAR_KEY);
+      const storedPlan = localStorage.getItem(STORAGE_PLAN_KEY);
+      if (storedCar) {
         try {
-          const storedCar = JSON.parse(stored);
-          setAttachedCar(storedCar);
-          setIsRemoving(false);
+          const car = JSON.parse(storedCar);
+          setAttachedCar(car);
+          setCarIsRemoving(false);
         } catch (e) {
           console.error("Error parsing stored car:", e);
-          localStorage.removeItem(STORAGE_KEY);
+          localStorage.removeItem(STORAGE_CAR_KEY);
+        }
+      }
+      if (storedPlan) {
+        try {
+          const plan = JSON.parse(storedPlan);
+          setAttachedPlan(plan);
+          setPlanIsRemoving(false);
+        } catch (e) {
+          console.error("Error parsing stored plan:", e);
+          localStorage.removeItem(STORAGE_PLAN_KEY);
         }
       }
     };
 
-    // Escuchar cambios en el storage
+    // Escuchar cambios en el storage (de otras pestañas y eventos manuales)
     const handleStorageChange = () => {
-      loadCarFromStorage();
+      loadComponentsFromStorage();
     };
     window.addEventListener("storage", handleStorageChange);
 
-    loadCarFromStorage();
+    loadComponentsFromStorage();
 
     // Limpiar el listener al desmontar para evitar fugas de memoria
     return () => {
@@ -41,12 +57,21 @@ export default function Contact() {
   }, []);
 
   const handleRemoveCar = () => {
-    setIsRemoving(true);
+    setCarIsRemoving(true);
     // Esperar a que termine la animación antes de remover
     setTimeout(() => {
       setAttachedCar(null);
-      localStorage.removeItem(STORAGE_KEY);
-      setIsRemoving(false);
+      localStorage.removeItem(STORAGE_CAR_KEY);
+      setCarIsRemoving(false);
+    }, 300); // Duración de la animación bounceOut
+  };
+  const handleRemovePlan = () => {
+    setPlanIsRemoving(true);
+    // Esperar a que termine la animación antes de remover
+    setTimeout(() => {
+      setAttachedPlan(null);
+      localStorage.removeItem(STORAGE_PLAN_KEY);
+      setPlanIsRemoving(false);
     }, 300); // Duración de la animación bounceOut
   };
 
@@ -62,7 +87,7 @@ export default function Contact() {
             <div className="attachment-header">
               <div className="attachment-info">
                 <Icon icon="mdi:information" />
-                <span>Consulta sobre este vehículo:</span>
+                <span>Estás consultando sobre este vehículo:</span>
               </div>
               <button
                 type="button"
@@ -97,6 +122,53 @@ export default function Contact() {
               type="hidden"
               name="car_code"
               value={attachedCar.code}
+            />
+          </div>
+        )}
+        {attachedPlan && (
+          <div
+            className={`plan-attachment${isRemovingPlan ? ' removing' : ''}`}
+            id="plan-attachment"
+          >
+            <div className="attachment-header">
+              <div className="attachment-info">
+                <Icon icon="mdi:information" />
+                <span>Estás consultando sobre este plan de financiación:</span>
+              </div>
+              <button
+                type="button"
+                className="remove-attachment"
+                onClick={handleRemovePlan}
+                aria-label="Quitar plan de la consulta"
+              >
+                <Icon icon="mdi:close" />
+              </button>
+            </div>
+            <a href={`/financing#plans`} className="attachment-link">
+              <div className="plan-tag">
+                <div
+                  className="plan-tag-header"
+                  style={{
+                    background: getPlanGradient(attachedPlan.name),
+                    backgroundImage: getPlanGradient(attachedPlan.name)
+                  }}
+                >
+                  <strong>{attachedPlan.name}</strong>
+                  <div className="plan-tag-rate">
+                    <span className="rate-value">{attachedPlan.rate}</span>
+                    <span className="rate-label">{attachedPlan.rateLabel}</span>
+                  </div>
+                </div>
+                <div className="plan-tag-details">
+                  <span>• Hasta {attachedPlan.months} meses</span>
+                  <span>• {attachedPlan.downPayment}% de anticipo</span>
+                </div>
+              </div>
+            </a>
+            <input
+              type="hidden"
+              name="plan_name"
+              value={attachedPlan.name}
             />
           </div>
         )}

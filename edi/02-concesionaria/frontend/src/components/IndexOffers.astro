@@ -1,6 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import CarImage from "../assets/images/chevrolet-astra.webp";
+import CarCard from "./CarCard.astro";
 import { getCar } from "../lib/cars";
 import { mapCarFromAPI, type Car } from "../types/car";
 import { Icon } from "astro-icon/components";
@@ -15,6 +14,9 @@ try {
   if (carsResponse && Array.isArray(carsResponse.items)) {
     // Mapear los datos de la API al formato esperado por el componente
     cars = carsResponse.items.map(mapCarFromAPI);
+    cars = cars.filter(
+      (car) => car.promotionPrice && car.promotionPrice < car.price,
+    );
   }
 } catch (error) {
   console.error("Error fetching cars from API:", error);
@@ -33,43 +35,7 @@ console.log("Final cars array:", cars);
     <div class="offers-cars">
       {
         cars.length > 0 ? (
-          cars.map((car: Car) =>
-            // si es una oferta, mostrar el carro, sino no
-            car.promotionPrice ? (
-              <a href={`/cars/${car.code}`} class="car-link">
-                <div
-                  class="car"
-                  id={`${car.brand}-${car.model}`}
-                  style={`view-transition-name: car-card-${car.code}`}
-                >
-                  {car.img && car.img.startsWith("data:") ? (
-                    <img
-                      src={car.img}
-                      alt={`${car.brand} ${car.model}`}
-                      class="car-image"
-                      style={`view-transition-name: image-${car.code}`}
-                    />
-                  ) : (
-                    <Image
-                      src={CarImage}
-                      alt={`Imagen de ${car.brand} ${car.model}`}
-                      class="car-image"
-                    />
-                  )}
-                  <h2 style={`view-transition-name: car-name-${car.code}`}>
-                    {car.brand} {car.model}
-                  </h2>
-                  <div>
-                    <p class="old-price">${car.price.toLocaleString()}</p>
-                    <p class="price">${car.promotionPrice.toLocaleString()}</p>
-                  </div>
-                  <p class="car-details">
-                    {car.year} • {car.km.toLocaleString()} km
-                  </p>
-                </div>
-              </a>
-            ) : null,
-          )
+          cars.map((car: Car) => <CarCard car={car} />)
         ) : (
           <div class="no-cars-message">
             <p>No hay vehículos disponibles en este momento.</p>
@@ -95,56 +61,11 @@ console.log("Final cars array:", cars);
 </section>
 
 <style>
-  .car {
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    padding: 1em;
-    box-shadow: var(--box-shadow);
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .car img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-  }
-
-  .car-link {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .car .old-price {
-    text-decoration: line-through;
-    color: var(--text-color-light);
-    font-size: 0.9em;
-    margin: 0;
-  }
-
-  .car .price {
-    color: var(--green-color);
-    font-weight: bold;
-    font-size: 1.2em;
-    margin: 0;
-  }
-
-  .car-details {
-    color: #666;
-    font-size: 0.9em;
-    margin: 0;
-  }
-
   .offers {
     margin: 2em 0;
   }
 
   .offers h2 {
-    text-align: center;
     margin-bottom: 1em;
   }
 
