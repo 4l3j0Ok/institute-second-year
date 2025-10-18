@@ -7,29 +7,29 @@ import Contact from "../components/Contact";
 ---
 
 <Layout>
-	<main>
-		<Hero />
-		<Services />
-		<IndexOffers />
-		<section
-			id="contact"
-			style="background-color: white; padding: 2em; border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin-top: 2em;"
-		>
-			<Contact client:load />
-		</section>
-	</main>
+  <main>
+    <Hero />
+    <Services />
+    <IndexOffers />
+    <section
+      id="contact"
+      style="background-color: white; padding: 2em; border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin-top: 2em;"
+    >
+      <Contact client:load />
+    </section>
+  </main>
 </Layout>
 
 <style>
-	main {
-		width: 80%;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		margin-bottom: 5em;
-	}
-	section {
-		width: 100%;
-		margin-bottom: 5em;
-	}
+  main {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5em;
+  }
+  section {
+    width: 100%;
+    margin-bottom: 5em;
+  }
 </style>
