@@ -1,12 +1,10 @@
 from fastapi import APIRouter, HTTPException, Body
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
-from pydantic import ValidationError
 from core import email
 from core.config import EmailConfig
 from core.logger import logger
 from models.contact import ContactRequest
-from models.plan import FinancingPlan
 
 
 router = APIRouter(
@@ -24,29 +22,13 @@ jinja_env = Environment(
 @router.post("/contact", status_code=204)
 def send_contact_email(request: ContactRequest = Body(...)):
     try:
-        # Validar y parsear plan_data si existe
-        plan = None
-        if request.plan_data:
-            try:
-                plan = FinancingPlan(**request.plan_data)
-                logger.info(f"Plan data validated: {plan.name}")
-            except ValidationError as e:
-                logger.warning(f"Plan data validation failed: {e}")
-                raise HTTPException(
-                    status_code=400, detail=f"Datos del plan inválidos: {e.errors()}"
-                )
-
-        # Log de datos recibidos
-        if request.car_data:
-            logger.info(
-                f"Car data received: {request.car_data.brand} {request.car_data.model}"
-            )
-
         # Preparar datos para los templates
         car_data_for_template = (
             request.car_data.model_dump() if request.car_data else None
         )
-        plan_data_for_template = plan.model_dump() if plan else None
+        plan_data_for_template = (
+            request.plan_data.model_dump() if request.plan_data else None
+        )
 
         # Renderizar template para la empresa
         company_template = jinja_env.get_template("email_to_company.html")
