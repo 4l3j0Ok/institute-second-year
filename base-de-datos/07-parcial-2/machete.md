@@ -207,3 +207,78 @@ HAVING SUM(p.Total) > 10000;
    * Agrupar con `GROUP BY` y filtrar con `HAVING`.
    * Crear una `VIEW` y hacer un `SELECT` sobre ella.
    * Crear un `STORED PROCEDURE` con parámetros.
+
+---
+
+## 🔹 7. NORMALIZACIÓN — Organizar y optimizar tablas
+
+La **normalización** es el proceso de estructurar las tablas para reducir la redundancia y mejorar la integridad de los datos. Se realiza en "formas normales" (FN), cada una con reglas específicas.
+
+### 🔸 1FN — Primera Forma Normal
+
+* Cada columna contiene valores atómicos (no listas ni conjuntos).
+* No hay filas duplicadas.
+
+**Ejemplo:**
+```sql
+-- Incorrecto (no está normalizado)
+| Nombre | Teléfonos |
+| ------ | --------- |
+| Juan   | 123, 456  |
+
+-- Correcto (1FN)
+| Nombre | Teléfono |
+| ------ | -------- |
+| Juan   | 123      |
+| Juan   | 456      |
+```
+
+---
+
+### 🔸 2FN — Segunda Forma Normal
+
+* La tabla ya cumple 1FN (valores atómicos y filas únicas).
+* **Todas las columnas que no son clave dependen de toda la clave primaria**, no solo de una parte.
+
+**¿Cuándo aplica?**  
+Cuando la clave primaria es compuesta (más de una columna).
+
+**Ejemplo:**
+Supongamos una tabla de detalles de pedidos:
+
+| PedidoId | ProductoId | FechaPedido |
+| -------- | ---------- | ----------- |
+| 1        | 10         | 2023-10-01  |
+
+Si "FechaPedido" depende solo de "PedidoId" y no de "ProductoId", debe estar en la tabla de "Pedidos", no en "DetallePedidos".
+
+**Solución:**  
+Separá los datos que dependen solo de una parte de la clave en otra tabla.
+
+---
+
+### 🔸 3FN — Tercera Forma Normal
+
+* Cumple 2FN.
+* No hay dependencias transitivas (las columnas dependen solo de la clave primaria, no de otras columnas no clave).
+
+**Ejemplo:**
+```sql
+-- Incorrecto (no está en 3FN)
+| PedidoId | UsuarioId | UsuarioEmail  |
+| -------- | --------- | ------------- |
+| 1        | 10        | juan@mail.com |
+
+-- Correcto (3FN)
+-- UsuarioEmail debe estar en la tabla Usuarios, no en Pedidos.
+```
+
+---
+
+**Ventajas de normalizar:**
+
+* Evita datos duplicados.
+* Facilita actualizaciones y mantenimiento.
+* Mejora la integridad referencial.
+
+**Consejo:** Normalizá hasta 3FN para la mayoría de los casos prácticos. Desnormalizá solo si necesitás mejorar el rendimiento en consultas específicas.
