@@ -8,11 +8,13 @@ namespace _06_get_set
 {
     internal class Variables
     {
+        // Para el formulario de Get/Set
         public static string value1 = "";
         public static string value2 = "";
-        public static List<int> checkedOne = new List<int>();
-        public static List<int> checkedTwo = new List<int>();
-        public static List<int> checkedThree = new List<int>();
-        public static List<int> checkedFour = new List<int>();
+        // Para el formulario de CheckBox
+        public static List<int> checkedCbOnlyOne = new List<int>();
+        public static List<int> checkedRbOnlyOne = new List<int>();
+        public static List<int> checkedCbMany = new List<int>();
+        public static List<int> checkedRbMany = new List<int>();
     }
 }

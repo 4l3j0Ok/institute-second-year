@@ -32,38 +32,38 @@
             groupBox4 = new GroupBox();
             tableLayoutPanel5 = new TableLayoutPanel();
             panel7 = new Panel();
-            rbTwo3 = new RadioButton();
-            rbTwo2 = new RadioButton();
-            rbTwo1 = new RadioButton();
+            rbMany3 = new RadioButton();
+            rbMany2 = new RadioButton();
+            rbMany1 = new RadioButton();
             panel8 = new Panel();
-            tbChecked4 = new TextBox();
+            tbRbManyChecked = new TextBox();
             label4 = new Label();
             groupBox3 = new GroupBox();
             tableLayoutPanel4 = new TableLayoutPanel();
             panel5 = new Panel();
-            cbTwo3 = new CheckBox();
-            cbTwo2 = new CheckBox();
-            cbTwo1 = new CheckBox();
+            cbMany3 = new CheckBox();
+            cbMany2 = new CheckBox();
+            cbMany1 = new CheckBox();
             panel6 = new Panel();
-            tbChecked2 = new TextBox();
+            tbCbManyChecked = new TextBox();
             label3 = new Label();
             groupBox2 = new GroupBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel3 = new Panel();
-            rbOne3 = new RadioButton();
-            rbOne2 = new RadioButton();
-            rbOne1 = new RadioButton();
+            rbOnlyOne3 = new RadioButton();
+            rbOnlyOne2 = new RadioButton();
+            rbOnlyOne1 = new RadioButton();
             panel4 = new Panel();
-            tbChecked3 = new TextBox();
+            tbRbOnlyOneChecked = new TextBox();
             label2 = new Label();
             groupBox1 = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel1 = new Panel();
-            cbOne3 = new CheckBox();
-            cbOne2 = new CheckBox();
-            cbOne1 = new CheckBox();
+            cbOnlyOne3 = new CheckBox();
+            cbOnlyOne2 = new CheckBox();
+            cbOnlyOne1 = new CheckBox();
             panel2 = new Panel();
-            tbChecked1 = new TextBox();
+            tbCbOnlyOneChecked = new TextBox();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -130,9 +130,9 @@
             // 
             // panel7
             // 
-            panel7.Controls.Add(rbTwo3);
-            panel7.Controls.Add(rbTwo2);
-            panel7.Controls.Add(rbTwo1);
+            panel7.Controls.Add(rbMany3);
+            panel7.Controls.Add(rbMany2);
+            panel7.Controls.Add(rbMany1);
             panel7.Dock = DockStyle.Fill;
             panel7.Location = new Point(3, 3);
             panel7.Name = "panel7";
@@ -140,48 +140,48 @@
             panel7.Size = new Size(188, 191);
             panel7.TabIndex = 5;
             // 
-            // rbTwo3
+            // rbMany3
             // 
-            rbTwo3.AutoSize = true;
-            rbTwo3.Dock = DockStyle.Top;
-            rbTwo3.Location = new Point(9, 47);
-            rbTwo3.Name = "rbTwo3";
-            rbTwo3.Size = new Size(170, 19);
-            rbTwo3.TabIndex = 8;
-            rbTwo3.TabStop = true;
-            rbTwo3.Text = "radioButton4";
-            rbTwo3.UseVisualStyleBackColor = true;
-            rbTwo3.CheckedChanged += RadioButtonCheckedChanged;
+            rbMany3.AutoSize = true;
+            rbMany3.Dock = DockStyle.Top;
+            rbMany3.Location = new Point(9, 47);
+            rbMany3.Name = "rbMany3";
+            rbMany3.Size = new Size(170, 19);
+            rbMany3.TabIndex = 8;
+            rbMany3.TabStop = true;
+            rbMany3.Text = "radioButton4";
+            rbMany3.UseVisualStyleBackColor = true;
+            rbMany3.CheckedChanged += RadioButtonCheckedChanged;
             // 
-            // rbTwo2
+            // rbMany2
             // 
-            rbTwo2.AutoSize = true;
-            rbTwo2.Dock = DockStyle.Top;
-            rbTwo2.Location = new Point(9, 28);
-            rbTwo2.Name = "rbTwo2";
-            rbTwo2.Size = new Size(170, 19);
-            rbTwo2.TabIndex = 7;
-            rbTwo2.TabStop = true;
-            rbTwo2.Text = "radioButton5";
-            rbTwo2.UseVisualStyleBackColor = true;
-            rbTwo2.CheckedChanged += RadioButtonCheckedChanged;
+            rbMany2.AutoSize = true;
+            rbMany2.Dock = DockStyle.Top;
+            rbMany2.Location = new Point(9, 28);
+            rbMany2.Name = "rbMany2";
+            rbMany2.Size = new Size(170, 19);
+            rbMany2.TabIndex = 7;
+            rbMany2.TabStop = true;
+            rbMany2.Text = "radioButton5";
+            rbMany2.UseVisualStyleBackColor = true;
+            rbMany2.CheckedChanged += RadioButtonCheckedChanged;
             // 
-            // rbTwo1
+            // rbMany1
             // 
-            rbTwo1.AutoSize = true;
-            rbTwo1.Dock = DockStyle.Top;
-            rbTwo1.Location = new Point(9, 9);
-            rbTwo1.Name = "rbTwo1";
-            rbTwo1.Size = new Size(170, 19);
-            rbTwo1.TabIndex = 6;
-            rbTwo1.TabStop = true;
-            rbTwo1.Text = "radioButton6";
-            rbTwo1.UseVisualStyleBackColor = true;
-            rbTwo1.CheckedChanged += RadioButtonCheckedChanged;
+            rbMany1.AutoSize = true;
+            rbMany1.Dock = DockStyle.Top;
+            rbMany1.Location = new Point(9, 9);
+            rbMany1.Name = "rbMany1";
+            rbMany1.Size = new Size(170, 19);
+            rbMany1.TabIndex = 6;
+            rbMany1.TabStop = true;
+            rbMany1.Text = "radioButton6";
+            rbMany1.UseVisualStyleBackColor = true;
+            rbMany1.CheckedChanged += RadioButtonCheckedChanged;
             // 
             // panel8
             // 
-            panel8.Controls.Add(tbChecked4);
+            panel8.Controls.Add(tbRbManyChecked);
             panel8.Controls.Add(label4);
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(197, 3);
@@ -190,13 +190,13 @@
             panel8.Size = new Size(188, 191);
             panel8.TabIndex = 6;
             // 
-            // tbChecked4
+            // tbRbManyChecked
             // 
-            tbChecked4.Dock = DockStyle.Top;
-            tbChecked4.Location = new Point(9, 24);
-            tbChecked4.Name = "tbChecked4";
-            tbChecked4.Size = new Size(170, 23);
-            tbChecked4.TabIndex = 3;
+            tbRbManyChecked.Dock = DockStyle.Top;
+            tbRbManyChecked.Location = new Point(9, 24);
+            tbRbManyChecked.Name = "tbRbManyChecked";
+            tbRbManyChecked.Size = new Size(170, 23);
+            tbRbManyChecked.TabIndex = 3;
             // 
             // label4
             // 
@@ -236,9 +236,9 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(cbTwo3);
-            panel5.Controls.Add(cbTwo2);
-            panel5.Controls.Add(cbTwo1);
+            panel5.Controls.Add(cbMany3);
+            panel5.Controls.Add(cbMany2);
+            panel5.Controls.Add(cbMany1);
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(3, 3);
             panel5.Name = "panel5";
@@ -246,45 +246,45 @@
             panel5.Size = new Size(188, 191);
             panel5.TabIndex = 5;
             // 
-            // cbTwo3
+            // cbMany3
             // 
-            cbTwo3.AutoSize = true;
-            cbTwo3.Dock = DockStyle.Top;
-            cbTwo3.Location = new Point(9, 47);
-            cbTwo3.Name = "cbTwo3";
-            cbTwo3.Size = new Size(170, 19);
-            cbTwo3.TabIndex = 2;
-            cbTwo3.Text = "checkBox7";
-            cbTwo3.UseVisualStyleBackColor = true;
-            cbTwo3.CheckedChanged += CheckBoxCheckedChanged;
+            cbMany3.AutoSize = true;
+            cbMany3.Dock = DockStyle.Top;
+            cbMany3.Location = new Point(9, 47);
+            cbMany3.Name = "cbMany3";
+            cbMany3.Size = new Size(170, 19);
+            cbMany3.TabIndex = 2;
+            cbMany3.Text = "checkBox7";
+            cbMany3.UseVisualStyleBackColor = true;
+            cbMany3.CheckedChanged += CheckBoxCheckedChanged;
             // 
-            // cbTwo2
+            // cbMany2
             // 
-            cbTwo2.AutoSize = true;
-            cbTwo2.Dock = DockStyle.Top;
-            cbTwo2.Location = new Point(9, 28);
-            cbTwo2.Name = "cbTwo2";
-            cbTwo2.Size = new Size(170, 19);
-            cbTwo2.TabIndex = 1;
-            cbTwo2.Text = "checkBox8";
-            cbTwo2.UseVisualStyleBackColor = true;
-            cbTwo2.CheckedChanged += CheckBoxCheckedChanged;
+            cbMany2.AutoSize = true;
+            cbMany2.Dock = DockStyle.Top;
+            cbMany2.Location = new Point(9, 28);
+            cbMany2.Name = "cbMany2";
+            cbMany2.Size = new Size(170, 19);
+            cbMany2.TabIndex = 1;
+            cbMany2.Text = "checkBox8";
+            cbMany2.UseVisualStyleBackColor = true;
+            cbMany2.CheckedChanged += CheckBoxCheckedChanged;
             // 
-            // cbTwo1
+            // cbMany1
             // 
-            cbTwo1.AutoSize = true;
-            cbTwo1.Dock = DockStyle.Top;
-            cbTwo1.Location = new Point(9, 9);
-            cbTwo1.Name = "cbTwo1";
-            cbTwo1.Size = new Size(170, 19);
-            cbTwo1.TabIndex = 0;
-            cbTwo1.Text = "checkBox9";
-            cbTwo1.UseVisualStyleBackColor = true;
-            cbTwo1.CheckedChanged += CheckBoxCheckedChanged;
+            cbMany1.AutoSize = true;
+            cbMany1.Dock = DockStyle.Top;
+            cbMany1.Location = new Point(9, 9);
+            cbMany1.Name = "cbMany1";
+            cbMany1.Size = new Size(170, 19);
+            cbMany1.TabIndex = 0;
+            cbMany1.Text = "checkBox9";
+            cbMany1.UseVisualStyleBackColor = true;
+            cbMany1.CheckedChanged += CheckBoxCheckedChanged;
             // 
             // panel6
             // 
-            panel6.Controls.Add(tbChecked2);
+            panel6.Controls.Add(tbCbManyChecked);
             panel6.Controls.Add(label3);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(197, 3);
@@ -293,13 +293,13 @@
             panel6.Size = new Size(188, 191);
             panel6.TabIndex = 6;
             // 
-            // tbChecked2
+            // tbCbManyChecked
             // 
-            tbChecked2.Dock = DockStyle.Top;
-            tbChecked2.Location = new Point(9, 24);
-            tbChecked2.Name = "tbChecked2";
-            tbChecked2.Size = new Size(170, 23);
-            tbChecked2.TabIndex = 3;
+            tbCbManyChecked.Dock = DockStyle.Top;
+            tbCbManyChecked.Location = new Point(9, 24);
+            tbCbManyChecked.Name = "tbCbManyChecked";
+            tbCbManyChecked.Size = new Size(170, 23);
+            tbCbManyChecked.TabIndex = 3;
             // 
             // label3
             // 
@@ -339,9 +339,9 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(rbOne3);
-            panel3.Controls.Add(rbOne2);
-            panel3.Controls.Add(rbOne1);
+            panel3.Controls.Add(rbOnlyOne3);
+            panel3.Controls.Add(rbOnlyOne2);
+            panel3.Controls.Add(rbOnlyOne1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
@@ -349,48 +349,48 @@
             panel3.Size = new Size(188, 191);
             panel3.TabIndex = 5;
             // 
-            // rbOne3
+            // rbOnlyOne3
             // 
-            rbOne3.AutoSize = true;
-            rbOne3.Dock = DockStyle.Top;
-            rbOne3.Location = new Point(9, 47);
-            rbOne3.Name = "rbOne3";
-            rbOne3.Size = new Size(170, 19);
-            rbOne3.TabIndex = 5;
-            rbOne3.TabStop = true;
-            rbOne3.Text = "radioButton3";
-            rbOne3.UseVisualStyleBackColor = true;
-            rbOne3.CheckedChanged += RadioButtonCheckedChanged;
+            rbOnlyOne3.AutoSize = true;
+            rbOnlyOne3.Dock = DockStyle.Top;
+            rbOnlyOne3.Location = new Point(9, 47);
+            rbOnlyOne3.Name = "rbOnlyOne3";
+            rbOnlyOne3.Size = new Size(170, 19);
+            rbOnlyOne3.TabIndex = 5;
+            rbOnlyOne3.TabStop = true;
+            rbOnlyOne3.Text = "radioButton3";
+            rbOnlyOne3.UseVisualStyleBackColor = true;
+            rbOnlyOne3.CheckedChanged += RadioButtonCheckedChanged;
             // 
-            // rbOne2
+            // rbOnlyOne2
             // 
-            rbOne2.AutoSize = true;
-            rbOne2.Dock = DockStyle.Top;
-            rbOne2.Location = new Point(9, 28);
-            rbOne2.Name = "rbOne2";
-            rbOne2.Size = new Size(170, 19);
-            rbOne2.TabIndex = 4;
-            rbOne2.TabStop = true;
-            rbOne2.Text = "radioButton2";
-            rbOne2.UseVisualStyleBackColor = true;
-            rbOne2.CheckedChanged += RadioButtonCheckedChanged;
+            rbOnlyOne2.AutoSize = true;
+            rbOnlyOne2.Dock = DockStyle.Top;
+            rbOnlyOne2.Location = new Point(9, 28);
+            rbOnlyOne2.Name = "rbOnlyOne2";
+            rbOnlyOne2.Size = new Size(170, 19);
+            rbOnlyOne2.TabIndex = 4;
+            rbOnlyOne2.TabStop = true;
+            rbOnlyOne2.Text = "radioButton2";
+            rbOnlyOne2.UseVisualStyleBackColor = true;
+            rbOnlyOne2.CheckedChanged += RadioButtonCheckedChanged;
             // 
-            // rbOne1
+            // rbOnlyOne1
             // 
-            rbOne1.AutoSize = true;
-            rbOne1.Dock = DockStyle.Top;
-            rbOne1.Location = new Point(9, 9);
-            rbOne1.Name = "rbOne1";
-            rbOne1.Size = new Size(170, 19);
-            rbOne1.TabIndex = 3;
-            rbOne1.TabStop = true;
-            rbOne1.Text = "radioButton1";
-            rbOne1.UseVisualStyleBackColor = true;
-            rbOne1.CheckedChanged += RadioButtonCheckedChanged;
+            rbOnlyOne1.AutoSize = true;
+            rbOnlyOne1.Dock = DockStyle.Top;
+            rbOnlyOne1.Location = new Point(9, 9);
+            rbOnlyOne1.Name = "rbOnlyOne1";
+            rbOnlyOne1.Size = new Size(170, 19);
+            rbOnlyOne1.TabIndex = 3;
+            rbOnlyOne1.TabStop = true;
+            rbOnlyOne1.Text = "radioButton1";
+            rbOnlyOne1.UseVisualStyleBackColor = true;
+            rbOnlyOne1.CheckedChanged += RadioButtonCheckedChanged;
             // 
             // panel4
             // 
-            panel4.Controls.Add(tbChecked3);
+            panel4.Controls.Add(tbRbOnlyOneChecked);
             panel4.Controls.Add(label2);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(197, 3);
@@ -399,13 +399,13 @@
             panel4.Size = new Size(188, 191);
             panel4.TabIndex = 6;
             // 
-            // tbChecked3
+            // tbRbOnlyOneChecked
             // 
-            tbChecked3.Dock = DockStyle.Top;
-            tbChecked3.Location = new Point(9, 24);
-            tbChecked3.Name = "tbChecked3";
-            tbChecked3.Size = new Size(170, 23);
-            tbChecked3.TabIndex = 3;
+            tbRbOnlyOneChecked.Dock = DockStyle.Top;
+            tbRbOnlyOneChecked.Location = new Point(9, 24);
+            tbRbOnlyOneChecked.Name = "tbRbOnlyOneChecked";
+            tbRbOnlyOneChecked.Size = new Size(170, 23);
+            tbRbOnlyOneChecked.TabIndex = 3;
             // 
             // label2
             // 
@@ -445,9 +445,9 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(cbOne3);
-            panel1.Controls.Add(cbOne2);
-            panel1.Controls.Add(cbOne1);
+            panel1.Controls.Add(cbOnlyOne3);
+            panel1.Controls.Add(cbOnlyOne2);
+            panel1.Controls.Add(cbOnlyOne1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
@@ -455,45 +455,45 @@
             panel1.Size = new Size(188, 191);
             panel1.TabIndex = 5;
             // 
-            // cbOne3
+            // cbOnlyOne3
             // 
-            cbOne3.AutoSize = true;
-            cbOne3.Dock = DockStyle.Top;
-            cbOne3.Location = new Point(9, 47);
-            cbOne3.Name = "cbOne3";
-            cbOne3.Size = new Size(170, 19);
-            cbOne3.TabIndex = 2;
-            cbOne3.Text = "checkBox3";
-            cbOne3.UseVisualStyleBackColor = true;
-            cbOne3.CheckedChanged += CheckBoxCheckedChanged;
+            cbOnlyOne3.AutoSize = true;
+            cbOnlyOne3.Dock = DockStyle.Top;
+            cbOnlyOne3.Location = new Point(9, 47);
+            cbOnlyOne3.Name = "cbOnlyOne3";
+            cbOnlyOne3.Size = new Size(170, 19);
+            cbOnlyOne3.TabIndex = 2;
+            cbOnlyOne3.Text = "checkBox3";
+            cbOnlyOne3.UseVisualStyleBackColor = true;
+            cbOnlyOne3.CheckedChanged += CheckBoxCheckedChanged;
             // 
-            // cbOne2
+            // cbOnlyOne2
             // 
-            cbOne2.AutoSize = true;
-            cbOne2.Dock = DockStyle.Top;
-            cbOne2.Location = new Point(9, 28);
-            cbOne2.Name = "cbOne2";
-            cbOne2.Size = new Size(170, 19);
-            cbOne2.TabIndex = 1;
-            cbOne2.Text = "checkBox2";
-            cbOne2.UseVisualStyleBackColor = true;
-            cbOne2.CheckedChanged += CheckBoxCheckedChanged;
+            cbOnlyOne2.AutoSize = true;
+            cbOnlyOne2.Dock = DockStyle.Top;
+            cbOnlyOne2.Location = new Point(9, 28);
+            cbOnlyOne2.Name = "cbOnlyOne2";
+            cbOnlyOne2.Size = new Size(170, 19);
+            cbOnlyOne2.TabIndex = 1;
+            cbOnlyOne2.Text = "checkBox2";
+            cbOnlyOne2.UseVisualStyleBackColor = true;
+            cbOnlyOne2.CheckedChanged += CheckBoxCheckedChanged;
             // 
-            // cbOne1
+            // cbOnlyOne1
             // 
-            cbOne1.AutoSize = true;
-            cbOne1.Dock = DockStyle.Top;
-            cbOne1.Location = new Point(9, 9);
-            cbOne1.Name = "cbOne1";
-            cbOne1.Size = new Size(170, 19);
-            cbOne1.TabIndex = 0;
-            cbOne1.Text = "checkBox1";
-            cbOne1.UseVisualStyleBackColor = true;
-            cbOne1.CheckedChanged += CheckBoxCheckedChanged;
+            cbOnlyOne1.AutoSize = true;
+            cbOnlyOne1.Dock = DockStyle.Top;
+            cbOnlyOne1.Location = new Point(9, 9);
+            cbOnlyOne1.Name = "cbOnlyOne1";
+            cbOnlyOne1.Size = new Size(170, 19);
+            cbOnlyOne1.TabIndex = 0;
+            cbOnlyOne1.Text = "checkBox1";
+            cbOnlyOne1.UseVisualStyleBackColor = true;
+            cbOnlyOne1.CheckedChanged += CheckBoxCheckedChanged;
             // 
             // panel2
             // 
-            panel2.Controls.Add(tbChecked1);
+            panel2.Controls.Add(tbCbOnlyOneChecked);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(197, 3);
@@ -502,13 +502,13 @@
             panel2.Size = new Size(188, 191);
             panel2.TabIndex = 6;
             // 
-            // tbChecked1
+            // tbCbOnlyOneChecked
             // 
-            tbChecked1.Dock = DockStyle.Top;
-            tbChecked1.Location = new Point(9, 24);
-            tbChecked1.Name = "tbChecked1";
-            tbChecked1.Size = new Size(170, 23);
-            tbChecked1.TabIndex = 3;
+            tbCbOnlyOneChecked.Dock = DockStyle.Top;
+            tbCbOnlyOneChecked.Location = new Point(9, 24);
+            tbCbOnlyOneChecked.Name = "tbCbOnlyOneChecked";
+            tbCbOnlyOneChecked.Size = new Size(170, 23);
+            tbCbOnlyOneChecked.TabIndex = 3;
             // 
             // label1
             // 
@@ -528,7 +528,6 @@
             Controls.Add(tableLayoutPanel1);
             Name = "FormCheckBox";
             Text = "FormCheckBox";
-            Load += FormCheckBox_Load;
             tableLayoutPanel1.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);
@@ -562,37 +561,37 @@
         private TableLayoutPanel tableLayoutPanel1;
         private GroupBox groupBox1;
         private Panel panel1;
-        private CheckBox cbOne3;
-        private CheckBox cbOne2;
-        private CheckBox cbOne1;
+        private CheckBox cbOnlyOne3;
+        private CheckBox cbOnlyOne2;
+        private CheckBox cbOnlyOne1;
         private Label label1;
-        private TextBox tbChecked1;
+        private TextBox tbCbOnlyOneChecked;
         private GroupBox groupBox4;
         private TableLayoutPanel tableLayoutPanel5;
         private Panel panel7;
-        private RadioButton rbTwo3;
-        private RadioButton rbTwo2;
-        private RadioButton rbTwo1;
+        private RadioButton rbMany3;
+        private RadioButton rbMany2;
+        private RadioButton rbMany1;
         private Panel panel8;
-        private TextBox tbChecked4;
+        private TextBox tbRbManyChecked;
         private Label label4;
         private GroupBox groupBox3;
         private TableLayoutPanel tableLayoutPanel4;
         private Panel panel5;
-        private CheckBox cbTwo3;
-        private CheckBox cbTwo2;
-        private CheckBox cbTwo1;
+        private CheckBox cbMany3;
+        private CheckBox cbMany2;
+        private CheckBox cbMany1;
         private Panel panel6;
-        private TextBox tbChecked2;
+        private TextBox tbCbManyChecked;
         private Label label3;
         private GroupBox groupBox2;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panel3;
-        private RadioButton rbOne3;
-        private RadioButton rbOne2;
-        private RadioButton rbOne1;
+        private RadioButton rbOnlyOne3;
+        private RadioButton rbOnlyOne2;
+        private RadioButton rbOnlyOne1;
         private Panel panel4;
-        private TextBox tbChecked3;
+        private TextBox tbRbOnlyOneChecked;
         private Label label2;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel2;

@@ -45,7 +45,7 @@
             // pForms
             // 
             pForms.Dock = DockStyle.Right;
-            pForms.Location = new Point(206, 0);
+            pForms.Location = new Point(264, 0);
             pForms.Name = "pForms";
             pForms.Size = new Size(594, 450);
             pForms.TabIndex = 0;
@@ -56,8 +56,10 @@
             groupBox1.Controls.Add(btnGetSet);
             groupBox1.Dock = DockStyle.Top;
             groupBox1.Location = new Point(0, 0);
+            groupBox1.MaximumSize = new Size(264, 200000);
+            groupBox1.MinimumSize = new Size(264, 250);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(206, 250);
+            groupBox1.Size = new Size(264, 250);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             // 
@@ -66,7 +68,7 @@
             btnCheckBox.Dock = DockStyle.Top;
             btnCheckBox.Location = new Point(3, 42);
             btnCheckBox.Name = "btnCheckBox";
-            btnCheckBox.Size = new Size(200, 23);
+            btnCheckBox.Size = new Size(258, 23);
             btnCheckBox.TabIndex = 1;
             btnCheckBox.Text = "Check Box";
             btnCheckBox.UseVisualStyleBackColor = true;
@@ -77,7 +79,7 @@
             btnGetSet.Dock = DockStyle.Top;
             btnGetSet.Location = new Point(3, 19);
             btnGetSet.Name = "btnGetSet";
-            btnGetSet.Size = new Size(200, 23);
+            btnGetSet.Size = new Size(258, 23);
             btnGetSet.TabIndex = 0;
             btnGetSet.Text = "GET - SET";
             btnGetSet.UseVisualStyleBackColor = true;
@@ -89,10 +91,11 @@
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(tbValue1);
             groupBox2.Controls.Add(label1);
-            groupBox2.Dock = DockStyle.Bottom;
+            groupBox2.Dock = DockStyle.Top;
             groupBox2.Location = new Point(0, 250);
+            groupBox2.MinimumSize = new Size(264, 250);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(206, 200);
+            groupBox2.Size = new Size(264, 250);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos recibidos";
@@ -102,7 +105,7 @@
             tbValue2.Dock = DockStyle.Top;
             tbValue2.Location = new Point(3, 72);
             tbValue2.Name = "tbValue2";
-            tbValue2.Size = new Size(200, 23);
+            tbValue2.Size = new Size(258, 23);
             tbValue2.TabIndex = 1;
             // 
             // label2
@@ -120,7 +123,7 @@
             tbValue1.Dock = DockStyle.Top;
             tbValue1.Location = new Point(3, 34);
             tbValue1.Name = "tbValue1";
-            tbValue1.Size = new Size(200, 23);
+            tbValue1.Size = new Size(258, 23);
             tbValue1.TabIndex = 0;
             // 
             // label1
@@ -137,7 +140,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(858, 450);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(pForms);
@@ -159,7 +162,7 @@
         private GroupBox groupBox2;
         private Label label2;
         private Label label1;
-        public static TextBox tbValue2;
-        public static TextBox tbValue1;
+        public TextBox tbValue2;
+        public TextBox tbValue1;
     }
 }
